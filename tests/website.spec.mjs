@@ -144,7 +144,7 @@ test("Smart-Home-Beispiele wechseln die Situation verständlich", async ({
   const room = page.getByRole("img", { name: /Wohnraum mit zwei/ });
   await expect(room).toHaveAttribute("data-light", "off");
   await expect(room.locator(".room-light-pools")).toHaveCSS("opacity", "0");
-  for (const [name, mode, label] of [["Grün", "green", "Grünes Licht"], ["Gelb", "yellow", "Gelbes Licht"], ["Gedimmt", "dim", "Warm & gedimmt"], ["Warm", "warm", "Einladend & warm"], ["Aus", "off", "Gewählte Lichter aus"]]) {
+  for (const [name, mode, label] of [["Rot", "red", "Rotes Licht"], ["Grün", "green", "Grünes Licht"], ["Gelb", "yellow", "Gelbes Licht"], ["Gedimmt", "dim", "Warm & gedimmt"], ["Warm", "warm", "Einladend & warm"], ["Aus", "off", "Gewählte Lichter aus"]]) {
     const choice = page.getByRole("button", { name, exact: true });
     await choice.click();
     await expect(choice).toHaveAttribute("aria-pressed", "true");

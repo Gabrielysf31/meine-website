@@ -98,7 +98,7 @@ if (sceneData) {
   }
   positionRoom();
   mobileRoom.addEventListener("change", positionRoom);
-  const lightLabels = { warm: "Einladend & warm", dim: "Warm & gedimmt", yellow: "Gelbes Licht", green: "Grünes Licht", off: "Gewählte Lichter aus" };
+  const lightLabels = { warm: "Einladend & warm", dim: "Warm & gedimmt", yellow: "Gelbes Licht", green: "Grünes Licht", red: "Rotes Licht", off: "Gewählte Lichter aus" };
   function setLight(mode) {
     room.dataset.light = mode;
     room.setAttribute("aria-label", "Wohnraum mit zwei Lampen " + (room.dataset.time === "day" ? "bei Tageslicht" : "am Abend") + ": " + lightLabels[mode]);

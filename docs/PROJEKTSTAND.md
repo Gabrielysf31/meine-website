@@ -4,6 +4,9 @@ Stand: 29.10.2026 · interaktive Lichtsimulation ergänzt
 
 ## Aktueller Stand
 
+- Rot als zusätzliche manuelle Lichtfarbe ergänzt: Lampen, Lichtkegel, Raumtönung und Beschriftung reagieren gemeinsam. Bestehende Alltagssituationen behalten ihre Lichtvorgaben. Branch: `feat/smart-home-rotes-licht`.
+
+
 - Tageslichtkorrektur: „Ankommen“ zeigt jetzt einen hellen Raum, blauen Himmel und Sonne passend zu „Tageslicht nutzen“. Feierabend und Unterwegs behalten die Abendansicht. Manuelle Lichtfarben erhalten die Tageszeit der gewählten Situation. Branch: `fix/smart-home-tageslicht`.
 
 

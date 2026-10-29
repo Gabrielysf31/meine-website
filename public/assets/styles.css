@@ -1084,6 +1084,7 @@
   .light-room[data-light="dim"] { --lamp-color:#f8b968; --lamp-surface:#dcb17c; --room-wall:#39463e; --room-floor:#3d4237; }
   .light-room[data-light="yellow"] { --lamp-color:#ffe027; --lamp-surface:#ffeb78; --room-wall:#777650; --room-floor:#6a6440; }
   .light-room[data-light="green"] { --lamp-color:#7de78e; --lamp-surface:#adf3b4; --room-wall:#436553; --room-floor:#435d44; }
+  .light-room[data-light="red"] { --lamp-color:#f45c5c; --lamp-surface:#ff8585; --room-wall:#704543; --room-floor:#60403b; }
   .light-room[data-light="off"] { --lamp-color:#000; --lamp-surface:#858a79; --room-wall:#273b3e; --room-floor:#303e3a; }
   .light-room[data-time="day"] { --window-sky:#b9d9df; --sky-light:#fff4b6; --window-landscape:#72947a; }
   .light-room[data-time="day"][data-light="warm"] { --room-wall:#b8b6a0; --room-floor:#a69a7b; }
@@ -1100,6 +1101,7 @@
   .light-options button { display:flex; align-items:center; gap:7px; border:1px solid #a7b6a5; border-radius:25px; background:transparent; padding:10px 13px; min-height:44px; font-size:12px; }
   .light-options button[aria-pressed="true"] { border-color:var(--petrol); background:var(--petrol); color:white; }
   .light-swatch { width:12px; height:12px; border-radius:50%; border:1px solid #ffffff70; }
+  .light-swatch.red { background:#f45c5c; }
   .light-swatch.warm { background:#ffe3a9; } .light-swatch.dim { background:#c39565; } .light-swatch.yellow { background:#ffe027; } .light-swatch.green { background:#7de78e; } .light-swatch.off { background:#30413b; }
   .light-manual-note { color:var(--muted); font-size:10px; margin-top:13px; }
   html:not(.js) .light-controls { display:none; }
