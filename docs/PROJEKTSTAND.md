@@ -1,6 +1,14 @@
 # Projektstand
 
-Stand: 29.10.2026 · Sitzungsabschluss
+Stand: 29.10.2026 · Sitzungsabschluss nach erneutem Start und Vorschau
+
+## Letzte Sitzung
+
+- Projektregeln, Dokumentation und relevante Implementierung eingelesen; GitHub-Stand mit `git fetch origin` aktualisiert. Der Themenbranch war vollständig synchronisiert und das Arbeitsverzeichnis sauber.
+- Auf Gabriels Wunsch die lokale Vorschau mit `npm run dev` gestartet und im Browser geöffnet. Dabei wurden 18 Seiten erfolgreich erstellt; die Startseite antwortete mit HTTP 200.
+- Keine Änderungen an Website-Funktionen, Inhalten oder Gestaltung. Inspirationsberater und Übergabe in den Projektplaner bleiben beim bisherigen Konzeptstand.
+- Keine erneuten Browserprüfungen oder Verweisprüfungen ausgeführt. Die unten aufgeführten umfassenderen Prüfungen stammen aus der vorherigen Umsetzung.
+- Zum Abschluss den lokalen Vorschau-Server beendet. Die nächste Sitzung knüpft weiterhin an die Inspirationsseite und den kurzen Berater an.
 
 ## Vereinbarte Richtung
 
@@ -84,7 +92,7 @@ Einstieg im Code: `src/pages.mjs` (`inspirationPage` und `plannerPage`), `src/co
 
 ## Sicherungsstand zum Sitzungsende
 
-Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Der Sitzungsabschluss ergänzt ausschließlich die Dokumentation. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
+Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Das Konzept für den Inspirationsberater und die vorherige Übergabe sind mit Commit `1315401` gesichert. Der aktuelle Sitzungsabschluss ergänzt ausschließlich die Dokumentation der erneuten Projektaufnahme und Vorschau. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
 
 Die sechs Browserprüfungen wurden während der Umsetzung erfolgreich ausgeführt. Nach der letzten Bildänderung wurden Build und alle 468 internen Verweise sowie Bildzuordnung und Darstellung im Browser geprüft. Für den reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
 
