@@ -1,25 +1,19 @@
 # Projektstand
 
-Stand: 29.10.2026 · interaktive Lichtsimulation ergänzt
+Stand: 29.10.2026 · Sitzungsabschluss
+
+## Letzte Sitzung und abschließende Entscheidungen
+
+- Inspirationsseite mit vier eigenen Bildmotiven, fünf Beraterfragen und bearbeitbarer Planerübergabe umgesetzt und geprüft.
+- Smart-Home-Seite um zwei eigene Bilder, Funktionsübersicht, Bedienung, Nachrüstung/Neubau, KNX-Einordnung und fünf aufklappbare Antworten erweitert. Am Ende führt ein Button zur ausdrücklich als Vorschau gekennzeichneten Assistentenfunktion.
+- Gabriels interaktive Lichtidee umgesetzt: illustrierter Wohnraum mit Pendel- und Stehleuchte. Lampen, Lichtkegel, Raumtönung und Lichtbeschreibung wechseln gemeinsam.
+- Endgültige Auswahl nach Gabriels Feedback: **Warm, Gedimmt und Aus**. Gelb, Grün und Rot wurden zwischenzeitlich ausprobiert und wieder entfernt, weil die bunten Farben ihm zu unseriös wirken. Diese gestalterische Entscheidung beim Wiedereinstieg beibehalten.
+- Ankommen: heller Raum mit Tageslicht, blauem Himmel und Sonne, passend zu „Tageslicht nutzen“; Licht warm. Feierabend: Abendansicht, warm und gedimmt. Unterwegs: Abendansicht mit ausgeschalteten Lampen.
+- Manuelle Lichtwahl verändert nur die Beleuchtung und erhält die gewählte Tageszeit. Ein Szenenwechsel stellt die Vorgabe der jeweiligen Situation wieder her. Auf Mobilgeräten stehen Raumansicht und Lichtauswahl direkt zusammen.
+- Raum als skalierbare SVG-/CSS-Illustration in `src/room.mjs`, ohne Geräteanbindung. Bedienelemente mit Tastatur und sichtbarem Auswahlzustand; bei reduzierter Bewegung ohne Übergangsanimation. Ohne JavaScript bleibt die warme Tagesansicht sichtbar.
+- Sämtliche Umsetzungsänderungen bis Commit `e4ad57b` sind auf `feat/smart-home-ruhige-lichtstimmungen` gesichert. Der Abschluss aktualisiert ausschließlich die Übergabedokumentation.
 
 ## Aktueller Stand
-
-- Gestalterische Korrektur nach Gabriels Feedback: Bunte Lichtfarben wirken ihm zu unseriös. Gelb, Grün und Rot wurden aus der Simulation entfernt; Warm, Gedimmt und Aus bleiben. Die Tageszeiten und Szenenwechsel bleiben erhalten. Branch: `feat/smart-home-ruhige-lichtstimmungen`.
-
-
-- Rot als zusätzliche manuelle Lichtfarbe ergänzt: Lampen, Lichtkegel, Raumtönung und Beschriftung reagieren gemeinsam. Bestehende Alltagssituationen behalten ihre Lichtvorgaben. Branch: `feat/smart-home-rotes-licht`.
-
-
-- Tageslichtkorrektur: „Ankommen“ zeigt jetzt einen hellen Raum, blauen Himmel und Sonne passend zu „Tageslicht nutzen“. Feierabend und Unterwegs behalten die Abendansicht. Manuelle Lichtfarben erhalten die Tageszeit der gewählten Situation. Branch: `fix/smart-home-tageslicht`.
-
-
-- Gabriels Lichtidee umgesetzt: eigener illustrierter Wohnraum mit Pendel- und Stehleuchte. Ankommen setzt warmes Licht, Feierabend gedimmtes Licht und Unterwegs ausgeschaltetes Licht. Rechts sind Warm, Gedimmt, Gelb, Grün und Aus direkt wählbar. Raumhintergrund, Leuchtflächen, Lichtkegel und Lichtbeschreibung wechseln gemeinsam. Ein Szenenwechsel setzt eine manuelle Lichtwahl zurück.
-- Umsetzung als skalierbare SVG-/CSS-Illustration in `src/room.mjs`, ohne neue Bilddateien oder Geräteanbindung. Bedienelemente mit Tastatur und sichtbarem Auswahlzustand; bei reduzierter Bewegung ohne Übergangsanimation. Ohne JavaScript bleibt die statische warme Illustration sichtbar. Themenbranch: `feat/smart-home-lichtsimulation`, abgeleitet von `feat/smart-home-details` (Commit `8ddc091`).
-
-
-- Smart Home auf Gabriels Wunsch erweitert: zwei neue eigene Bildmotive, vier Funktionsbereiche, Taster/App/Automatik, Bestand und Neubau, KNX-Einordnung, fünf aufklappbare Antworten und ein abschließender Hinweis mit Button zur Assistenten-Vorschau. Keine aktive Chatbot-Anbindung behauptet.
-- Neue Umsetzung: `src/smart-home.mjs`; Bilddateien, Prompts und fachliche Quellen: [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Themenbranch: `feat/smart-home-details`, abgeleitet von `feat/inspiration-berater` (Commit `a33994a`).
-
 
 - Die Inspirationsseite zeigt vier eigene Alltagssituationen mit neuen, gekennzeichneten KI-Motiven: nächtliches Orientierungslicht, Morgenroutine mit Jalousien, Arbeits- und Wohnlicht sowie Energieüberblick. Die bisherigen Bilder auf den Leistungsseiten bleiben erhalten.
 - Ein kurzer Berater stellt fünf Fragen zu Zuhause, Vorhaben, Wünschen, Bedienung und Priorität. Bis zu drei konkrete Wünsche oder „Noch offen“ sind auswählbar. Rücknavigation erhält die Antworten.
@@ -53,6 +47,8 @@ Die Website bleibt ein lokaler privater Entwurf. Veröffentlichung, kostenpflich
 
 Statisches HTML aus JavaScript-Vorlagen, CSS und ergänzende Browsermodule. Node.js dient für Build und Vorschau; Playwright ist eine Entwicklungsabhängigkeit.
 
+- `src/smart-home.mjs`: erweiterte Smart-Home-Seite und Assistentenhinweis.
+- `src/room.mjs`: interaktive Raumillustration und reduzierte Lichtauswahl; Szenensteuerung in `public/assets/app.js`, Gestaltung in `public/assets/styles.css`.
 - `src/inspiration.mjs`: Geschichten, fünf Fragen und Ergebnisrahmen.
 - `src/planner.mjs`: gemeinsamer Planerabschnitt für Inspiration und `/anfrage/`.
 - `public/assets/project-draft.js`: Fragen, Themenzuordnung, feste Ergebnisregeln, Entwurfsformat Version 1 und Validierung. Wünsche, mögliche Ansätze und offene Fragen bleiben getrennt.
@@ -66,18 +62,18 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 ## Geprüft
 
 - Build und Verweise: 18 Seiten, 465 interne Verweise.
-- Alle zehn Playwright-Prüfungen bestanden: neun Browserabläufe und eine Prüfung des gemeinsamen Entwurfsformats.
+- Alle zehn Playwright-Prüfungen bestanden: neun Browserabläufe und eine Prüfung des gemeinsamen Entwurfsformats. Nach den abschließenden kleinen Änderungen an Tageslicht und Lichtfarben wurden Build/Verweise und gezielt die Smart-Home-Browserprüfung erneut erfolgreich ausgeführt. Für diesen reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
 - Berater: Pflichtantworten, maximal drei Wünsche, ausschließliche Wahl „Noch offen“, Rücknavigation und passende Ergebnisanzahl.
 - Übernahme: richtige Themen, bearbeitbare Angaben, alte und neue Entwürfe vergleichen, Behalten und Ersetzen sowie Erhalt des Planers beim Neustart des Beraters.
 - Kein automatisches Vorauswählen von Photovoltaik allein aufgrund der gemeinsamen Antwort zu Verbrauch und Solarstrom. Bei offenen Wünschen bleiben Themen offen, bis der Besucher selbst auswählt.
 - Bestehender Planer mit Validierung, sicherer Freitextdarstellung, Rücknavigation und Textdateiexport. Beraterkopie mit Fehlerfall und manueller Alternative.
 - Keine Datenanfragen während der geprüften Eingaben, kein Browser-Speicher und keine Angaben in URL-Parametern. Rücksetzen nach Neuladen und nach Verlassen/Rückkehr geprüft.
 - Alle Seiten bei 375 Pixeln Breite ohne horizontales Überlaufen. Geschichten und erklärender Hinweis bei deaktiviertem JavaScript erreichbar.
-- Inspiration, Ergebnis und geöffneter Planer auf Desktop (1440 Pixel) und Mobil (375 Pixel) visuell geprüft. Sechs aktuelle Ansichten liegen unter `docs/vorschau/`.
+- Inspiration, Ergebnis und geöffneter Planer auf Desktop (1440 Pixel) und Mobil (375 Pixel) visuell geprüft. Aktuelle Ansichten liegen unter `docs/vorschau/`; auch Smart Home und die Lichtsimulation wurden auf Desktop und Mobil aufgenommen und geprüft.
 
 ## Nächster gemeinsamer Schritt
 
-Die erweiterte Smart-Home-Seite mit Gabriel ansehen; anschließend bei Bedarf die Inspirationsseite und einen Beraterdurchlauf gemeinsam ansehen. Bildmotive, Texte, Fragen und Ergebnislänge anhand seines Feedbacks verfeinern.
+Beim Wiedereinstieg diesen Abschlussstand lesen und mit Gabriel die nächste gewünschte Überarbeitung festlegen. Die zuletzt gewünschte reduzierte Lichtauswahl ist umgesetzt; daraus ergibt sich keine weitere offene Funktionsaufgabe. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs` und `src/room.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -87,7 +83,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Die aktuelle Umsetzung liegt auf dem davon abgeleiteten Themenbranch `feat/inspiration-berater`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der aktuelle, vollständige Arbeitsstand liegt auf `feat/smart-home-ruhige-lichtstimmungen`; dort wird auch die Abschlussdokumentation gesichert. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 
