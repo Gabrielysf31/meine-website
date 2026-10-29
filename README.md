@@ -72,4 +72,6 @@ Inspiration mit eigenen Bildmotiven und einem kurzen Berater weiterentwickeln. B
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 
+Die fünf Beraterfragen, Ergebnisregeln, eigenständigen Bildideen und die bearbeitbare Übergabe sind in [docs/INSPIRATIONSBERATER.md](docs/INSPIRATIONSBERATER.md) konkretisiert. Vorgeschlagen ist ein direkt unter dem Ergebnis geöffneter Projektplaner, damit Angaben weiterhin ohne Browser-Speicher auskommen. Die Website-Funktionen sind noch nicht entsprechend erweitert.
+
 Die Website ist noch nicht veröffentlicht. Eine Veröffentlichung oder kostenpflichtige Anbindung wird gesondert abgestimmt. Der Entwurf ist mit `noindex` gekennzeichnet; das ersetzt keine Zugriffsbeschränkung, falls er später gehostet wird.

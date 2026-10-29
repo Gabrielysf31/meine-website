@@ -1,8 +1,14 @@
 # Projektstand
 
-Stand: 29.10.2026 · Sitzungsabschluss nach erneutem Start und Vorschau
+Stand: 29.10.2026 · Inspirationsberater konkretisiert
 
 ## Letzte Sitzung
+
+- Bei der Fortsetzung die vereinbarte nächste Ausbaustufe konkretisiert: [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) enthält vier eigenständige Bildgeschichten, fünf Fragen, feste Ergebnisregeln, ein durchgespieltes Beispiel und das gemeinsame Entwurfsformat für Berater und späteren Chatbot.
+- Für die Übernahme ist ein direkt auf der Inspirationsseite geöffneter, wiederverwendbarer Planer vorgeschlagen. So sind keine Browser-Speicherung und keine Übertragung von Angaben in der URL nötig. Angaben bleiben bearbeitbar; ein bestehender Entwurf wird erst nach sichtbarer Auswahl ersetzt.
+- Diese Konkretisierung ist Dokumentation, noch keine Erweiterung der Website. Die nächste Arbeit ist die lokale Umsetzung auf Grundlage dieses Vorschlags. Neue Bilder und echte KI sind weiterhin nicht eingebunden.
+
+### Vorherige Projektaufnahme und Vorschau
 
 - Projektregeln, Dokumentation und relevante Implementierung eingelesen; GitHub-Stand mit `git fetch origin` aktualisiert. Der Themenbranch war vollständig synchronisiert und das Arbeitsverzeichnis sauber.
 - Auf Gabriels Wunsch die lokale Vorschau mit `npm run dev` gestartet und im Browser geöffnet. Dabei wurden 18 Seiten erfolgreich erstellt; die Startseite antwortete mit HTTP 200.
@@ -79,31 +85,31 @@ Empfohlener Ablauf aus dem Gespräch, noch als Konzept:
 - Berater und Chatbot liefern denselben bearbeitbaren Projektentwurf: Wohnsituation, ausdrücklich genannte Wünsche, mögliche Ansätze und offene Fragen.
 - Am Ergebnis sowohl „Zusammenfassung kopieren“ als auch „In Projektplaner übernehmen“ anbieten. Kunden prüfen die Angaben; vorhandene Antworten werden vorausgefüllt.
 
-Die Richtung „erst Inspiration und kurzer Berater, später echter Chatbot“ wurde empfohlen. Die konkrete Ausgestaltung ist noch offen. Es wurden weder neue Inspirationsbilder noch Quiz, Chatbot oder automatische Übergabe implementiert.
+Die Richtung „erst Inspiration und kurzer Berater, später echter Chatbot“ wurde empfohlen. Die konkrete Ausgestaltung ist inzwischen als Vorschlag in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) ausgearbeitet. Es wurden weder neue Inspirationsbilder noch Quiz, Chatbot oder automatische Übergabe implementiert.
 
 ## Übergabe für die nächste Sitzung
 
-1. An Gabriels letztem Feedback zur Inspiration anknüpfen und den Seitenaufbau mit eigenständigen Alltagssituationen konkretisieren.
-2. Fragen und Ergebnislogik für den kleinen Berater sowie den gemeinsamen Projektentwurf ausarbeiten. Grundlage sind die vorhandenen Felder `building`, `topics`, `timeline`, `location` und `wishes`.
-3. Die Übergabe in den Projektplaner mit einer sichtbaren Prüfung der Angaben vorsehen. Das Verhalten bei Seitenwechsel und Neuladen festlegen; derzeit wird nichts dauerhaft im Browser gespeichert.
-4. Danach die lokale Inspirationsseite, neue Bildmotive und den Berater umsetzen. Den echten KI-Dienst erst in einer späteren Ausbaustufe anbinden.
+1. Den ausgearbeiteten Vorschlag in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) als Grundlage für die nächste lokale Umsetzung verwenden. Geschichten, Fragen, Ergebnisregeln und Entwurfsformat sind dort konkret beschrieben.
+2. Den Planer als wiederverwendbaren Abschnitt vorbereiten und die sichtbare Prüfung übernommener Angaben umsetzen. Grundlage bleiben die Felder `building`, `topics`, `timeline`, `location` und `wishes`.
+3. Neue Inspirationsbilder, Berater und Ergebnisansicht ergänzen. Die vorgeschlagene Übernahme erfolgt auf derselben Seite ohne Browser-Speicher; Neuladen und Verlassen setzen Angaben zurück.
+4. Bestehende Planerfunktionen und die neuen Abläufe im Browser prüfen. Den echten KI-Dienst erst in einer späteren Ausbaustufe anbinden.
 
 Einstieg im Code: `src/pages.mjs` (`inspirationPage` und `plannerPage`), `src/content.mjs` (Inhalte und Bildmotive) sowie `public/assets/app.js` (Formular und Zusammenfassung).
 
 ## Sicherungsstand zum Sitzungsende
 
-Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Das Konzept für den Inspirationsberater und die vorherige Übergabe sind mit Commit `1315401` gesichert. Der aktuelle Sitzungsabschluss ergänzt ausschließlich die Dokumentation der erneuten Projektaufnahme und Vorschau. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
+Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Das frühere Konzept und die Übergabe sind mit Commit `1315401`, die erneute Projektaufnahme mit Commit `b73bed2` gesichert. Der davon abgeleitete Branch `docs/inspirationsberater-konzept` ergänzt die konkrete Ausgestaltung ausschließlich als Dokumentation. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
 
 Die sechs Browserprüfungen wurden während der Umsetzung erfolgreich ausgeführt. Nach der letzten Bildänderung wurden Build und alle 468 internen Verweise sowie Bildzuordnung und Darstellung im Browser geprüft. Für den reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
 
-Die lokale Vorschau wurde zum Sitzungsende beendet. Beim Wiedereinstieg mit `npm run dev` starten; anschließend ist sie unter `http://localhost:4173` erreichbar.
+Die lokale Vorschau wurde bei der aktuellen Projektaufnahme auf Gabriels Wunsch erneut gestartet und geöffnet. Sie ist unter `http://localhost:4173` erreichbar, solange der Vorschau-Server läuft. Bei Bedarf mit `npm run dev` neu starten.
 
 ## Git und Freigabegrenzen
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Der erste Entwurf wird auf `feat/erster-website-entwurf` gesichert. Keine Website-Veröffentlichung und keine kostenpflichtigen Dienste beauftragt. Innerhalb der lokalen Umsetzung routinemäßig selbstständig arbeiten.
+Der erste Website-Entwurf liegt auf `feat/erster-website-entwurf`. Die anschließende Konzeptausarbeitung liegt auf `docs/inspirationsberater-konzept`. Keine Website-Veröffentlichung und keine kostenpflichtigen Dienste beauftragt. Innerhalb der lokalen Umsetzung routinemäßig selbstständig arbeiten.
 
 ## Nächster gemeinsamer Schritt
 
-Die Inspirationsseite mit eigenständigen Bildmotiven und einem kurzen Berater konkretisieren. Wünsche und Ergebnisse so strukturieren, dass später derselbe Entwurf aus dem Chatbot in den Projektplaner übernommen werden kann. Die konkrete Wahl eines KI-Anbieters ist dafür noch nicht erforderlich.
+Die konkrete Ausgestaltung ist in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) ausgearbeitet. Als nächster Schritt ist die lokale Umsetzung der neuen Geschichten, des Beraters und der bearbeitbaren Übernahme vorgesehen. Der Planer soll dafür als gemeinsamer Abschnitt wiederverwendbar werden. Die konkrete Wahl eines KI-Anbieters ist nicht erforderlich. Die Umsetzung dieses Vorschlags ist noch nicht erfolgt.
