@@ -161,5 +161,9 @@ test("Inhalte und Antworten bleiben auch ohne JavaScript erreichbar", async ({
       exact: false,
     }),
   ).toBeVisible();
+  await page.goto("http://127.0.0.1:4173/inspiration/");
+  await expect(page.getByText("Den Weg finden.", { exact: false })).toBeVisible();
+  await expect(page.locator("[data-advisor-fallback]")).toBeVisible();
+  await expect(page.locator("#advisor-form")).toBeHidden();
   await context.close();
 });

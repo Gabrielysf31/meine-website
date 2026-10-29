@@ -6,6 +6,10 @@ Die Bilder werden lokal ausgeliefert und sind auf den Seiten als Beispiele geken
 
 Sechs Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: eingeschaltete Wohnraumbeleuchtung, Außenjalousien mit Fernbedienung, Elektroinstallation im Neubau, Modernisierung im Bestand, Photovoltaik mit Wallbox sowie Laden am eigenen Carport. Die Dateien liegen unter `public/assets/` und sind auf der Website als KI-Visualisierungen gekennzeichnet. Dateipfade und vollständige Prompts stehen in [BILDPROMPTS.md](BILDPROMPTS.md).
 
+## Eigene Inspirationsmotive
+
+Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: nächtliches Orientierungslicht, Schlafzimmer im Morgenlicht, Arbeits- und Leseecke sowie ein Energieüberblick im Hauswirtschaftsraum. Sie liegen als `public/assets/inspiration-*.jpg` vor. Alle Dateipfade und Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Insgesamt verwendet der Entwurf damit zehn gekennzeichnete KI-Visualisierungen.
+
 ## Wohnraumfotos
 
 | Lokale Datei                      | Originalquelle                                               |

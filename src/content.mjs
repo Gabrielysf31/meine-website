@@ -5,6 +5,30 @@ export const site = {
 };
 
 export const visuals = {
+  orientation: {
+    src: "/assets/inspiration-nachtlicht.jpg",
+    alt: "Wohnungsflur bei Nacht mit dezenten bodennahen Orientierungsleuchten",
+    caption: "Orientierungslicht im Alltag · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
+  morning: {
+    src: "/assets/inspiration-morgen.jpg",
+    alt: "Schlafzimmer im Morgenlicht mit teilweise geöffneten Außenjalousien und Wandtaster",
+    caption: "Ein leichterer Start in den Tag · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
+  workspace: {
+    src: "/assets/inspiration-arbeitsplatz.jpg",
+    alt: "Arbeitsecke und Lesesessel in einem Wohnraum mit getrennten Lichtbereichen",
+    caption: "Ein Raum mit mehreren Lichtbereichen · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
+  energyOverview: {
+    src: "/assets/inspiration-energie.jpg",
+    alt: "Hauswirtschaftsraum mit geschlossener Elektroverteilung, Wechselrichter und schlichtem Energiesymbol",
+    caption: "Energie im Zuhause überblicken · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
   installation: {
     src: "/assets/neubau-elektrik.jpg",
     alt: "Elektroinstallation im Rohbau mit Leitungswegen und vorbereiteten Gerätedosen",

@@ -1,3 +1,6 @@
+import { initProjectPlanner } from "./planner.js";
+import { initAdvisor } from "./advisor.js";
+
 document.documentElement.classList.add("js");
 
 const menuButton = document.querySelector(".menu-toggle");
@@ -98,111 +101,15 @@ if (sceneData) {
   }
 }
 
-const projectForm = document.querySelector("#project-form");
-if (projectForm) {
-  document.querySelector("[data-planner-fallback]").hidden = true;
-  projectForm.hidden = false;
-  let step = 0;
-  let summaryText = "";
-  const stepPanels = [...projectForm.querySelectorAll("[data-step]")];
-  const nextButton = document.querySelector("#next-step");
-  const previousButton = document.querySelector("#previous-step");
-  const error = document.querySelector("#form-error");
-
-  function buildSummary() {
-    const data = new FormData(projectForm);
-    const rows = [
-      ["Dein Zuhause", data.get("building")],
-      ["Deine Themen", data.getAll("topics").join(", ")],
-      ["Zeitraum", data.get("timeline")],
-      ["Ort / Postleitzahl", data.get("location").trim() || "Noch offen"],
-      [
-        "Deine Wünsche",
-        data.get("wishes").trim() || "Noch keine weiteren Angaben",
-      ],
-    ];
-    const summary = document.querySelector("#project-summary");
-    summary.replaceChildren();
-    for (const [label, value] of rows) {
-      const row = document.createElement("div");
-      const term = document.createElement("dt");
-      const definition = document.createElement("dd");
-      term.textContent = label;
-      definition.textContent = value;
-      row.append(term, definition);
-      summary.append(row);
-    }
-    summaryText =
-      "MEINE PROJEKTIDEE\n\n" +
-      rows.map(([label, value]) => `${label}\n${value}`).join("\n\n") +
-      "\n\nPrivater Website-Entwurf. Nicht versendet; kein Auftrag.\n";
-    document.querySelector("#copy-status").textContent = "";
+const planner = initProjectPlanner(document.querySelector("#project-form"));
+const advisor = initAdvisor(planner);
+window.addEventListener("pagehide", () => {
+  planner?.reset();
+  advisor?.reset();
+});
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    planner?.reset();
+    advisor?.reset();
   }
-
-  function showStep(target) {
-    step = target;
-    error.hidden = true;
-    stepPanels.forEach((panel, index) => {
-      panel.hidden = index !== step;
-    });
-    document.querySelectorAll("[data-progress]").forEach((item, index) => {
-      if (index === step) item.setAttribute("aria-current", "step");
-      else item.removeAttribute("aria-current");
-    });
-    document.querySelector("[data-step-label]").textContent =
-      `SCHRITT 0${step + 1} VON 03`;
-    previousButton.hidden = step === 0;
-    nextButton.hidden = step === 2;
-    nextButton.firstChild.textContent =
-      step === 1 ? "Zusammenfassung ansehen" : "Weiter";
-    if (step === 2) buildSummary();
-    stepPanels[step].querySelector("h2").focus();
-  }
-
-  projectForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (step === 0) {
-      const building = projectForm.querySelector('[name="building"]:checked');
-      const topics = projectForm.querySelector('[name="topics"]:checked');
-      if (!building || !topics) {
-        error.textContent = !building
-          ? "Bitte wähle zuerst aus, um welche Art von Zuhause es geht."
-          : "Bitte wähle mindestens ein Thema für dein Vorhaben aus.";
-        error.hidden = false;
-        const firstField = projectForm.querySelector(
-          !building ? '[name="building"]' : '[name="topics"]',
-        );
-        firstField.focus();
-        return;
-      }
-    }
-    if (step < 2) showStep(step + 1);
-  });
-  previousButton.addEventListener("click", () =>
-    showStep(Math.max(0, step - 1)),
-  );
-  document
-    .querySelector("#copy-summary")
-    .addEventListener("click", async () => {
-      const status = document.querySelector("#copy-status");
-      try {
-        await navigator.clipboard.writeText(summaryText);
-        status.textContent = "Deine Zusammenfassung wurde kopiert.";
-      } catch {
-        status.textContent =
-          "Kopieren ist hier nicht verfügbar. Du kannst die Zusammenfassung als Textdatei speichern.";
-      }
-    });
-  document.querySelector("#download-summary").addEventListener("click", () => {
-    const url = URL.createObjectURL(
-      new Blob([summaryText], { type: "text/plain;charset=utf-8" }),
-    );
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "meine-projektidee.txt";
-    document.body.append(link);
-    link.click();
-    link.remove();
-    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-  });
-}
+});

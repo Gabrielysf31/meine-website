@@ -1,115 +1,83 @@
 # Projektstand
 
-Stand: 29.10.2026 · Inspirationsberater konkretisiert
+Stand: 29.10.2026 · Inspirationsseite und Berater lokal umgesetzt
 
-## Letzte Sitzung
+## Aktueller Stand
 
-- Bei der Fortsetzung die vereinbarte nächste Ausbaustufe konkretisiert: [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) enthält vier eigenständige Bildgeschichten, fünf Fragen, feste Ergebnisregeln, ein durchgespieltes Beispiel und das gemeinsame Entwurfsformat für Berater und späteren Chatbot.
-- Für die Übernahme ist ein direkt auf der Inspirationsseite geöffneter, wiederverwendbarer Planer vorgeschlagen. So sind keine Browser-Speicherung und keine Übertragung von Angaben in der URL nötig. Angaben bleiben bearbeitbar; ein bestehender Entwurf wird erst nach sichtbarer Auswahl ersetzt.
-- Diese Konkretisierung ist Dokumentation, noch keine Erweiterung der Website. Die nächste Arbeit ist die lokale Umsetzung auf Grundlage dieses Vorschlags. Neue Bilder und echte KI sind weiterhin nicht eingebunden.
+- Die Inspirationsseite zeigt vier eigene Alltagssituationen mit neuen, gekennzeichneten KI-Motiven: nächtliches Orientierungslicht, Morgenroutine mit Jalousien, Arbeits- und Wohnlicht sowie Energieüberblick. Die bisherigen Bilder auf den Leistungsseiten bleiben erhalten.
+- Ein kurzer Berater stellt fünf Fragen zu Zuhause, Vorhaben, Wünschen, Bedienung und Priorität. Bis zu drei konkrete Wünsche oder „Noch offen“ sind auswählbar. Rücknavigation erhält die Antworten.
+- Das Ergebnis zeigt die eigenen Antworten, ein bis drei begründete Ansätze und offene Fragen. Bei offenen Wünschen erscheinen zwei Anregungen, ohne zusätzliche Themen zu unterstellen.
+- „Zusammenfassung kopieren“ bietet bei fehlendem Zwischenablagezugriff einen markierbaren Text. „In Projektplaner übernehmen“ öffnet den gemeinsamen Planer direkt unter dem Ergebnis.
+- Übernommene Angaben bleiben bearbeitbar. Vor dem Ersetzen eines bestehenden Entwurfs werden alte und neue Angaben verglichen. „Neu beginnen“ setzt den Berater zurück und erhält den bereits bearbeiteten Planer.
+- Angaben bleiben im Arbeitsspeicher der aktuellen Seite. Kein Versand, kein Browser-Speicher und keine Angaben in URLs. Neuladen und Verlassen setzen die Eingaben zurück, auch bei Rückkehr über die Browsernavigation.
+- Die normale Planerseite unter `/anfrage/` bleibt erhalten. Kopie und Textdateiexport funktionieren weiterhin.
 
-### Vorherige Projektaufnahme und Vorschau
-
-- Projektregeln, Dokumentation und relevante Implementierung eingelesen; GitHub-Stand mit `git fetch origin` aktualisiert. Der Themenbranch war vollständig synchronisiert und das Arbeitsverzeichnis sauber.
-- Auf Gabriels Wunsch die lokale Vorschau mit `npm run dev` gestartet und im Browser geöffnet. Dabei wurden 18 Seiten erfolgreich erstellt; die Startseite antwortete mit HTTP 200.
-- Keine Änderungen an Website-Funktionen, Inhalten oder Gestaltung. Inspirationsberater und Übergabe in den Projektplaner bleiben beim bisherigen Konzeptstand.
-- Keine erneuten Browserprüfungen oder Verweisprüfungen ausgeführt. Die unten aufgeführten umfassenderen Prüfungen stammen aus der vorherigen Umsetzung.
-- Zum Abschluss den lokalen Vorschau-Server beendet. Die nächste Sitzung knüpft weiterhin an die Inspirationsseite und den kurzen Berater an.
-
-## Vereinbarte Richtung
+## Vereinbarte Richtung und Grenzen
 
 Gabriel plant einen möglichen späteren Betrieb für Elektrotechnik und intelligente Gebäude. Primäre Zielgruppe sind Privatkunden mit Wohnungen und Eigenheimen; Gewerbe ist eine mögliche spätere Erweiterung.
 
 Die Website soll modern, schlicht und mehrseitig sein. Kurze Texte, verständliche Sprache und leicht erreichbare Details haben Vorrang. Später sind ein KI-Assistent und Agentenfunktionen vorgesehen.
 
-Ein Meisterabschluss ist bisher eine Zukunftsüberlegung. Keine abgeschlossene Qualifikation, realisierte Kundenprojekte, Kontaktdaten oder betrieblichen Angaben erfinden.
+Ein Meisterabschluss ist bisher eine Zukunftsüberlegung. Keine abgeschlossene Qualifikation, realisierten Kundenprojekte, Kontaktdaten oder betrieblichen Angaben erfinden. Firmenname, Einsatzgebiet und tatsächlicher späterer Leistungsumfang sind noch offen.
 
-## Umgesetzt
+Die Website bleibt ein lokaler privater Entwurf. Veröffentlichung, kostenpflichtige Dienste und echter Anfrageversand sind nicht beauftragt. Es gibt kein Backend, keine Analysewerkzeuge und keine aktive KI-Anbindung.
 
-- Lokaler statischer Entwurf mit 17 Inhaltsseiten und einer Fehlerseite.
-- Helle Flächen, Petrol, zurückhaltende Akzente und lokale Wohnraumbilder, ergänzt um sechs gekennzeichnete KI-Visualisierungen mit sichtbarer Elektrotechnik.
-- Sechs Leistungsbereiche: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden. Alle haben eine eigene bebilderte Unterseite und sind im Projektplaner auswählbar.
-- Jeder Leistungsbereich hat ein eigenes Bildmotiv. Modernisierung zeigt einen erneuerten Altbauwohnraum; Energie und Laden zeigt eine Wallbox am privaten Carport mit angeschlossenem Elektroauto. Neubau und Photovoltaik behalten die zuvor abgestimmten Motive.
-- Inspiration zeigt Beleuchtung am Abend, Außenjalousien mit Fernsteuerung, Neubauinstallation und Photovoltaik mit Wallbox.
-- Die großen wiederholten Abschlussblöcke mit Projektaufruf wurden entfernt. Der Einstieg bleibt oben rechts und im Startseiten-Hero; die Kontaktseite behält ihren direkten Planerzugang.
-- Auf Mobilgeräten ist der Assistenteneinstieg auf ein kleines, zugänglich beschriftetes Symbol reduziert, damit er weniger Inhalt verdeckt.
-- Zentrale Inhalte, gemeinsame Navigation und wiederverwendbarer Seitenrahmen.
-- Mobile Navigation mit Tastaturbedienung, aufklappbare Antworten und Suche mit zusätzlichen Suchbegriffen.
-- Interaktive Smart-Home-Beispiele ohne Geräteanbindung.
-- Projektplaner mit Validierung, Bearbeitung, Textkopie und Dateiexport.
-- Assistenten-Dialog mit ehrlicher Vorschau und Links zu bestehenden Funktionen.
-- Inhalte ohne JavaScript erreichbar; im Planer erscheint dann ein erklärender Hinweis.
-- Keine KI-Anfragen, keine Formularübermittlung, kein Browser-Speicher und keine externen Dienste im Seitenbetrieb.
+## Übrige Umsetzung
 
-## Technische Entscheidung
+- 17 Inhaltsseiten und eine Fehlerseite, helle Gestaltung mit Petrol und lokal ausgelieferten Bildern, Schriften und Skripten.
+- Sechs Leistungsbereiche mit eigenen Unterseiten und Motiven: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
+- Mobile Navigation mit Tastaturbedienung, drei interaktive Smart-Home-Situationen und durchsuchbare häufige Fragen.
+- Über mich, Kontakt, Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise.
+- Assistenteneinstieg als ausdrücklich gekennzeichnete Vorschau, auf Mobilgeräten als kleines Symbol.
+- Keine großen wiederkehrenden Abschlussblöcke mit Projektaufruf. Planerzugänge oben rechts, auf der Startseite und auf der Kontaktseite bleiben erhalten. Auf der Inspirationsseite ist die Übernahme Bestandteil des Beraterergebnisses.
+- Alle zehn KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
 
-Statisches HTML aus gemeinsamen JavaScript-Vorlagen, CSS und ergänzendes Browser-JavaScript. Node.js wird für Build und lokale Vorschau verwendet. Für den Entwurf sind weder Datenbank noch Framework oder kostenpflichtiger Dienst erforderlich. Playwright ist ausschließlich eine Entwicklungsabhängigkeit für Browserprüfungen.
+## Technischer Einstieg
+
+Statisches HTML aus JavaScript-Vorlagen, CSS und ergänzende Browsermodule. Node.js dient für Build und Vorschau; Playwright ist eine Entwicklungsabhängigkeit.
+
+- `src/inspiration.mjs`: Geschichten, fünf Fragen und Ergebnisrahmen.
+- `src/planner.mjs`: gemeinsamer Planerabschnitt für Inspiration und `/anfrage/`.
+- `public/assets/project-draft.js`: Fragen, Themenzuordnung, feste Ergebnisregeln, Entwurfsformat Version 1 und Validierung. Wünsche, mögliche Ansätze und offene Fragen bleiben getrennt.
+- `public/assets/advisor.js`: Berater, Ergebnisse, Kopie und kontrollierte Übernahme.
+- `public/assets/planner.js`: Planer, Bearbeitung, Zusammenfassung und Export.
+- `public/assets/app.js`: übrige Websitefunktionen und Zurücksetzen beim Verlassen beziehungsweise Wiederherstellen einer Seite.
+- `src/content.mjs`: Leistungsinhalte und Bilddefinitionen.
+
+Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md). Die vier neuen Bilder mit Dateipfaden und vollständigen Prompts sind in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md) dokumentiert. Die Originale bleiben im Imagegen-Ausgabeordner; die Website verwendet lokale JPEG-Dateien.
 
 ## Geprüft
 
-- Build und interne Verweise: 18 Seiten, 468 interne Verweise.
-- Sechs Browserprüfungen in Google Chrome bestanden.
-- Formular: notwendige Auswahl, Rücknavigation, sichere Darstellung von Freitext, Dateiexport und Zurücksetzen beim Neuladen. Neubau und Photovoltaik erscheinen korrekt in der Zusammenfassung.
-- Mobile Navigation und alle Seiten bei 375 Pixeln Breite ohne horizontales Überlaufen.
-- Startseite, Inspiration und ergänzende Leistungsansichten auf Desktop beziehungsweise Mobil visuell geprüft; Ansichten liegen unter `docs/vorschau/`.
-- Die neuen Motive für Modernisierung und Energie sind in Übersicht und Unterseiten geladen und geprüft. Die Leistungsübersicht wurde zusätzlich bei 390 Pixeln Breite kontrolliert; der Ausschnitt des Wallboxbilds hält das Gerät im Blick.
-
-## Inhaltliche Orientierung für diese Überarbeitung
-
-- [KNX Planning Guide: Anwendungen](https://planning.knx.org/submit/step7) als Grundlage für die kurzen Hinweise zu Beleuchtung und Beschattung.
-- [KNX: Home Shading](https://www.knx.org/news/home-shading-benefits-jalousie) für den Zusammenhang zwischen Außenjalousien und Gebäudesteuerung.
-- [VDE: Prüfung von Photovoltaik- und Speicheranlagen](https://www.vde-verlag.de/p/fachwissen/pruefung-von-photovoltaik-und-speicheranlagen/316493) zur Einordnung von Prüfung und Dokumentation.
-
-Der Solarbereich beschreibt Anschluss, Inbetriebnahme, Prüfung sowie Übergabe und Abnahmevorbereitung als vorgesehene Themen. Eine pauschale Zusage, beliebige Fremdanlagen abzunehmen, wird daraus nicht abgeleitet. Die Bilder dienen als Visualisierungen und weisen keine konkrete KNX-Produktkompatibilität nach.
-
-## Noch offen
-
-1. Inspiration nach Gabriels letztem Feedback weiterentwickeln: eigene Bildmotive und ein neuer Nutzen gegenüber den Leistungsseiten.
-2. Firmenname, Einsatzgebiet und tatsächlicher späterer Leistungsumfang.
-3. Eigene Bilder, Profilinformationen und später echte Referenzen.
-4. Vor einem Betriebsstart: konkrete Kontaktmöglichkeiten, vollständige betriebliche und rechtliche Angaben.
-5. Später: geprüfte Wissensgrundlage, serverseitige KI-Anbindung und tatsächlicher Anfrageversand.
-
-## Letztes Feedback und besprochene nächste Ausbaustufe
-
-Gabriel findet den bisherigen Entwurf und die überarbeiteten Leistungsbilder gut. Die Wiederholung der Leistungsbilder auf der Inspirationsseite gefällt ihm jedoch nicht: Wer sich durch die Website bewegt, soll dort neue Anregungen bekommen. Die zuletzt besprochene Weiterentwicklung wurde noch nicht umgesetzt.
-
-Gabriel erwägt einen kurzen Quiz-Berater, der Besuchern Möglichkeiten zeigt und hilft, passende Ansätze für die eigene Wohnsituation zu finden. Er fragt ausdrücklich nach dem Zusammenspiel mit einem späteren Chatbot. Seine Idee: Kunden erklären Wünsche und Bedürfnisse frei; der Chatbot fragt nach und erstellt eine Zusammenfassung, die in den Projektplaner übernommen werden kann.
-
-Empfohlener Ablauf aus dem Gespräch, noch als Konzept:
-
-- Inspiration bekommt eigene Bilder und konkrete Alltagssituationen statt einer weiteren Leistungsübersicht.
-- Ein kurzer Berater mit ungefähr fünf Fragen grenzt Wohnsituation, Bau- oder Nachrüstvorhaben, gewünschte Verbesserungen, Bedienung und Prioritäten ein.
-- Das Ergebnis zeigt zwei oder drei passende Ansätze mit Begründung und offenen Punkten. Zunächst Funktionen und Lösungsarten erklären; konkrete Produktinformationen bei Bedarf mit Quellen und Aktualisierungsdatum pflegen.
-- Der spätere Chatbot vertieft freie Wünsche, erklärt Begriffe und fragt gezielt nach.
-- Berater und Chatbot liefern denselben bearbeitbaren Projektentwurf: Wohnsituation, ausdrücklich genannte Wünsche, mögliche Ansätze und offene Fragen.
-- Am Ergebnis sowohl „Zusammenfassung kopieren“ als auch „In Projektplaner übernehmen“ anbieten. Kunden prüfen die Angaben; vorhandene Antworten werden vorausgefüllt.
-
-Die Richtung „erst Inspiration und kurzer Berater, später echter Chatbot“ wurde empfohlen. Die konkrete Ausgestaltung ist inzwischen als Vorschlag in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) ausgearbeitet. Es wurden weder neue Inspirationsbilder noch Quiz, Chatbot oder automatische Übergabe implementiert.
-
-## Übergabe für die nächste Sitzung
-
-1. Den ausgearbeiteten Vorschlag in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) als Grundlage für die nächste lokale Umsetzung verwenden. Geschichten, Fragen, Ergebnisregeln und Entwurfsformat sind dort konkret beschrieben.
-2. Den Planer als wiederverwendbaren Abschnitt vorbereiten und die sichtbare Prüfung übernommener Angaben umsetzen. Grundlage bleiben die Felder `building`, `topics`, `timeline`, `location` und `wishes`.
-3. Neue Inspirationsbilder, Berater und Ergebnisansicht ergänzen. Die vorgeschlagene Übernahme erfolgt auf derselben Seite ohne Browser-Speicher; Neuladen und Verlassen setzen Angaben zurück.
-4. Bestehende Planerfunktionen und die neuen Abläufe im Browser prüfen. Den echten KI-Dienst erst in einer späteren Ausbaustufe anbinden.
-
-Einstieg im Code: `src/pages.mjs` (`inspirationPage` und `plannerPage`), `src/content.mjs` (Inhalte und Bildmotive) sowie `public/assets/app.js` (Formular und Zusammenfassung).
-
-## Sicherungsstand zum Sitzungsende
-
-Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Das frühere Konzept und die Übergabe sind mit Commit `1315401`, die erneute Projektaufnahme mit Commit `b73bed2` gesichert. Der davon abgeleitete Branch `docs/inspirationsberater-konzept` ergänzt die konkrete Ausgestaltung ausschließlich als Dokumentation. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
-
-Die sechs Browserprüfungen wurden während der Umsetzung erfolgreich ausgeführt. Nach der letzten Bildänderung wurden Build und alle 468 internen Verweise sowie Bildzuordnung und Darstellung im Browser geprüft. Für den reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
-
-Die lokale Vorschau wurde bei der aktuellen Projektaufnahme auf Gabriels Wunsch erneut gestartet und geöffnet. Sie ist unter `http://localhost:4173` erreichbar, solange der Vorschau-Server läuft. Bei Bedarf mit `npm run dev` neu starten.
-
-## Git und Freigabegrenzen
-
-Privates Repository: https://github.com/Gabrielysf31/meine-website
-
-Der erste Website-Entwurf liegt auf `feat/erster-website-entwurf`. Die anschließende Konzeptausarbeitung liegt auf `docs/inspirationsberater-konzept`. Keine Website-Veröffentlichung und keine kostenpflichtigen Dienste beauftragt. Innerhalb der lokalen Umsetzung routinemäßig selbstständig arbeiten.
+- Build und Verweise: 18 Seiten, 465 interne Verweise.
+- Alle zehn Playwright-Prüfungen bestanden: neun Browserabläufe und eine Prüfung des gemeinsamen Entwurfsformats.
+- Berater: Pflichtantworten, maximal drei Wünsche, ausschließliche Wahl „Noch offen“, Rücknavigation und passende Ergebnisanzahl.
+- Übernahme: richtige Themen, bearbeitbare Angaben, alte und neue Entwürfe vergleichen, Behalten und Ersetzen sowie Erhalt des Planers beim Neustart des Beraters.
+- Kein automatisches Vorauswählen von Photovoltaik allein aufgrund der gemeinsamen Antwort zu Verbrauch und Solarstrom. Bei offenen Wünschen bleiben Themen offen, bis der Besucher selbst auswählt.
+- Bestehender Planer mit Validierung, sicherer Freitextdarstellung, Rücknavigation und Textdateiexport. Beraterkopie mit Fehlerfall und manueller Alternative.
+- Keine Datenanfragen während der geprüften Eingaben, kein Browser-Speicher und keine Angaben in URL-Parametern. Rücksetzen nach Neuladen und nach Verlassen/Rückkehr geprüft.
+- Alle Seiten bei 375 Pixeln Breite ohne horizontales Überlaufen. Geschichten und erklärender Hinweis bei deaktiviertem JavaScript erreichbar.
+- Inspiration, Ergebnis und geöffneter Planer auf Desktop (1440 Pixel) und Mobil (375 Pixel) visuell geprüft. Sechs aktuelle Ansichten liegen unter `docs/vorschau/`.
 
 ## Nächster gemeinsamer Schritt
 
-Die konkrete Ausgestaltung ist in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md) ausgearbeitet. Als nächster Schritt ist die lokale Umsetzung der neuen Geschichten, des Beraters und der bearbeitbaren Übernahme vorgesehen. Der Planer soll dafür als gemeinsamer Abschnitt wiederverwendbar werden. Die konkrete Wahl eines KI-Anbieters ist nicht erforderlich. Die Umsetzung dieses Vorschlags ist noch nicht erfolgt.
+Die lokale Inspirationsseite und einen vollständigen Beraterdurchlauf mit Gabriel ansehen. Bildmotive, Texte, Fragen und Ergebnislänge anhand seines Feedbacks verfeinern.
+
+Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
+
+Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte Profilinformationen und Kontaktangaben offen. Vor einer KI-Anbindung braucht es eine geprüfte Wissensgrundlage und eine gesonderte serverseitige Umsetzung. Der gemeinsame Projektentwurf ist dafür vorbereitet; ein konkreter KI-Anbieter ist noch nicht gewählt.
+
+## Git und Vorschau
+
+Privates Repository: https://github.com/Gabrielysf31/meine-website
+
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Die aktuelle Umsetzung liegt auf dem davon abgeleiteten Themenbranch `feat/inspiration-berater`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+
+Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
+
+## Bisherige fachliche Orientierung
+
+- [KNX Planning Guide: Anwendungen](https://planning.knx.org/submit/step7) für Beleuchtung und Beschattung.
+- [KNX: Home Shading](https://www.knx.org/news/home-shading-benefits-jalousie) für Außenjalousien und Gebäudesteuerung.
+- [VDE: Prüfung von Photovoltaik- und Speicheranlagen](https://www.vde-verlag.de/p/fachwissen/pruefung-von-photovoltaik-und-speicheranlagen/316493) zur Einordnung von Prüfung und Dokumentation.
+
+Der Solarbereich beschreibt Anschluss, Inbetriebnahme, Prüfung sowie Übergabe und Abnahmevorbereitung als vorgesehene Themen. Eine pauschale Zusage zur Abnahme beliebiger Fremdanlagen wird daraus nicht abgeleitet.

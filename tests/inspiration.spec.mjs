@@ -1,0 +1,142 @@
+import { test, expect } from "@playwright/test";
+import { readFile } from "node:fs/promises";
+import { createDraft, validateDraft, plannerWishes, topics } from "../public/assets/project-draft.js";
+import { services } from "../src/content.mjs";
+
+async function completeAdvisor(page, { project = "Einzelne Funktionen ergänzen", goals = ["Passendes Licht", "Weniger Handgriffe bei Licht und Beschattung"] } = {}) {
+  const form = page.locator("#advisor-form");
+  await form.getByRole("radio", { name: "Eigenheim", exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: project, exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  while (await form.locator('[name="goals"]:checked').count()) await form.locator('[name="goals"]:checked').first().uncheck();
+  for (const goal of goals) await form.getByRole("checkbox", { name: goal, exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: "Taster und passende automatische Abläufe", exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: "Einfach anfangen", exact: true }).check();
+  await form.getByRole("button", { name: "Meine Ansätze ansehen" }).click();
+}
+
+test("Entwurfsformat trennt Wünsche von Vorschlägen und übernimmt nur passende Themen", () => {
+  expect(Object.values(topics).sort()).toEqual(services.map((s) => s.label).sort());
+  const base = { building: "Eigenheim", project: "extend", goals: ["light", "smart"], controls: "auto", priority: "small" };
+  const draft = createDraft(base);
+  expect(draft.topics).toEqual([topics.light, topics.smart]);
+  expect(draft.wishes).toEqual(["Passendes Licht", "Weniger Handgriffe bei Licht und Beschattung"]);
+  expect(plannerWishes(draft)).toContain("Mögliche Ansätze");
+  const energy = createDraft({ ...base, project: "new", goals: ["energy", "charging"] });
+  expect(energy.topics).toEqual([topics.new, topics.energy]);
+  expect(energy.topics).not.toContain(topics.solar);
+  const open = createDraft({ ...base, project: "explore", goals: ["open"] });
+  expect(open.topics).toEqual([]);
+  expect(open.approaches).toHaveLength(2);
+  expect(() => createDraft({ ...base, goals: ["open", "light"] })).toThrow();
+  expect(() => createDraft({ ...base, goals: ["light", "smart", "energy", "charging"] })).toThrow();
+  expect(() => validateDraft({ ...draft, version: 2 })).toThrow();
+  expect(() => validateDraft({ ...draft, topics: ["Erfunden"] })).toThrow();
+  expect(() => plannerWishes({ ...draft, openQuestions: Array(10).fill("x".repeat(300)) })).toThrow(/2.000/);
+});
+
+test("Berater validiert, begrenzt Wünsche und behält Antworten bei Rücknavigation", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto("/inspiration/");
+  const form = page.locator("#advisor-form");
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await expect(form.getByRole("alert")).toContainText("Antwort");
+  await form.getByRole("radio", { name: "Eigenheim", exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: "Einzelne Funktionen ergänzen" }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  for (const name of ["Passendes Licht", "Weniger Handgriffe bei Licht und Beschattung", "Verbrauch und eigenen Solarstrom besser überblicken"]) await form.getByRole("checkbox", { name, exact: true }).check();
+  await form.getByRole("checkbox", { name: "Zu Hause laden", exact: true }).click();
+  await expect(form.locator('[name="goals"]:checked')).toHaveCount(3);
+  await expect(page.locator("#advisor-selection-status")).toContainText("bis zu drei");
+  await expect(form.getByRole("checkbox", { name: "Zu Hause laden", exact: true })).not.toBeChecked();
+  await form.getByRole("checkbox", { name: "Noch offen", exact: true }).check();
+  await expect(form.locator('[name="goals"]:checked')).toHaveCount(1);
+  await form.getByRole("checkbox", { name: "Passendes Licht", exact: true }).check();
+  await expect(form.getByRole("checkbox", { name: "Noch offen", exact: true })).not.toBeChecked();
+  await form.getByRole("button", { name: "Zurück", exact: true }).click();
+  await expect(form.getByRole("radio", { name: "Einzelne Funktionen ergänzen" })).toBeChecked();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await expect(form.getByRole("checkbox", { name: "Passendes Licht", exact: true })).toBeChecked();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: "Noch offen", exact: true }).check();
+  await form.getByRole("button", { name: "Weiter", exact: true }).click();
+  await form.getByRole("radio", { name: "Noch offen", exact: true }).check();
+  await form.getByRole("button", { name: "Meine Ansätze ansehen" }).click();
+  await expect(page.locator(".advisor-idea")).toHaveCount(1);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test("Übernahme bleibt bearbeitbar und ersetzt vorhandene Angaben erst nach Prüfung", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.goto("/inspiration/");
+  const outgoing = [];
+  page.on("request", (request) => {
+    if (request.method() !== "GET" || ["fetch", "xhr"].includes(request.resourceType()) || new URL(request.url()).origin !== new URL(page.url()).origin) outgoing.push(request.url());
+  });
+  await completeAdvisor(page);
+  await expect(page.locator(".advisor-idea")).toHaveCount(2);
+  await page.getByRole("button", { name: "In Projektplaner übernehmen" }).click();
+  const planner = page.locator("#project-form");
+  await expect(planner.getByRole("radio", { name: /^Eigenheim/ })).toBeChecked();
+  await expect(planner.getByRole("checkbox", { name: topics.light, exact: true })).toBeChecked();
+  await expect(planner.getByRole("checkbox", { name: topics.smart, exact: true })).toBeChecked();
+  await planner.getByRole("button", { name: "Weiter", exact: true }).click();
+  await expect(planner.getByLabel("Beschreibe kurz deine Wünsche")).toHaveValue(/Deine Auswahl[\s\S]*Mögliche Ansätze[\s\S]*Noch zu klären/);
+  await expect(planner.getByLabel("Ort oder Postleitzahl")).toHaveValue("");
+  const edited = "Meine eigene Ergänzung <script>alert(1)</script>";
+  await planner.getByLabel("Beschreibe kurz deine Wünsche").fill(edited);
+  await page.getByRole("button", { name: "Antworten ändern" }).click();
+  await completeAdvisor(page, { project: "Neu bauen", goals: ["Zu Hause laden"] });
+  await page.getByRole("button", { name: "In Projektplaner übernehmen" }).click();
+  await expect(page.locator("#replacement-current")).toContainText(edited);
+  await expect(page.locator("#replacement-current script")).toHaveCount(0);
+  await expect(page.locator("#replacement-new")).toContainText("Zu Hause laden");
+  await page.getByRole("button", { name: "Bisherigen Entwurf behalten" }).click();
+  await expect(planner.getByLabel("Beschreibe kurz deine Wünsche")).toHaveValue(edited);
+  await page.getByRole("button", { name: "In Projektplaner übernehmen" }).click();
+  await page.getByRole("button", { name: "Durch neue Antworten ersetzen" }).click();
+  await expect(planner.getByRole("checkbox", { name: topics.new, exact: true })).toBeChecked();
+  await expect(planner.getByRole("checkbox", { name: topics.energy, exact: true })).toBeChecked();
+  await expect(planner.getByRole("checkbox", { name: topics.light, exact: true })).not.toBeChecked();
+  await page.getByRole("button", { name: "Neu beginnen" }).click();
+  await expect(planner.getByRole("checkbox", { name: topics.new, exact: true })).toBeChecked();
+  await planner.getByRole("button", { name: "Weiter", exact: true }).click();
+  await planner.getByRole("button", { name: "Zusammenfassung ansehen" }).click();
+  const downloadEvent = page.waitForEvent("download");
+  await planner.getByRole("button", { name: "Als Textdatei speichern" }).click();
+  const download = await downloadEvent;
+  expect(await readFile(await download.path(), "utf8")).toContain("Zu Hause laden");
+  expect(outgoing).toEqual([]);
+  expect(await page.evaluate(() => localStorage.length + sessionStorage.length)).toBe(0);
+  expect(new URL(page.url()).search).toBe("");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.reload();
+  await expect(page.locator("#advisor-planner")).toBeHidden();
+  await expect(page.locator('#advisor-form input:checked')).toHaveCount(0);
+});
+
+test("Offene Wünsche bleiben offen und Kopierfehler bieten den Text zum Mitnehmen", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", { value: { writeText: async () => { throw new Error("Unavailable"); } }, configurable: true });
+  });
+  await page.goto("/inspiration/");
+  await completeAdvisor(page, { project: "Erst einmal Ideen sammeln", goals: ["Noch offen"] });
+  await expect(page.locator(".advisor-idea")).toHaveCount(2);
+  await page.getByRole("button", { name: "Zusammenfassung kopieren", exact: true }).click();
+  await expect(page.locator("#advisor-copy-text")).toBeVisible();
+  await expect(page.locator("#advisor-copy-text")).toHaveValue(/Wünsche noch offen/);
+  await page.getByRole("button", { name: "In Projektplaner übernehmen" }).click();
+  const planner = page.locator("#project-form");
+  await expect(planner.locator('[name="topics"]:checked')).toHaveCount(0);
+  await planner.getByRole("button", { name: "Weiter", exact: true }).click();
+  await expect(planner.getByRole("alert")).toContainText("mindestens ein Thema");
+  await page.goto("/wissen/");
+  await page.goBack();
+  await expect(page.locator("#advisor-result")).toBeHidden();
+  await expect(page.locator("#advisor-planner")).toBeHidden();
+  await expect(page.locator('#advisor-form input:checked')).toHaveCount(0);
+});

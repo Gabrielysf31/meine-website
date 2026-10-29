@@ -1,8 +1,8 @@
 # Inspiration und kurzer Berater
 
-Stand: 29.10.2026 · ausgearbeiteter Vorschlag für die nächste lokale Umsetzung
+Stand: 29.10.2026 · lokal umgesetzt und geprüft
 
-Dieser Entwurf konkretisiert die bisher besprochene Richtung. Bilder, Berater und Übergabe sind noch nicht implementiert. Er ergänzt keine betrieblichen Angaben und legt keinen KI-Anbieter fest.
+Die hier beschriebene Richtung ist mit vier eigenen Bildmotiven, fünf Fragen und der bearbeitbaren Übergabe lokal umgesetzt. Bilder und vollständige Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Die Ergebnisse enthalten je nach konkreter Auswahl ein bis drei Ansätze, bei offenen Wünschen zwei Anregungen. Der echte Chatbot ist noch nicht angebunden.
 
 ## Einstieg über den Alltag
 
@@ -106,6 +106,8 @@ Der spätere Chatbot kann den gleichen Entwurf und die gleiche Übernahmeprüfun
 
 ## Umsetzung und Prüfung
 
+Die folgenden Schritte sind umgesetzt. Build und 465 interne Verweise sind geprüft; alle zehn Playwright-Prüfungen bestanden. Desktop- und Mobilansichten einschließlich Ergebnis und geöffnetem Planer liegen unter `docs/vorschau/`. Der Einstieg im Code ist `src/inspiration.mjs`; `src/planner.mjs` liefert den gemeinsam genutzten Planer. Fragen und Entwurfsformat liegen in `public/assets/project-draft.js`, das Verhalten in `public/assets/advisor.js` und `public/assets/planner.js`.
+
 1. Gemeinsame Definition für Antworten, Entwurf und Zuordnung der bestehenden Themen anlegen. Planer als wiederverwendbaren Abschnitt aus `src/pages.mjs` lösen.
 2. Neue Geschichten und Bildmotive ergänzen. Den Berater direkt auf der Inspirationsseite umsetzen, einschließlich Tastaturbedienung, Fortschritt und verständlicher Validierung.
 3. Ergebnisse aus ausdrücklichen Antworten bilden. Kopie, bearbeitbare Übernahme und Schutz bestehender Planereingaben ergänzen.
@@ -113,3 +115,7 @@ Der spätere Chatbot kann den gleichen Entwurf und die gleiche Übernahmeprüfun
 5. Auf kleinen Bildschirmen Ergebnisse und geöffneten Planer prüfen. Sicherstellen, dass Eingaben keine Netzwerkanfragen auslösen, nicht in URLs auftauchen und nach Neuladen zurückgesetzt sind. Build und interne Verweise prüfen.
 
 Die Umsetzung bleibt lokal und verwendet zunächst feste Ergebnisregeln. Website-Veröffentlichung, kostenpflichtige Dienste und echte KI-Anbindung gehören nicht zu diesem Schritt.
+
+## Spätere Top-Fragen aus dem Chatbot
+
+Gabriels Ergänzung: Wiederkehrende Fragen aus der späteren Chatbot-Nutzung sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Wenn sich dabei zeigt, dass eine Angabe für die Beratung regelmäßig fehlt, wird auch der Fragenablauf gezielt angepasst. Die fünf Einstiegsfragen bleiben zunächst kurz; es werden keine angeblich häufigen Kundenfragen erfunden. Die spätere Auswertung und redaktionelle Übernahme sind noch nicht implementiert.
