@@ -1,0 +1,12 @@
+# Bildquellen
+
+Die Bilder werden lokal ausgeliefert und sind auf den Seiten als Beispiele gekennzeichnet. Sie zeigen keine Arbeiten von Gabriel.
+
+| Lokale Datei                      | Originalquelle                                               |
+| --------------------------------- | ------------------------------------------------------------ |
+| `public/assets/wohnraum.jpg`      | https://images.unsplash.com/photo-1600210492486-724fe5c67fb0 |
+| `public/assets/wohnen-detail.jpg` | https://images.unsplash.com/photo-1600607687920-4e2a09cf159d |
+
+Bezug am 29.10.2026 über Unsplash mit verkleinerten Bildabmessungen. Die Quellen sind zusätzlich auf der Website unter `/bildnachweise/` verlinkt. Unsplash-Lizenz: https://unsplash.com/license
+
+Logozeichen, Favicon und Funktionssymbole sind im Projekt als SVG umgesetzt. Die Schriftgestaltung verwendet lokal vorhandene Systemschriften.

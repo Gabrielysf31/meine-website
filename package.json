@@ -1,0 +1,20 @@
+{
+  "name": "meine-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lokaler Website-Entwurf für Elektrotechnik und intelligente Gebäude",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/dev.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "playwright test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  }
+}
