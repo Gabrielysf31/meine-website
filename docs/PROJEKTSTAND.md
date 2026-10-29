@@ -4,6 +4,9 @@ Stand: 29.10.2026 · interaktive Lichtsimulation ergänzt
 
 ## Aktueller Stand
 
+- Tageslichtkorrektur: „Ankommen“ zeigt jetzt einen hellen Raum, blauen Himmel und Sonne passend zu „Tageslicht nutzen“. Feierabend und Unterwegs behalten die Abendansicht. Manuelle Lichtfarben erhalten die Tageszeit der gewählten Situation. Branch: `fix/smart-home-tageslicht`.
+
+
 - Gabriels Lichtidee umgesetzt: eigener illustrierter Wohnraum mit Pendel- und Stehleuchte. Ankommen setzt warmes Licht, Feierabend gedimmtes Licht und Unterwegs ausgeschaltetes Licht. Rechts sind Warm, Gedimmt, Gelb, Grün und Aus direkt wählbar. Raumhintergrund, Leuchtflächen, Lichtkegel und Lichtbeschreibung wechseln gemeinsam. Ein Szenenwechsel setzt eine manuelle Lichtwahl zurück.
 - Umsetzung als skalierbare SVG-/CSS-Illustration in `src/room.mjs`, ohne neue Bilddateien oder Geräteanbindung. Bedienelemente mit Tastatur und sichtbarem Auswahlzustand; bei reduzierter Bewegung ohne Übergangsanimation. Ohne JavaScript bleibt die statische warme Illustration sichtbar. Themenbranch: `feat/smart-home-lichtsimulation`, abgeleitet von `feat/smart-home-details` (Commit `8ddc091`).
 

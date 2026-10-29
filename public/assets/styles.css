@@ -1085,6 +1085,9 @@
   .light-room[data-light="yellow"] { --lamp-color:#ffe027; --lamp-surface:#ffeb78; --room-wall:#777650; --room-floor:#6a6440; }
   .light-room[data-light="green"] { --lamp-color:#7de78e; --lamp-surface:#adf3b4; --room-wall:#436553; --room-floor:#435d44; }
   .light-room[data-light="off"] { --lamp-color:#000; --lamp-surface:#858a79; --room-wall:#273b3e; --room-floor:#303e3a; }
+  .light-room[data-time="day"] { --window-sky:#b9d9df; --sky-light:#fff4b6; --window-landscape:#72947a; }
+  .light-room[data-time="day"][data-light="warm"] { --room-wall:#b8b6a0; --room-floor:#a69a7b; }
+  .light-room[data-time="day"][data-light="off"] { --room-wall:#929b8c; --room-floor:#8a8570; }
   .light-room svg { width:100%; height:auto; }
   .light-room svg * { transition:fill .45s, opacity .45s; }
   .room-light-pools { opacity:1; transition:opacity .45s; }

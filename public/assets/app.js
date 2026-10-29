@@ -101,7 +101,7 @@ if (sceneData) {
   const lightLabels = { warm: "Einladend & warm", dim: "Warm & gedimmt", yellow: "Gelbes Licht", green: "Grünes Licht", off: "Gewählte Lichter aus" };
   function setLight(mode) {
     room.dataset.light = mode;
-    room.setAttribute("aria-label", "Wohnraum mit zwei Lampen: " + lightLabels[mode]);
+    room.setAttribute("aria-label", "Wohnraum mit zwei Lampen " + (room.dataset.time === "day" ? "bei Tageslicht" : "am Abend") + ": " + lightLabels[mode]);
     document.querySelector("[data-scene-light]").textContent = lightLabels[mode];
     document.querySelectorAll("[data-light-choice]").forEach((choice) => choice.setAttribute("aria-pressed", String(choice.dataset.lightChoice === mode)));
   }
@@ -109,6 +109,7 @@ if (sceneData) {
   for (const button of document.querySelectorAll("[data-scene]")) {
     button.addEventListener("click", () => {
       const scene = scenes[button.dataset.scene];
+      room.dataset.time = button.dataset.scene === "ankommen" ? "day" : "night";
       setLight({ ankommen: "warm", feierabend: "dim", unterwegs: "off" }[button.dataset.scene]);
       for (const tab of document.querySelectorAll("[data-scene]"))
         tab.setAttribute("aria-pressed", String(tab === button));

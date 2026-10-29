@@ -1,14 +1,14 @@
 // Vector room: lamp surfaces and light pools share the same live CSS variables.
-export const interactiveRoom = `<div class="light-room" data-light="warm" role="img" aria-label="Wohnraum mit zwei eingeschalteten Lampen: einladend und warm">
+export const interactiveRoom = `<div class="light-room" data-light="warm" data-time="day" role="img" aria-label="Wohnraum mit zwei Lampen bei Tageslicht: einladend und warm">
 <svg viewBox="0 0 640 430" aria-hidden="true" focusable="false">
 <defs><radialGradient id="room-glow"><stop offset="0" stop-color="var(--lamp-color)" stop-opacity=".7"/><stop offset="1" stop-color="var(--lamp-color)" stop-opacity="0"/></radialGradient><linearGradient id="room-beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--lamp-color)" stop-opacity=".38"/><stop offset="1" stop-color="var(--lamp-color)" stop-opacity="0"/></linearGradient></defs>
 <rect width="640" height="430" rx="10" fill="var(--room-wall)"/>
 <path d="M0 315H640V430H0Z" fill="var(--room-floor)"/>
 <path d="M0 315H640M0 365H640M0 415H640M180 315L120 430M460 315L520 430" stroke="#ffffff" stroke-opacity=".07"/>
-<rect x="48" y="55" width="145" height="178" rx="3" fill="#243c47" stroke="#9a9b88" stroke-width="7"/>
+<rect x="48" y="55" width="145" height="178" rx="3" fill="var(--window-sky, #243c47)" stroke="#9a9b88" stroke-width="7"/>
 <path d="M120 58V229M52 144H188" stroke="#9a9b88" stroke-width="4"/>
-<circle cx="155" cy="95" r="17" fill="#c4d2c5" opacity=".7"/>
-<path d="M51 178L85 157 124 184 154 167 189 188V230H51Z" fill="#1a3438"/>
+<circle cx="155" cy="95" r="17" fill="var(--sky-light, #c4d2c5)" opacity=".9"/>
+<path d="M51 178L85 157 124 184 154 167 189 188V230H51Z" fill="var(--window-landscape, #1a3438)"/>
 <ellipse cx="350" cy="359" rx="190" ry="37" fill="#b1ac94" opacity=".35"/>
 <path d="M238 265Q238 235 265 235H421Q449 235 449 265V327H238Z" fill="#8b9b8d"/>
 <rect x="223" y="277" width="241" height="61" rx="14" fill="#667e72"/>
