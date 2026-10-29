@@ -68,6 +68,8 @@ Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. 
 
 ## Nächster Schritt
 
-Den Entwurf gemeinsam ansehen und Gestaltung, Ton und Seitenaufteilung abstimmen. Anschließend Firmenname, Einsatzgebiet und das vorgesehene Angebot konkretisieren.
+Inspiration mit eigenen Bildmotiven und einem kurzen Berater weiterentwickeln. Besucher sollen neue Möglichkeiten entdecken und ihre Wünsche eingrenzen können. Besprochen ist ein gemeinsamer Projektentwurf, den später auch der Chatbot erstellt und der nach Prüfung direkt in den Projektplaner übernommen werden kann. Quiz, neue Inspirationsbilder und automatische Übergabe sind noch nicht umgesetzt.
+
+Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 
 Die Website ist noch nicht veröffentlicht. Eine Veröffentlichung oder kostenpflichtige Anbindung wird gesondert abgestimmt. Der Entwurf ist mit `noindex` gekennzeichnet; das ersetzt keine Zugriffsbeschränkung, falls er später gehostet wird.

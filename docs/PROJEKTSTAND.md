@@ -1,6 +1,6 @@
 # Projektstand
 
-Stand: 29.10.2026
+Stand: 29.10.2026 · Sitzungsabschluss
 
 ## Vereinbarte Richtung
 
@@ -50,11 +50,45 @@ Der Solarbereich beschreibt Anschluss, Inbetriebnahme, Prüfung sowie Übergabe 
 
 ## Noch offen
 
-1. Gabriels Rückmeldung zu Gestaltung, Wortwahl und Seitenaufteilung.
+1. Inspiration nach Gabriels letztem Feedback weiterentwickeln: eigene Bildmotive und ein neuer Nutzen gegenüber den Leistungsseiten.
 2. Firmenname, Einsatzgebiet und tatsächlicher späterer Leistungsumfang.
 3. Eigene Bilder, Profilinformationen und später echte Referenzen.
 4. Vor einem Betriebsstart: konkrete Kontaktmöglichkeiten, vollständige betriebliche und rechtliche Angaben.
 5. Später: geprüfte Wissensgrundlage, serverseitige KI-Anbindung und tatsächlicher Anfrageversand.
+
+## Letztes Feedback und besprochene nächste Ausbaustufe
+
+Gabriel findet den bisherigen Entwurf und die überarbeiteten Leistungsbilder gut. Die Wiederholung der Leistungsbilder auf der Inspirationsseite gefällt ihm jedoch nicht: Wer sich durch die Website bewegt, soll dort neue Anregungen bekommen. Die zuletzt besprochene Weiterentwicklung wurde noch nicht umgesetzt.
+
+Gabriel erwägt einen kurzen Quiz-Berater, der Besuchern Möglichkeiten zeigt und hilft, passende Ansätze für die eigene Wohnsituation zu finden. Er fragt ausdrücklich nach dem Zusammenspiel mit einem späteren Chatbot. Seine Idee: Kunden erklären Wünsche und Bedürfnisse frei; der Chatbot fragt nach und erstellt eine Zusammenfassung, die in den Projektplaner übernommen werden kann.
+
+Empfohlener Ablauf aus dem Gespräch, noch als Konzept:
+
+- Inspiration bekommt eigene Bilder und konkrete Alltagssituationen statt einer weiteren Leistungsübersicht.
+- Ein kurzer Berater mit ungefähr fünf Fragen grenzt Wohnsituation, Bau- oder Nachrüstvorhaben, gewünschte Verbesserungen, Bedienung und Prioritäten ein.
+- Das Ergebnis zeigt zwei oder drei passende Ansätze mit Begründung und offenen Punkten. Zunächst Funktionen und Lösungsarten erklären; konkrete Produktinformationen bei Bedarf mit Quellen und Aktualisierungsdatum pflegen.
+- Der spätere Chatbot vertieft freie Wünsche, erklärt Begriffe und fragt gezielt nach.
+- Berater und Chatbot liefern denselben bearbeitbaren Projektentwurf: Wohnsituation, ausdrücklich genannte Wünsche, mögliche Ansätze und offene Fragen.
+- Am Ergebnis sowohl „Zusammenfassung kopieren“ als auch „In Projektplaner übernehmen“ anbieten. Kunden prüfen die Angaben; vorhandene Antworten werden vorausgefüllt.
+
+Die Richtung „erst Inspiration und kurzer Berater, später echter Chatbot“ wurde empfohlen. Die konkrete Ausgestaltung ist noch offen. Es wurden weder neue Inspirationsbilder noch Quiz, Chatbot oder automatische Übergabe implementiert.
+
+## Übergabe für die nächste Sitzung
+
+1. An Gabriels letztem Feedback zur Inspiration anknüpfen und den Seitenaufbau mit eigenständigen Alltagssituationen konkretisieren.
+2. Fragen und Ergebnislogik für den kleinen Berater sowie den gemeinsamen Projektentwurf ausarbeiten. Grundlage sind die vorhandenen Felder `building`, `topics`, `timeline`, `location` und `wishes`.
+3. Die Übergabe in den Projektplaner mit einer sichtbaren Prüfung der Angaben vorsehen. Das Verhalten bei Seitenwechsel und Neuladen festlegen; derzeit wird nichts dauerhaft im Browser gespeichert.
+4. Danach die lokale Inspirationsseite, neue Bildmotive und den Berater umsetzen. Den echten KI-Dienst erst in einer späteren Ausbaustufe anbinden.
+
+Einstieg im Code: `src/pages.mjs` (`inspirationPage` und `plannerPage`), `src/content.mjs` (Inhalte und Bildmotive) sowie `public/assets/app.js` (Formular und Zusammenfassung).
+
+## Sicherungsstand zum Sitzungsende
+
+Die Website-Umsetzung bis einschließlich der individuellen Bilder für Modernisierung und Energie ist mit Commit `401ef75` auf `feat/erster-website-entwurf` gesichert. Der Sitzungsabschluss ergänzt ausschließlich die Dokumentation. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; die Themenarbeit ist noch nicht integriert.
+
+Die sechs Browserprüfungen wurden während der Umsetzung erfolgreich ausgeführt. Nach der letzten Bildänderung wurden Build und alle 468 internen Verweise sowie Bildzuordnung und Darstellung im Browser geprüft. Für den reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
+
+Die lokale Vorschau wurde zum Sitzungsende beendet. Beim Wiedereinstieg mit `npm run dev` starten; anschließend ist sie unter `http://localhost:4173` erreichbar.
 
 ## Git und Freigabegrenzen
 
@@ -64,4 +98,4 @@ Der erste Entwurf wird auf `feat/erster-website-entwurf` gesichert. Keine Websit
 
 ## Nächster gemeinsamer Schritt
 
-Den lokalen Entwurf ansehen und anhand von Gabriels Rückmeldung verfeinern. Eine Auswahl des KI-Anbieters ist für diese Gestaltungsrunde noch nicht notwendig.
+Die Inspirationsseite mit eigenständigen Bildmotiven und einem kurzen Berater konkretisieren. Wünsche und Ergebnisse so strukturieren, dass später derselbe Entwurf aus dem Chatbot in den Projektplaner übernommen werden kann. Die konkrete Wahl eines KI-Anbieters ist dafür noch nicht erforderlich.
