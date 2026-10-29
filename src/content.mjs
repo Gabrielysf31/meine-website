@@ -5,6 +5,18 @@ export const site = {
 };
 
 export const visuals = {
+  smartLiving: {
+    src: "/assets/smart-home-wohnen.jpg",
+    alt: "Küche und Essbereich mit getrennten Lichtgruppen, Außenjalousien und Wandtaster",
+    caption: "Vernetztes Wohnen im Alltag · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
+  smartControl: {
+    src: "/assets/smart-home-bedienung.jpg",
+    alt: "Wandtaster neben einer Holztür mit Blick auf Esszimmer und Außenjalousien",
+    caption: "Bedienung am Wandtaster · KI-Visualisierung",
+    width: 1536, height: 1024,
+  },
   orientation: {
     src: "/assets/inspiration-nachtlicht.jpg",
     alt: "Wohnungsflur bei Nacht mit dezenten bodennahen Orientierungsleuchten",

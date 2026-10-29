@@ -8,7 +8,7 @@ Sechs Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: einge
 
 ## Eigene Inspirationsmotive
 
-Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: nächtliches Orientierungslicht, Schlafzimmer im Morgenlicht, Arbeits- und Leseecke sowie ein Energieüberblick im Hauswirtschaftsraum. Sie liegen als `public/assets/inspiration-*.jpg` vor. Alle Dateipfade und Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Insgesamt verwendet der Entwurf damit zehn gekennzeichnete KI-Visualisierungen.
+Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: nächtliches Orientierungslicht, Schlafzimmer im Morgenlicht, Arbeits- und Leseecke sowie ein Energieüberblick im Hauswirtschaftsraum. Sie liegen als `public/assets/inspiration-*.jpg` vor. Alle Dateipfade und Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Zwei weitere eigene Motive für die Smart-Home-Seite zeigen einen vernetzten Küchen-/Essbereich und die Bedienung am Wandtaster. Dateien und Prompts stehen in [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Insgesamt verwendet der Entwurf zwölf gekennzeichnete KI-Visualisierungen.
 
 ## Wohnraumfotos
 

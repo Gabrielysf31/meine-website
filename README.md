@@ -14,7 +14,7 @@ Website für Gabriels mögliche spätere Selbstständigkeit im Bereich Elektrote
 Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unterseiten, mobile Navigation und kurze Inhalte für Privatkunden.
 
 - Startseite, Leistungsübersicht und sechs Leistungsunterseiten: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
-- Smart-Home-Seite mit drei interaktiven Alltagssituationen.
+- Erweiterte Smart-Home-Seite mit eigenen Bildern, Funktionsübersicht, Bedienung, Einstieg im Bestand oder Neubau, fünf Antworten und Assistentenhinweis. Drei interaktive Alltagssituationen bleiben erhalten.
 - Inspiration mit vier eigenen Alltagsszenen: Orientierungslicht, Morgenroutine, Arbeits- und Wohnlicht sowie Energieüberblick.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
 - Über mich, Kontakt sowie durchsuchbare häufige Fragen.

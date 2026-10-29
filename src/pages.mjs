@@ -1,3 +1,4 @@
+import { renderSmartHome } from "./smart-home.mjs";
 import { plannerSection } from "./planner.mjs";
 import { renderInspiration } from "./inspiration.mjs";
 import { services, faqs, scenes, visuals } from "./content.mjs";
@@ -37,17 +38,7 @@ const home = `<section class="hero container"><div class="hero-copy">${eyebrow("
 
 const servicesPage = `${pageIntro("LEISTUNGEN IM ÜBERBLICK", "Was dein Zuhause<br>weiterbringt.", "Vom Neubau über die Modernisierung bis zum eigenen Solarstrom: Hier findest du die passende Richtung.")}<section class="container content-section"><div class="service-list">${serviceRows(true)}</div><p class="section-footnote">Diese Bereiche zeigen die geplante Ausrichtung. Es werden noch keine Leistungen angeboten.</p></section>`;
 
-const smartPage = `
-${pageIntro("SMART HOME & GEBÄUDEINTEGRATION", "Einfach wohnen.<br>Intelligent verbunden.", "Beleuchtung per Taster, Jalousien vom Garten aus oder eine gemeinsame Szene für den Abend. Gebäudetechnik wird dann gut, wenn sie zu deinem Alltag passt.")}
-<div class="container">${visualFigure("shading", "smart-hero-image")}</div>
-${scenesSection()}
-<section class="container section">
-  <div class="section-heading"><div>${eyebrow("LICHT, BESCHATTUNG & BEDIENUNG")}<h2>Technik, die<br>zusammenspielt.</h2></div><p>Ein System wie KNX kann unterschiedliche Gebäudefunktionen verbinden. Welche Lösung passt, entscheidet sich an deinem Zuhause.</p></div>
-  <div class="smart-detail-grid">
-    ${visualFigure("lighting")}
-    <div class="smart-detail-copy"><h3>Licht ist mehr als an und aus.</h3><p>Gedimmte Pendelleuchten, indirektes LED-Licht und einzelne Lichtgruppen lassen sich zu passenden Szenen zusammenfassen.</p><h3>Deine Jalousien. Deine Bedienung.</h3><p>Beschattung über Wandtaster, automatische Abläufe oder eine eingerichtete App steuern – auch von der Terrasse aus.</p><p class="section-footnote">Die Bilder veranschaulichen Funktionen. Sie zeigen keine zertifizierten Produkte oder bereits realisierte Anlagen.</p></div>
-  </div>
-</section>`;
+const smartPage = renderSmartHome(visualFigure, scenesSection);
 
 const inspirationPage = renderInspiration(visualImage);
 

@@ -141,6 +141,13 @@ test("Smart-Home-Beispiele wechseln die Situation verständlich", async ({
   await expect(page.locator("[data-scene-light]")).toHaveText(
     "Gewählte Lichter aus",
   );
+  await page.getByText("Was bedeutet KNX?", { exact: true }).click();
+  await expect(page.locator("#smart-fragen")).toContainText("kabelgebundene und funkbasierte");
+  await page.getByRole("button", { name: "Assistenten-Vorschau öffnen" }).click();
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page.getByRole("dialog")).toContainText("noch keine KI");
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("button", { name: "Assistenten-Vorschau öffnen" })).toBeFocused();
 });
 
 test("Inhalte und Antworten bleiben auch ohne JavaScript erreichbar", async ({

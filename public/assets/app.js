@@ -43,10 +43,10 @@ window.addEventListener(
 );
 
 const assistant = document.querySelector("#assistant-dialog");
-document.querySelector(".assistant-trigger")?.addEventListener("click", () => {
+document.querySelectorAll(".assistant-trigger, [data-open-assistant]").forEach((trigger) => trigger.addEventListener("click", () => {
   closeMenu();
   assistant.showModal();
-});
+}));
 document
   .querySelector("[data-close-dialog]")
   ?.addEventListener("click", () => assistant.close());

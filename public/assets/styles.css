@@ -1080,6 +1080,37 @@
 }
 
 @layer components {
+  .smart-jump-links { display:flex; flex-wrap:wrap; gap:12px 28px; margin-top:-15px; margin-bottom:35px; font-size:13px; }
+  .smart-jump-links a { padding-block:10px; border-bottom:1px solid var(--line); }
+  .smart-function-grid, .smart-entry-grid { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+  .smart-function-grid article { border-top:1px solid var(--line); padding-top:28px; }
+  .smart-function-grid .icon { margin-bottom:20px; color:#60806b; }
+  .smart-function-grid h3, .smart-entry-grid h3, .smart-system-note h3 { font-size:26px; margin-bottom:16px; }
+  .smart-function-grid p, .smart-entry-grid p, .smart-entry-grid li, .smart-system-note p { color:var(--muted); font-size:14px; }
+  .smart-scenes-band { background:#e9ede3; padding-bottom:75px; }
+  .smart-scenes-band .scene-section { padding-top:75px; }
+  .smart-scenes-band .scene-card { background:var(--paper); }
+  .smart-entry-band { background:#eeeee6; }
+  .smart-entry-grid article { background:var(--paper); padding:32px; }
+  .smart-entry-grid .tag { display:block; margin-bottom:20px; }
+  .smart-entry-grid ul { padding-left:20px; margin-bottom:0; }
+  .smart-entry-grid li + li { margin-top:8px; }
+  .smart-system-note { border-top:1px solid #ccd1c6; margin-top:35px; padding-top:30px; max-width:850px; }
+  .smart-system-note .text-link { margin-top:12px; }
+  .smart-assistant-note { display:flex; gap:28px; padding:32px; margin-bottom:75px; border:1px solid var(--line); border-radius:4px; }
+  .smart-assistant-note .feature-icon { flex-shrink:0; }
+  .smart-assistant-note h2 { font-size:32px; }
+  .smart-assistant-note p:not(.eyebrow) { color:var(--muted); max-width:720px; font-size:14px; margin-top:18px; }
+  .smart-assistant-actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px 25px; margin-top:22px; }
+  @media (max-width:680px) {
+    .smart-function-grid, .smart-entry-grid { grid-template-columns:1fr; gap:28px; }
+    .smart-entry-grid article { padding:25px; }
+    .smart-assistant-note { padding:25px 20px; display:block; margin-bottom:55px; }
+    .smart-assistant-note > .feature-icon { margin-bottom:22px; }
+    .smart-assistant-note h2 { font-size:28px; }
+    .smart-scenes-band { padding-bottom:45px; }
+    .smart-scenes-band .scene-section { padding-top:45px; }
+  }
   .inspiration-accent { color: #60806b; }
   .inspiration-intro-link { display: flex; align-items: center; gap: 22px; margin-top: -20px; margin-bottom: 45px; flex-wrap: wrap; }
   .inspiration-intro-link > span { color: var(--muted); font-size: 11px; }

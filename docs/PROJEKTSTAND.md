@@ -1,8 +1,12 @@
 # Projektstand
 
-Stand: 29.10.2026 · Inspirationsseite und Berater lokal umgesetzt
+Stand: 29.10.2026 · Smart-Home-Seite erweitert
 
 ## Aktueller Stand
+
+- Smart Home auf Gabriels Wunsch erweitert: zwei neue eigene Bildmotive, vier Funktionsbereiche, Taster/App/Automatik, Bestand und Neubau, KNX-Einordnung, fünf aufklappbare Antworten und ein abschließender Hinweis mit Button zur Assistenten-Vorschau. Keine aktive Chatbot-Anbindung behauptet.
+- Neue Umsetzung: `src/smart-home.mjs`; Bilddateien, Prompts und fachliche Quellen: [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Themenbranch: `feat/smart-home-details`, abgeleitet von `feat/inspiration-berater` (Commit `a33994a`).
+
 
 - Die Inspirationsseite zeigt vier eigene Alltagssituationen mit neuen, gekennzeichneten KI-Motiven: nächtliches Orientierungslicht, Morgenroutine mit Jalousien, Arbeits- und Wohnlicht sowie Energieüberblick. Die bisherigen Bilder auf den Leistungsseiten bleiben erhalten.
 - Ein kurzer Berater stellt fünf Fragen zu Zuhause, Vorhaben, Wünschen, Bedienung und Priorität. Bis zu drei konkrete Wünsche oder „Noch offen“ sind auswählbar. Rücknavigation erhält die Antworten.
@@ -30,7 +34,7 @@ Die Website bleibt ein lokaler privater Entwurf. Veröffentlichung, kostenpflich
 - Über mich, Kontakt, Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise.
 - Assistenteneinstieg als ausdrücklich gekennzeichnete Vorschau, auf Mobilgeräten als kleines Symbol.
 - Keine großen wiederkehrenden Abschlussblöcke mit Projektaufruf. Planerzugänge oben rechts, auf der Startseite und auf der Kontaktseite bleiben erhalten. Auf der Inspirationsseite ist die Übernahme Bestandteil des Beraterergebnisses.
-- Alle zehn KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
+- Alle zwölf KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
 
 ## Technischer Einstieg
 
@@ -60,7 +64,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Die lokale Inspirationsseite und einen vollständigen Beraterdurchlauf mit Gabriel ansehen. Bildmotive, Texte, Fragen und Ergebnislänge anhand seines Feedbacks verfeinern.
+Die erweiterte Smart-Home-Seite mit Gabriel ansehen; anschließend bei Bedarf die Inspirationsseite und einen Beraterdurchlauf gemeinsam ansehen. Bildmotive, Texte, Fragen und Ergebnislänge anhand seines Feedbacks verfeinern.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
