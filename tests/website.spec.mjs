@@ -141,6 +141,20 @@ test("Smart-Home-Beispiele wechseln die Situation verständlich", async ({
   await expect(page.locator("[data-scene-light]")).toHaveText(
     "Gewählte Lichter aus",
   );
+  const room = page.getByRole("img", { name: /Wohnraum mit zwei/ });
+  await expect(room).toHaveAttribute("data-light", "off");
+  await expect(room.locator(".room-light-pools")).toHaveCSS("opacity", "0");
+  for (const [name, mode, label] of [["Grün", "green", "Grünes Licht"], ["Gelb", "yellow", "Gelbes Licht"], ["Gedimmt", "dim", "Warm & gedimmt"], ["Warm", "warm", "Einladend & warm"], ["Aus", "off", "Gewählte Lichter aus"]]) {
+    const choice = page.getByRole("button", { name, exact: true });
+    await choice.click();
+    await expect(choice).toHaveAttribute("aria-pressed", "true");
+    await expect(room).toHaveAttribute("data-light", mode);
+    await expect(page.locator("[data-scene-light]")).toHaveText(label);
+  }
+  await page.getByRole("button", { name: "Ankommen", exact: true }).click();
+  await expect(room).toHaveAttribute("data-light", "warm");
+  await page.getByRole("button", { name: "Feierabend", exact: true }).click();
+  await expect(room).toHaveAttribute("data-light", "dim");
   await page.getByText("Was bedeutet KNX?", { exact: true }).click();
   await expect(page.locator("#smart-fragen")).toContainText("kabelgebundene und funkbasierte");
   await page.getByRole("button", { name: "Assistenten-Vorschau öffnen" }).click();

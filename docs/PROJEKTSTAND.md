@@ -1,8 +1,12 @@
 # Projektstand
 
-Stand: 29.10.2026 · Smart-Home-Seite erweitert
+Stand: 29.10.2026 · interaktive Lichtsimulation ergänzt
 
 ## Aktueller Stand
+
+- Gabriels Lichtidee umgesetzt: eigener illustrierter Wohnraum mit Pendel- und Stehleuchte. Ankommen setzt warmes Licht, Feierabend gedimmtes Licht und Unterwegs ausgeschaltetes Licht. Rechts sind Warm, Gedimmt, Gelb, Grün und Aus direkt wählbar. Raumhintergrund, Leuchtflächen, Lichtkegel und Lichtbeschreibung wechseln gemeinsam. Ein Szenenwechsel setzt eine manuelle Lichtwahl zurück.
+- Umsetzung als skalierbare SVG-/CSS-Illustration in `src/room.mjs`, ohne neue Bilddateien oder Geräteanbindung. Bedienelemente mit Tastatur und sichtbarem Auswahlzustand; bei reduzierter Bewegung ohne Übergangsanimation. Ohne JavaScript bleibt die statische warme Illustration sichtbar. Themenbranch: `feat/smart-home-lichtsimulation`, abgeleitet von `feat/smart-home-details` (Commit `8ddc091`).
+
 
 - Smart Home auf Gabriels Wunsch erweitert: zwei neue eigene Bildmotive, vier Funktionsbereiche, Taster/App/Automatik, Bestand und Neubau, KNX-Einordnung, fünf aufklappbare Antworten und ein abschließender Hinweis mit Button zur Assistenten-Vorschau. Keine aktive Chatbot-Anbindung behauptet.
 - Neue Umsetzung: `src/smart-home.mjs`; Bilddateien, Prompts und fachliche Quellen: [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Themenbranch: `feat/smart-home-details`, abgeleitet von `feat/inspiration-berater` (Commit `a33994a`).
