@@ -32,6 +32,12 @@ test("Projektplaner validiert, behält Eingaben und exportiert ohne Versand", as
   await page.getByRole("button", { name: "Weiter", exact: true }).click();
   await expect(page.getByRole("alert")).toContainText("mindestens ein Thema");
   await page.getByRole("checkbox", { name: "Smart Home & Vernetzung" }).check();
+  await page
+    .getByRole("checkbox", { name: "Neubau & Elektroinstallation" })
+    .check();
+  await page
+    .getByRole("checkbox", { name: "Photovoltaik & Solartechnik" })
+    .check();
   await page.getByRole("button", { name: "Weiter", exact: true }).click();
   await page.getByLabel("Ort oder Postleitzahl").fill("Teststadt");
   await page
@@ -39,6 +45,12 @@ test("Projektplaner validiert, behält Eingaben und exportiert ohne Versand", as
     .fill("Licht & Rollläden <script>alert(1)</script>");
   await page.getByRole("button", { name: "Zusammenfassung ansehen" }).click();
   await expect(page.locator("#project-summary")).toContainText("Teststadt");
+  await expect(page.locator("#project-summary")).toContainText(
+    "Neubau & Elektroinstallation",
+  );
+  await expect(page.locator("#project-summary")).toContainText(
+    "Photovoltaik & Solartechnik",
+  );
   await expect(page.locator("#project-summary")).toContainText(
     "<script>alert(1)</script>",
   );

@@ -450,6 +450,19 @@
     font-size: 13px;
     color: var(--muted);
   }
+  .service-thumb {
+    display: block;
+    flex-shrink: 0;
+    width: 112px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .service-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .row-arrow {
     margin-left: auto;
     display: grid;
@@ -530,32 +543,6 @@
   }
   .home-faq {
     padding-top: 0;
-  }
-  .closing {
-    background: var(--sage);
-    padding: 58px 65px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    border-radius: 4px 70px 4px 4px;
-    margin-block: 0 100px;
-  }
-  .closing .eyebrow {
-    font-size: 9px;
-    margin-bottom: 18px;
-  }
-  .closing > div:last-child {
-    align-self: center;
-  }
-  .closing > div:last-child > p {
-    max-width: 340px;
-    font-size: 14px;
-    margin-bottom: 25px;
-  }
-  .closing small {
-    font-size: 10px;
-    color: #546b50;
-    margin-top: 14px;
   }
   .site-footer {
     padding-top: 64px;
@@ -647,6 +634,42 @@
     object-fit: cover;
     object-position: center 65%;
     border-radius: 4px 70px 4px 4px;
+  }
+  .technology-figure img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px 60px 4px 4px;
+  }
+  .technology-figure figcaption {
+    color: var(--muted);
+    font-size: 11px;
+    padding-top: 12px;
+  }
+  .service-figure {
+    margin-bottom: 45px;
+  }
+  .service-figure img {
+    max-height: 560px;
+  }
+  .smart-hero-image img {
+    max-height: 540px;
+  }
+  .smart-detail-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    gap: 60px;
+  }
+  .smart-detail-copy h3 {
+    margin-bottom: 15px;
+  }
+  .smart-detail-copy p + h3 {
+    margin-top: 30px;
+  }
+  .smart-detail-copy > p:not(.section-footnote) {
+    color: var(--muted);
+    font-size: 14px;
   }
   .three-columns {
     display: grid;
@@ -820,6 +843,34 @@
   .inspiration-feature img {
     height: 420px;
     object-fit: cover;
+  }
+  .inspiration-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .inspiration-feature .inspiration-image img {
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+  }
+  .inspiration-image .image-caption {
+    font-size: 8px;
+    max-width: calc(100% - 40px);
+    background: #163e3cdb;
+  }
+  .inspiration-solar {
+    background: #e5ecde;
+  }
+  .inspiration-small.inspiration-technical {
+    padding: 0;
+    overflow: hidden;
+  }
+  .inspiration-technical .inspiration-image img {
+    height: 270px;
+    object-fit: cover;
+  }
+  .inspiration-body {
+    padding: 32px;
   }
   .inspiration-feature > div {
     padding: 45px;
@@ -1509,6 +1560,48 @@
 }
 
 @layer responsive {
+  @media (max-width: 960px) {
+    .smart-detail-grid {
+      gap: 30px;
+    }
+    .inspiration-body {
+      padding: 25px;
+    }
+    .service-thumb {
+      width: 85px;
+      height: 70px;
+    }
+  }
+  @media (max-width: 680px) {
+    .service-thumb {
+      width: 54px;
+      height: 64px;
+    }
+    .technology-figure img {
+      border-top-right-radius: 35px;
+    }
+    .technology-figure figcaption {
+      font-size: 10px;
+    }
+    .smart-detail-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    .inspiration-feature .inspiration-image img {
+      height: 280px;
+      min-height: 0;
+    }
+    .inspiration-technical .inspiration-image img {
+      height: 230px;
+    }
+    .inspiration-image .image-caption {
+      font-size: 7px;
+    }
+    .service-figure {
+      margin-bottom: 30px;
+    }
+  }
+
   html:not(.js) .scene-tabs,
   html:not(.js) .search-label,
   html:not(.js) .search-input,
@@ -1714,11 +1807,6 @@
     }
     .home-faq {
       padding-top: 0;
-    }
-    .closing {
-      gap: 35px;
-      padding: 45px;
-      margin-bottom: 75px;
     }
     .footer-top {
       grid-template-columns: 1.2fr 0.8fr 0.8fr;
@@ -1995,17 +2083,6 @@
     .faq-answer p {
       font-size: 13px;
     }
-    .closing {
-      grid-template-columns: 1fr;
-      padding: 35px 25px;
-      gap: 25px;
-      border-top-right-radius: 50px;
-      margin-bottom: 60px;
-    }
-    .closing > div:last-child > p {
-      font-size: 13px;
-      margin-bottom: 20px;
-    }
     .footer-top {
       grid-template-columns: 1fr 1fr;
       gap: 30px 25px;
@@ -2033,8 +2110,15 @@
     .assistant-trigger {
       right: 16px;
       bottom: 16px;
-      padding: 11px 13px;
-      gap: 10px;
+      width: 50px;
+      height: 50px;
+      padding: 12px;
+      gap: 0;
+      border-radius: 50%;
+      justify-content: center;
+    }
+    .assistant-trigger > span {
+      display: none;
     }
     .assistant-trigger > span:not(.assistant-spark) {
       font-size: 11px;

@@ -2,6 +2,12 @@
 
 Die Bilder werden lokal ausgeliefert und sind auf den Seiten als Beispiele gekennzeichnet. Sie zeigen keine Arbeiten von Gabriel.
 
+## KI-Visualisierungen
+
+Vier ergänzende Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: eingeschaltete Wohnraumbeleuchtung, Außenjalousien mit Fernbedienung, Elektroinstallation im Neubau sowie Photovoltaik mit Wallbox. Die Dateien liegen unter `public/assets/` und sind auf der Website als KI-Visualisierungen gekennzeichnet. Dateipfade und vollständige Prompts stehen in [BILDPROMPTS.md](BILDPROMPTS.md).
+
+## Wohnraumfotos
+
 | Lokale Datei                      | Originalquelle                                               |
 | --------------------------------- | ------------------------------------------------------------ |
 | `public/assets/wohnraum.jpg`      | https://images.unsplash.com/photo-1600210492486-724fe5c67fb0 |

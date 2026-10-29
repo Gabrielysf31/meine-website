@@ -13,9 +13,9 @@ Website für Gabriels mögliche spätere Selbstständigkeit im Bereich Elektrote
 
 Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unterseiten, mobile Navigation und kurze Inhalte für Privatkunden.
 
-- Startseite, Leistungsübersicht und vier Leistungsunterseiten.
+- Startseite, Leistungsübersicht und sechs Leistungsunterseiten: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
 - Smart-Home-Seite mit drei interaktiven Alltagssituationen.
-- Inspiration mit ausdrücklich gekennzeichneten Beispielen.
+- Inspiration mit Technikmotiven zu eingeschalteter Beleuchtung, Außenjalousien, Neubauinstallation und Photovoltaik.
 - Über mich, Kontakt sowie durchsuchbare häufige Fragen.
 - Projektplaner mit Auswahl, Detailangaben und exportierbarer Zusammenfassung.
 - Als Vorschau gekennzeichneter Einstieg für einen späteren KI-Assistenten.
@@ -43,7 +43,7 @@ npm run check
 npm test
 ```
 
-`check` erstellt alle 16 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. Die sechs Browserprüfungen decken Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Auf diesem Mac verwenden sie das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
+`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. Die sechs Browserprüfungen decken Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Neubau und Photovoltaik werden auch im Projektplaner geprüft. Auf diesem Mac verwenden sie das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
 
 ## Aufbau
 
@@ -61,6 +61,10 @@ Die Website liefert fertiges HTML mit CSS und ergänzendem JavaScript aus. Es we
 ## Vorschau
 
 [Desktopansicht](docs/vorschau/startseite-desktop.png) · [Mobilansicht](docs/vorschau/startseite-mobil.png)
+
+[Inspiration auf Desktop](docs/vorschau/inspiration-desktop.png) · [Inspiration auf Mobil](docs/vorschau/inspiration-mobil.png)
+
+Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. Der Planer ist weiterhin über den Button oben rechts und den Einstieg auf der Startseite erreichbar. Alle Leistungsunterseiten zeigen passende Technikmotive. Die generierten Bilder und ihre Prompts sind in [BILDPROMPTS.md](docs/BILDPROMPTS.md) dokumentiert.
 
 ## Nächster Schritt
 

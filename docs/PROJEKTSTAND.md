@@ -12,8 +12,12 @@ Ein Meisterabschluss ist bisher eine Zukunftsüberlegung. Keine abgeschlossene Q
 
 ## Umgesetzt
 
-- Lokaler statischer Entwurf mit 15 Inhaltsseiten und einer Fehlerseite.
-- Helle Flächen, Petrol, zurückhaltende Akzente und lokale Wohnraumbilder.
+- Lokaler statischer Entwurf mit 17 Inhaltsseiten und einer Fehlerseite.
+- Helle Flächen, Petrol, zurückhaltende Akzente und lokale Wohnraumbilder, ergänzt um vier gekennzeichnete KI-Visualisierungen mit sichtbarer Elektrotechnik.
+- Sechs Leistungsbereiche: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden. Alle haben eine eigene bebilderte Unterseite und sind im Projektplaner auswählbar.
+- Inspiration zeigt Beleuchtung am Abend, Außenjalousien mit Fernsteuerung, Neubauinstallation und Photovoltaik mit Wallbox.
+- Die großen wiederholten Abschlussblöcke mit Projektaufruf wurden entfernt. Der Einstieg bleibt oben rechts und im Startseiten-Hero; die Kontaktseite behält ihren direkten Planerzugang.
+- Auf Mobilgeräten ist der Assistenteneinstieg auf ein kleines, zugänglich beschriftetes Symbol reduziert, damit er weniger Inhalt verdeckt.
 - Zentrale Inhalte, gemeinsame Navigation und wiederverwendbarer Seitenrahmen.
 - Mobile Navigation mit Tastaturbedienung, aufklappbare Antworten und Suche mit zusätzlichen Suchbegriffen.
 - Interaktive Smart-Home-Beispiele ohne Geräteanbindung.
@@ -28,11 +32,19 @@ Statisches HTML aus gemeinsamen JavaScript-Vorlagen, CSS und ergänzendes Browse
 
 ## Geprüft
 
-- Build und interne Verweise: 16 Seiten, 408 interne Verweise.
+- Build und interne Verweise: 18 Seiten, 468 interne Verweise.
 - Sechs Browserprüfungen in Google Chrome bestanden.
-- Formular: notwendige Auswahl, Rücknavigation, sichere Darstellung von Freitext, Dateiexport und Zurücksetzen beim Neuladen.
+- Formular: notwendige Auswahl, Rücknavigation, sichere Darstellung von Freitext, Dateiexport und Zurücksetzen beim Neuladen. Neubau und Photovoltaik erscheinen korrekt in der Zusammenfassung.
 - Mobile Navigation und alle Seiten bei 375 Pixeln Breite ohne horizontales Überlaufen.
-- Startseite auf Desktop und Mobil visuell geprüft; Ansichten liegen unter `docs/vorschau/`.
+- Startseite, Inspiration und ergänzende Leistungsansichten auf Desktop beziehungsweise Mobil visuell geprüft; Ansichten liegen unter `docs/vorschau/`.
+
+## Inhaltliche Orientierung für diese Überarbeitung
+
+- [KNX Planning Guide: Anwendungen](https://planning.knx.org/submit/step7) als Grundlage für die kurzen Hinweise zu Beleuchtung und Beschattung.
+- [KNX: Home Shading](https://www.knx.org/news/home-shading-benefits-jalousie) für den Zusammenhang zwischen Außenjalousien und Gebäudesteuerung.
+- [VDE: Prüfung von Photovoltaik- und Speicheranlagen](https://www.vde-verlag.de/p/fachwissen/pruefung-von-photovoltaik-und-speicheranlagen/316493) zur Einordnung von Prüfung und Dokumentation.
+
+Der Solarbereich beschreibt Anschluss, Inbetriebnahme, Prüfung sowie Übergabe und Abnahmevorbereitung als vorgesehene Themen. Eine pauschale Zusage, beliebige Fremdanlagen abzunehmen, wird daraus nicht abgeleitet. Die Bilder dienen als Visualisierungen und weisen keine konkrete KNX-Produktkompatibilität nach.
 
 ## Noch offen
 
