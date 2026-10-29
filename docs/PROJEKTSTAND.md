@@ -4,6 +4,9 @@ Stand: 29.10.2026 · interaktive Lichtsimulation ergänzt
 
 ## Aktueller Stand
 
+- Gestalterische Korrektur nach Gabriels Feedback: Bunte Lichtfarben wirken ihm zu unseriös. Gelb, Grün und Rot wurden aus der Simulation entfernt; Warm, Gedimmt und Aus bleiben. Die Tageszeiten und Szenenwechsel bleiben erhalten. Branch: `feat/smart-home-ruhige-lichtstimmungen`.
+
+
 - Rot als zusätzliche manuelle Lichtfarbe ergänzt: Lampen, Lichtkegel, Raumtönung und Beschriftung reagieren gemeinsam. Bestehende Alltagssituationen behalten ihre Lichtvorgaben. Branch: `feat/smart-home-rotes-licht`.
 
 
