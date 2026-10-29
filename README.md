@@ -64,7 +64,7 @@ Die Website liefert fertiges HTML mit CSS und ergänzendem JavaScript aus. Es we
 
 [Inspiration auf Desktop](docs/vorschau/inspiration-desktop.png) · [Inspiration auf Mobil](docs/vorschau/inspiration-mobil.png)
 
-Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. Der Planer ist weiterhin über den Button oben rechts und den Einstieg auf der Startseite erreichbar. Alle Leistungsunterseiten zeigen passende Technikmotive. Die generierten Bilder und ihre Prompts sind in [BILDPROMPTS.md](docs/BILDPROMPTS.md) dokumentiert.
+Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. Der Planer ist weiterhin über den Button oben rechts und den Einstieg auf der Startseite erreichbar. Jeder Leistungsbereich hat ein eigenes Technikmotiv: Modernisierung zeigt einen bestehenden Wohnraum mit erneuerter Elektrik, Energie und Laden eine Wallbox mit angeschlossenem Elektroauto. Die generierten Bilder und ihre Prompts sind in [BILDPROMPTS.md](docs/BILDPROMPTS.md) dokumentiert.
 
 ## Nächster Schritt
 

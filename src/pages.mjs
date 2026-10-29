@@ -3,7 +3,7 @@ import { icon, button, eyebrow, pageIntro, escape } from "./components.mjs";
 
 const visualImage = (key, lazy = true) => {
   const image = visuals[key];
-  return `<img src="${image.src}" alt="${escape(image.alt)}" width="${image.width}" height="${image.height}" ${lazy ? 'loading="lazy"' : ""}>`;
+  return `<img src="${image.src}" alt="${escape(image.alt)}" width="${image.width}" height="${image.height}" ${image.position ? `style="object-position: ${escape(image.position)}"` : ""} ${lazy ? 'loading="lazy"' : ""}>`;
 };
 const visualFigure = (key, classes = "") =>
   `<figure class="technology-figure ${classes}">${visualImage(key, false)}<figcaption>${escape(visuals[key].caption)}</figcaption></figure>`;
@@ -149,7 +149,7 @@ export const pages = [
     path: "/bildnachweise/",
     title: "Bildnachweise",
     description: "Bildquellen des privaten Website-Entwurfs.",
-    content: `${pageIntro("BILDQUELLEN", "Technik sichtbar machen.", "Wohnraumfotos und KI-Visualisierungen illustrieren die Themen. Sie zeigen keine eigenen Arbeiten oder Kundenprojekte.")}<section class="container legal-copy"><h2>Wohnraum</h2><p>Bildquelle: Unsplash · Foto-ID 1600210492486-724fe5c67fb0.</p><p><a class="text-link" href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" target="_blank" rel="noopener noreferrer">Originalbild öffnen${icon("diagonal")}</a></p><h2>Offener Wohn- und Essbereich</h2><p>Bildquelle: Unsplash · Foto-ID 1600607687920-4e2a09cf159d.</p><p><a class="text-link" href="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" target="_blank" rel="noopener noreferrer">Originalbild öffnen${icon("diagonal")}</a></p><h2>Technikmotive</h2><p>Die Motive für Beleuchtung am Abend, Außenjalousien, Elektroinstallation im Neubau sowie Photovoltaik und Wallbox wurden für diesen Entwurf mit KI erstellt. Sie sind illustrative Beispiele und keine Produkt- oder Ausführungsnachweise.</p></section>`,
+    content: `${pageIntro("BILDQUELLEN", "Technik sichtbar machen.", "Wohnraumfotos und KI-Visualisierungen illustrieren die Themen. Sie zeigen keine eigenen Arbeiten oder Kundenprojekte.")}<section class="container legal-copy"><h2>Wohnraum</h2><p>Bildquelle: Unsplash · Foto-ID 1600210492486-724fe5c67fb0.</p><p><a class="text-link" href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0" target="_blank" rel="noopener noreferrer">Originalbild öffnen${icon("diagonal")}</a></p><h2>Offener Wohn- und Essbereich</h2><p>Bildquelle: Unsplash · Foto-ID 1600607687920-4e2a09cf159d.</p><p><a class="text-link" href="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" target="_blank" rel="noopener noreferrer">Originalbild öffnen${icon("diagonal")}</a></p><h2>Technikmotive</h2><p>Die Motive für Beleuchtung am Abend, Außenjalousien, Elektroinstallation im Neubau, Modernisierung im Bestand, Photovoltaik und Laden zu Hause wurden für diesen Entwurf mit KI erstellt. Sie sind illustrative Beispiele und keine Produkt- oder Ausführungsnachweise.</p></section>`,
   },
   ...services.map((s) => ({
     path: `/leistungen/${s.slug}/`,

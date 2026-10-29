@@ -12,6 +12,13 @@ export const visuals = {
     width: 1536,
     height: 1024,
   },
+  modernization: {
+    src: "/assets/modernisierung-bestand.jpg",
+    alt: "Modernisierter Altbauwohnraum mit erhaltenem Parkett, neuen Wandbedienelementen und eingeschalteter Beleuchtung",
+    caption: "Elektromodernisierung im Bestand · KI-Visualisierung",
+    width: 1536,
+    height: 1024,
+  },
   lighting: {
     src: "/assets/licht-am-abend.jpg",
     alt: "Wohnraum am Abend mit eingeschalteter Pendelleuchte, Deckenlicht und indirekter LED-Beleuchtung",
@@ -30,6 +37,14 @@ export const visuals = {
     src: "/assets/photovoltaik-eigenheim.jpg",
     alt: "Eigenheim mit Photovoltaikmodulen auf dem Dach und einer Wallbox an der Hauswand",
     caption: "Photovoltaik & Laden zu Hause · KI-Visualisierung",
+    width: 1536,
+    height: 1024,
+  },
+  energy: {
+    src: "/assets/energie-wallbox.jpg",
+    alt: "Wallbox am privaten Carport mit angeschlossenem Elektroauto",
+    caption: "Laden am eigenen Zuhause · KI-Visualisierung",
+    position: "center 20%",
     width: 1536,
     height: 1024,
   },
@@ -67,7 +82,7 @@ export const services = [
     slug: "modernisieren",
     icon: "bolt",
     number: "02",
-    visual: "installation",
+    visual: "modernization",
     label: "Renovieren & modernisieren",
     short: "Ein guter Anfang für neue Wohnideen.",
     description:
@@ -175,7 +190,7 @@ export const services = [
     slug: "energie",
     icon: "leaf",
     number: "06",
-    visual: "solar",
+    visual: "energy",
     label: "Energie & Laden",
     short: "Heute wohnen. Morgen weiterdenken.",
     description:

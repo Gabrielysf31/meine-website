@@ -4,7 +4,7 @@ Die Bilder werden lokal ausgeliefert und sind auf den Seiten als Beispiele geken
 
 ## KI-Visualisierungen
 
-Vier ergänzende Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: eingeschaltete Wohnraumbeleuchtung, Außenjalousien mit Fernbedienung, Elektroinstallation im Neubau sowie Photovoltaik mit Wallbox. Die Dateien liegen unter `public/assets/` und sind auf der Website als KI-Visualisierungen gekennzeichnet. Dateipfade und vollständige Prompts stehen in [BILDPROMPTS.md](BILDPROMPTS.md).
+Sechs Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: eingeschaltete Wohnraumbeleuchtung, Außenjalousien mit Fernbedienung, Elektroinstallation im Neubau, Modernisierung im Bestand, Photovoltaik mit Wallbox sowie Laden am eigenen Carport. Die Dateien liegen unter `public/assets/` und sind auf der Website als KI-Visualisierungen gekennzeichnet. Dateipfade und vollständige Prompts stehen in [BILDPROMPTS.md](BILDPROMPTS.md).
 
 ## Wohnraumfotos
 

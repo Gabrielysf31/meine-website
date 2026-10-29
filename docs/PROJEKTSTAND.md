@@ -13,8 +13,9 @@ Ein Meisterabschluss ist bisher eine Zukunftsüberlegung. Keine abgeschlossene Q
 ## Umgesetzt
 
 - Lokaler statischer Entwurf mit 17 Inhaltsseiten und einer Fehlerseite.
-- Helle Flächen, Petrol, zurückhaltende Akzente und lokale Wohnraumbilder, ergänzt um vier gekennzeichnete KI-Visualisierungen mit sichtbarer Elektrotechnik.
+- Helle Flächen, Petrol, zurückhaltende Akzente und lokale Wohnraumbilder, ergänzt um sechs gekennzeichnete KI-Visualisierungen mit sichtbarer Elektrotechnik.
 - Sechs Leistungsbereiche: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden. Alle haben eine eigene bebilderte Unterseite und sind im Projektplaner auswählbar.
+- Jeder Leistungsbereich hat ein eigenes Bildmotiv. Modernisierung zeigt einen erneuerten Altbauwohnraum; Energie und Laden zeigt eine Wallbox am privaten Carport mit angeschlossenem Elektroauto. Neubau und Photovoltaik behalten die zuvor abgestimmten Motive.
 - Inspiration zeigt Beleuchtung am Abend, Außenjalousien mit Fernsteuerung, Neubauinstallation und Photovoltaik mit Wallbox.
 - Die großen wiederholten Abschlussblöcke mit Projektaufruf wurden entfernt. Der Einstieg bleibt oben rechts und im Startseiten-Hero; die Kontaktseite behält ihren direkten Planerzugang.
 - Auf Mobilgeräten ist der Assistenteneinstieg auf ein kleines, zugänglich beschriftetes Symbol reduziert, damit er weniger Inhalt verdeckt.
@@ -37,6 +38,7 @@ Statisches HTML aus gemeinsamen JavaScript-Vorlagen, CSS und ergänzendes Browse
 - Formular: notwendige Auswahl, Rücknavigation, sichere Darstellung von Freitext, Dateiexport und Zurücksetzen beim Neuladen. Neubau und Photovoltaik erscheinen korrekt in der Zusammenfassung.
 - Mobile Navigation und alle Seiten bei 375 Pixeln Breite ohne horizontales Überlaufen.
 - Startseite, Inspiration und ergänzende Leistungsansichten auf Desktop beziehungsweise Mobil visuell geprüft; Ansichten liegen unter `docs/vorschau/`.
+- Die neuen Motive für Modernisierung und Energie sind in Übersicht und Unterseiten geladen und geprüft. Die Leistungsübersicht wurde zusätzlich bei 390 Pixeln Breite kontrolliert; der Ausschnitt des Wallboxbilds hält das Gerät im Blick.
 
 ## Inhaltliche Orientierung für diese Überarbeitung
 
