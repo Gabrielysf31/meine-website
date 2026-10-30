@@ -1,6 +1,13 @@
 # Projektstand
 
-Stand: 30.10.2026 · Neues Startbild mit sichtbarer Elektrotechnik
+Stand: 30.10.2026 · Weiterer Ausschnitt für das Startbild
+
+## Aktuelle Bildanpassung
+
+- Gabriel gefiel die nahe Darstellung nicht; sein Wunsch war, etwas herauszuzoomen.
+- Das vorhandene Foto wird jetzt vollständig im Seitenverhältnis 4:3 und mittig angezeigt. Der hohe Bildrahmen mit seitlichem Beschnitt entfällt. Mehr Wohnraum ist sichtbar, die Technik wirkt kleiner. Die Bilddatei wurde nicht verändert und kein neues Motiv generiert.
+- Umsetzung nur in `public/assets/smart-demos.css`, Einzelheiten in [STARTBILD.md](STARTBILD.md). Build und 509 interne Verweise sowie mobile Navigation und Layout erfolgreich geprüft. Vollständiges Bildverhältnis auf Desktop und Mobil kontrolliert; Vorschauansichten aktualisiert.
+- Aktueller Arbeitsbranch: `style/startbild-weiterer-ausschnitt`, aufbauend auf `92cd957`. Nächster Schritt: den weiteren Ausschnitt mit Gabriel ansehen.
 
 ## Aktuelle Überarbeitung
 
@@ -9,7 +16,7 @@ Stand: 30.10.2026 · Neues Startbild mit sichtbarer Elektrotechnik
 - Bild, Alternativtext, Preload und Bildnachweise angepasst; als KI-Visualisierung gekennzeichnet. Der bisherige Textkasten über dem Bild wurde entfernt, damit er keine Steckdosen verdeckt. Das alte Foto bleibt als ungenutzte Datei erhalten.
 - Nur die Intensität der beiden Hintergrund-Lichtflächen noch leicht angehoben. Tempo, Bewegungsweg und Pausenfunktionen bleiben erhalten.
 - Build und 509 interne Verweise erfolgreich. Vier passende Browserprüfungen bestanden: alle Seiten erreichbar, mobiles Layout und Navigation, Lichtspiel/Pause/reduzierte Bewegung sowie Darstellung ohne JavaScript. Desktop und Mobil visuell geprüft; alle drei elektrischen Bedienelemente bleiben im Bildausschnitt sichtbar.
-- Aktueller Arbeitsbranch: `feat/startbild-elektrotechnik`, aufbauend auf `2b06c13`. Nächster Schritt: das neue Bild und die leicht erhöhte Lichtstärke mit Gabriel ansehen.
+- Mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert, aufbauend auf `2b06c13`.
 
 ## Aktuelle Feinabstimmung
 
@@ -115,7 +122,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg das neue Startbild mit sichtbarer Elektrotechnik und die leicht erhöhte Lichtstärke mit Gabriel ansehen und sein Feedback aufnehmen. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
+Beim Wiedereinstieg den weiteren Ausschnitt des Startbilds mit Gabriel ansehen und sein Feedback aufnehmen. Die Lichtstärke ist bereits leicht erhöht. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -125,7 +132,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Der aktuelle, vollständige Arbeitsstand mit neuem Startbild und nochmals leicht angehobener Lichtstärke liegt auf `feat/startbild-elektrotechnik`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der aktuelle, vollständige Arbeitsstand mit weiterem Bildausschnitt liegt auf `style/startbild-weiterer-ausschnitt`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 

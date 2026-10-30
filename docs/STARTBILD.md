@@ -14,6 +14,10 @@ Gabriels Wunsch: Die moderne Wohnatmosphäre beibehalten und im Startbild klar s
 - Das frühere Startbild `public/assets/wohnraum.jpg` bleibt als ungenutzte Datei erhalten.
 - Illustratives Motiv, kein Kundenprojekt oder Nachweis einer konkreten Produktkompatibilität.
 
+## Weiterer Ausschnitt nach Gabriels Feedback
+
+Der erste Einbau wirkte Gabriel zu nah. Das vorhandene Foto wird jetzt vollständig im ursprünglichen Seitenverhältnis 4:3 angezeigt und mittig ausgerichtet. Der frühere hohe Bildrahmen schnitt links und rechts Bildinhalt ab und vergrößerte dadurch die Wand mit der Technik. Der weitere Ausschnitt zeigt mehr Wohnraum; die Bedienelemente wirken kleiner. Die Anpassung erfolgt ausschließlich über die Darstellung in `public/assets/smart-demos.css`; Bilddatei und ursprünglicher Prompt bleiben erhalten.
+
 ## Vollständiger Prompt
 
 ```text
