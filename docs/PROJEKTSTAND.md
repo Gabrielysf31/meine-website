@@ -1,6 +1,16 @@
 # Projektstand
 
-Stand: 30.10.2026 · einheitlicher Hintergrundschein auf allen Unterseiten
+Stand: 30.10.2026 · Smart-Home-Bedienung mit Taster, App und Automatik
+
+## Smart Home: drei Bedienungsarten (30.10.2026)
+
+- Gabriels Auftrag: Tasterbedienung mit Dimmen ergänzen, alternativ eine kleine Demo für Taster, App und Automatik unter „Du bestimmst. Die Technik unterstützt.“. Beispielzeiten Licht aus um 08:00 Uhr und Jalousien herunter um 10:00 Uhr. Die Platzierung wurde freigestellt.
+- Neue eigenständige Demo „Ein Raum. Drei Wege.“ im Abschnitt `#bedienung`. Gemeinsamer Zustand für Licht und Jalousie, eigene kleine SVG-Raumansicht. Taster kurz zum Schalten, halten zum Dimmen; zusätzliche Dimm-Tasten. App mit Helligkeitsregler und Schaltflächen. Drei Bedienungsarten erhalten beim Wechsel den Zustand.
+- Automatik mit zwei änderbaren Uhrzeiten, vorgespulter Beispieluhr, chronologischer Ausführung und Ereignisliste. Standard 08:00 Licht aus, 10:00 Jalousie zu. Gleichzeitige Aktionen funktionieren ebenfalls. Start/Stop und manuelle Übersteuerung; kein echter Zeitplan. Timer stoppen außerhalb des sichtbaren Bereichs oder bei verborgenem Tab.
+- Mobil mit sichtbarer Raumansicht. Tastaturbedienung, Statusmeldungen und reduzierte Bewegung berücksichtigt. Ohne JavaScript Illustration und Erklärung. Kein Versand, keine Speicherung, keine echten Geräte. Bestehende Licht- und Jalousiendemos bleiben unabhängig.
+- Umsetzung `src/control-demo.mjs`, `public/assets/control-demo.js` / `.css`, Einbau in `src/smart-home.mjs`; CSS/Skript nur auf der Smart-Home-Seite geladen. Belegung und fachliche Primärquellen in [SMART-HOME-DEMO.md](SMART-HOME-DEMO.md).
+- Geprüft: 18 Seiten und 564 interne Verweise; alle 27 Browserprüfungen erfolgreich. Vier neue Prüfungen für manuelle Bedienung auf Desktop/Mobil, Automatik und No-JS. Layout aller Modi bei 320–1440 Pixeln ohne Überlauf; sechs Ansichten unter `docs/vorschau/bedienung-*.png`.
+- Branch `feat/smart-home-bedienungsdemo`, aufbauend auf `559a849`. Keine Veröffentlichung. Nächster Schritt: Bedienungsdemo mit Gabriel unter `/smart-home/#bedienung` ansehen. Der kostenlose freie Assistent bleibt anschließend offen; Groq ist empfohlen und noch nicht angebunden.
 
 ## Einheitlicher Hintergrundschein (30.10.2026)
 
