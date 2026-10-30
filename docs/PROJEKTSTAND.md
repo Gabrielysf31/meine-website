@@ -8,7 +8,8 @@ Stand: 30.10.2026 · Einheitlicher Effekt für klickbare Elemente
 - Infopunkte vollständig zurückgesetzt. Links, Buttons, Fragen, Auswahlkarten und Formularfelder werden jetzt mit passender Vergrößerung, leichtem Anheben und Schatten hervorgehoben. Breite Flächen etwas zurückhaltender, damit sie nicht überlaufen. Ausgewählte Zustände und dunkle Bereiche behalten passende Farben; Touch und reduzierte Bewegung berücksichtigt.
 - Zentrale Umsetzung in `public/assets/interactions.css`, auf allen Seiten eingebunden. Native Radio-/Checkbox-Felder decken ihre Auswahlkarte transparent ab, damit die vergrößerten Karten zuverlässig anklickbar bleiben. Keine neue JavaScript-Funktion. Einzelheiten in [INTERAKTIONEN.md](INTERAKTIONEN.md).
 - Build: 18 Seiten, 527 interne Verweise. Alle 15 Playwright-Prüfungen erfolgreich. Klickfunktionen, statische Infopunkte, Layout, Auswahlfarben und mobile Bedienung zusätzlich kontrolliert.
-- Aktueller Arbeitsbranch: `style/klickbare-elemente-hover`, aufbauend auf `b2b1048`. Nächster Schritt: die Hervorhebung auf den verschiedenen Seiten mit Gabriel ansehen.
+- Aktueller Arbeitsbranch: `style/klickbare-elemente-hover`, aufbauend auf `b2b1048`. Der vollständige Umsetzungsstand ist mit `02fb621` auf diesem Themenbranch gesichert und mit GitHub synchronisiert.
+- Sitzungsabschluss am 30.10.2026: keine offenen Änderungen. Beim nächsten Einstieg die Website gemeinsam durchgehen und den Hover-Effekt bei Bedarf fein abstimmen.
 
 ## Vorherige Startseitenanpassung (zurückgenommen)
 
