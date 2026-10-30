@@ -1,7 +1,10 @@
 import { initProjectPlanner } from "./planner.js";
 import { initAdvisor } from "./advisor.js";
+import { initShadingDemo, initHeroAmbience } from "./smart-demos.js";
 
 document.documentElement.classList.add("js");
+initShadingDemo(document.querySelector("[data-shading-demo]"));
+initHeroAmbience(document.querySelector("[data-hero-ambience]"));
 
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-nav");

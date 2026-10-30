@@ -16,6 +16,8 @@ Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unter
 - Startseite, Leistungsübersicht und sechs Leistungsunterseiten: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
 - Alle sechs Leistungsseiten mit ausgeschriebenem Navigationspfad „Leistungen / Leistungsname“, drei ausführlichen Themenabschnitten, Sprunglinks und insgesamt 18 erklärenden Vektorskizzen. Dazu gehören ein markierter Beispielgrundriss, eine schematische Verteilung, Lichtbereiche und Energieübersichten.
 - Erweiterte Smart-Home-Seite mit eigenen Bildern, Funktionsübersicht, Bedienung, Einstieg im Bestand oder Neubau, fünf Antworten und Assistentenhinweis. Drei interaktive Alltagssituationen steuern eine illustrierte Raumansicht mit zwei Lampen. Warm, gedimmt und Aus lassen sich zusätzlich direkt ausprobieren.
+- Darunter eine Jalousien-Demo mit drei Räumen und Beispiel-App: einzeln öffnen, halb schließen oder schließen sowie alle gemeinsam öffnen und schließen. Fenster, Raumhelligkeit und angezeigte Zustände ändern sich zusammen. Auf Mobil bleibt die Fensteransicht beim Bedienen sichtbar.
+- Dezentes bewegtes Lichtspiel im Hintergrund des Startseiteneinstiegs, mit Pausentaste. Bei reduzierter Bewegung oder ohne JavaScript bleibt es statisch; außerhalb des sichtbaren Bereichs und bei verborgenem Tab pausiert die Bewegung.
 - Inspiration mit vier eigenen Alltagsszenen: Orientierungslicht, Morgenroutine, Arbeits- und Wohnlicht sowie Energieüberblick.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
 - Über mich, Kontakt sowie durchsuchbare häufige Fragen.
@@ -45,7 +47,7 @@ npm run check
 npm test
 ```
 
-`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. Elf Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
+`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. 15 Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Die neuen Prüfungen kontrollieren Jalousien auf Desktop und Mobil, Tastaturbedienung, Lichtspiel-Pause, reduzierte Bewegung und die Darstellung ohne JavaScript. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
 
 ## Aufbau
 
@@ -53,6 +55,7 @@ npm test
 - `src/components.mjs`: gemeinsamer Seitenrahmen und wiederverwendbare Elemente.
 - `src/pages.mjs`: Inhalte der einzelnen Seiten.
 - `src/service-page.mjs`, `src/service-details.mjs` und `src/service-illustrations.mjs`: ausführliche Leistungsseiten, Themeninhalte und eigene Vektorskizzen; Gestaltung in `public/assets/services.css`.
+- `src/shading.mjs` sowie `public/assets/smart-demos.js` und `smart-demos.css`: Jalousien-Demo und Startseiten-Lichtspiel.
 - `src/inspiration.mjs` und `src/planner.mjs`: Inspirationsseite und wiederverwendbarer Planer.
 - `public/assets/project-draft.js`: gemeinsame Fragen, Ergebnisregeln und geprüftes Entwurfsformat.
 - `public/assets/advisor.js` und `public/assets/planner.js`: Berater und Planer im Browser.
@@ -72,11 +75,13 @@ Die Website liefert fertiges HTML mit CSS und ergänzendem JavaScript aus. Es we
 
 [Ausführliche Leistungsseite auf Desktop](docs/vorschau/leistungen-neubau-desktop.png) · [auf Mobil](docs/vorschau/leistungen-neubau-mobil.png)
 
+[Jalousien auf Desktop](docs/vorschau/jalousien-desktop.png) · [auf Mobil](docs/vorschau/jalousien-mobil.png) · [Startseite mit Lichtspiel](docs/vorschau/startseite-lichtspiel-desktop.png)
+
 Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. Der Planer ist weiterhin über den Button oben rechts und den Einstieg auf der Startseite erreichbar. Jeder Leistungsbereich hat ein eigenes Technikmotiv: Modernisierung zeigt einen bestehenden Wohnraum mit erneuerter Elektrik, Energie und Laden eine Wallbox mit angeschlossenem Elektroauto. Die generierten Bilder und ihre Prompts sind in [BILDPROMPTS.md](docs/BILDPROMPTS.md) dokumentiert.
 
 ## Nächster Schritt
 
-Die sechs erweiterten Leistungsseiten gemeinsam ansehen und Texte sowie Planungsskizzen anhand von Gabriels Feedback verfeinern. Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Auch Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
+Die Jalousien-Demo und das dezente Startseiten-Lichtspiel gemeinsam ansehen und Gabriels Feedback aufnehmen. Verhalten und Dateien stehen in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md). Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 
