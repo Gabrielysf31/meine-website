@@ -1,6 +1,16 @@
 # Projektstand
 
-Stand: 30.10.2026 · Wissenssuche direkt über den Fragen, 50 Antworten
+Stand: 30.10.2026 · Inspirationsgalerien mit 13 Ansichten
+
+## Inspirationsgalerien (30.10.2026)
+
+- Gabriels Auftrag: pro Inspirationsthema drei bis vier unterschiedliche Ansichten mit kurzen Erklärungen, seitlich vor und zurück wechseln, nach dem letzten wieder zum ersten Bild. Wallbox in Garage und draußen als konkrete Beispiele.
+- Vier eigenständige Galerien: Nachtlicht (Flur, Treppe, Bett), Beschattung (Schlafzimmer, Wohnraum, Terrasse), Licht (Arbeitsplatz, Küche, Lesen), Energie und Laden (Überblick, Garage, Einfahrt, Carport). Insgesamt 13 Bilder mit individuellen Titeln, Alttexten und Erläuterungen.
+- Acht neue KI-Motive; bisherige vier Inspirationsmotive und vorhandenes Carport-Bild wiederverwendet. Dateien und vollständige Prompts in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md), maschinenlesbar in `inspiration-gallery-assets.json`. Keine Kundenprojekte oder Produktzusagen.
+- Native horizontale Scrollgalerien mit Touch/Trackpad, Pfeilen, Bildpunkten und Tastatur (Links/Rechts, Anfang/Ende). Die Endlosschleife verwendet ausgeblendete Randkopien. Kein automatischer Bildwechsel. Reduzierte Bewegung berücksichtigt; ohne JavaScript bleiben alle 13 Bilder mit ihren Texten seitlich erreichbar, ohne Endlosschleife.
+- Inhalte und HTML: `src/inspiration-gallery.mjs`; Verhalten und Gestaltung: `public/assets/inspiration-gallery.js` und `.css`, nur auf der Inspirationsseite geladen. Berater und Planer bleiben erhalten.
+- Geprüft: 18 Seiten und 545 interne Verweise, alle 20 Playwright-Prüfungen erfolgreich. Neue Prüfungen decken den umlaufenden Wechsel in beide Richtungen, individuelle Texte und geladene Bilder, unabhängige Galerien, Tastatur, natives Scrollen, Größenwechsel, reduzierte Bewegung und alle Bilder ohne JavaScript ab. Desktop/Mobil visuell geprüft, einschließlich aller acht neuen Motive. Layout von 320 bis 1440 Pixeln ohne horizontalen Seitenüberlauf; Vorschauansichten aktualisiert.
+- Branch: `feat/inspiration-bildgalerien`, aufbauend auf `ff834a0`. Kein Merge nach main und keine Veröffentlichung. Nächster gemeinsamer Schritt: die Galerien unter `/inspiration/` ansehen, Bildauswahl und Bedienung mit Gabriel abstimmen.
 
 ## Sitzungsabschluss am 30.10.2026
 
@@ -154,7 +164,7 @@ Die Website bleibt ein lokaler privater Entwurf. Veröffentlichung, kostenpflich
 - Über mich, Kontakt, Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise.
 - Assistenteneinstieg als ausdrücklich gekennzeichnete Vorschau, auf Mobilgeräten als kleines Symbol.
 - Keine großen wiederkehrenden Abschlussblöcke mit Projektaufruf. Planerzugänge oben rechts, auf der Startseite und auf der Kontaktseite bleiben erhalten. Auf der Inspirationsseite ist die Übernahme Bestandteil des Beraterergebnisses.
-- Alle 13 KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
+- Alle 21 KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
 
 ## Technischer Einstieg
 
@@ -188,7 +198,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg an der Wissensseite unter `/wissen/` anknüpfen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
+Aktueller nächster Schritt: neue Inspirationsgalerien unter `/inspiration/` mit Gabriel ansehen. Die bisherige Rückmeldung zur Wissensseite bleibt offen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 

@@ -20,7 +20,7 @@ Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unter
 - Erweiterte Smart-Home-Seite mit eigenen Bildern, Funktionsübersicht, Bedienung, Einstieg im Bestand oder Neubau, fünf Antworten und Assistentenhinweis. Drei interaktive Alltagssituationen steuern eine illustrierte Raumansicht mit zwei Lampen. Warm, gedimmt und Aus lassen sich zusätzlich direkt ausprobieren.
 - Darunter eine Jalousien-Demo mit drei Räumen und Beispiel-App: einzeln öffnen, halb schließen oder schließen sowie alle gemeinsam öffnen und schließen. Fenster, Raumhelligkeit und angezeigte Zustände ändern sich zusammen. Auf Mobil bleibt die Fensteransicht beim Bedienen sichtbar.
 - Dezentes bewegtes Lichtspiel im Hintergrund des Startseiteneinstiegs, mit Pausentaste. Bei reduzierter Bewegung oder ohne JavaScript bleibt es statisch; außerhalb des sichtbaren Bereichs und bei verborgenem Tab pausiert die Bewegung.
-- Inspiration mit vier eigenen Alltagsszenen: Orientierungslicht, Morgenroutine, Arbeits- und Wohnlicht sowie Energieüberblick.
+- Inspiration mit vier seitlich bedienbaren Bildergalerien und 13 Ansichten: Nachtlicht, Beschattung, Wohnlicht sowie Energie und Laden. Je drei bis vier Ideen mit eigenem Text, Pfeilen, Bildpunkten und Endlosschleife; Wallboxen in Garage, Einfahrt und Carport.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
 - Über mich, Kontakt sowie ein Wissensbereich mit 50 Fragen, sieben Themenfiltern, Volltextsuche, verwandten Fragen und Technik-ABC. Acht Fragen bilden den Einstieg; der vollständige Katalog lässt sich aus- und wieder einklappen.
 - Moderner Projektplaner mit Wünschen am Anfang, drei erklärten Schritten, Fortschrittsbalken, Themenkarten und Hilfe zur Orientierung. Exportierbare Zusammenfassung mit den Wünschen zuerst.
@@ -49,7 +49,7 @@ npm run check
 npm test
 ```
 
-`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. 17 Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Die neuen Prüfungen kontrollieren Jalousien auf Desktop und Mobil, Tastaturbedienung, Lichtspiel-Pause, reduzierte Bewegung und die Darstellung ohne JavaScript. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
+`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. 20 Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Die neuen Prüfungen kontrollieren Jalousien auf Desktop und Mobil, Tastaturbedienung, Lichtspiel-Pause, reduzierte Bewegung und die Darstellung ohne JavaScript. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
 
 Der Wissensbereich wird zusätzlich auf Suche mit mehreren Wörtern, Themenfilter, den vollständigen Katalog, verwandte Fragen, Direktlinks und Nutzung ohne JavaScript geprüft. Aufbau und fachliche Quellen stehen in [docs/WISSEN.md](docs/WISSEN.md).
 
@@ -62,6 +62,7 @@ Der Wissensbereich wird zusätzlich auf Suche mit mehreren Wörtern, Themenfilte
 - `src/pages.mjs`: Inhalte der einzelnen Seiten.
 - `src/service-page.mjs`, `src/service-details.mjs` und `src/service-illustrations.mjs`: ausführliche Leistungsseiten, Themeninhalte und eigene Vektorskizzen; Gestaltung in `public/assets/services.css`.
 - `src/shading.mjs` sowie `public/assets/smart-demos.js` und `smart-demos.css`: Jalousien-Demo und Startseiten-Lichtspiel.
+- `src/inspiration-gallery.mjs` sowie `public/assets/inspiration-gallery.js` / `.css`: Galerieinhalte, seitliches Scrollen und Endlosschleife.
 - `src/inspiration.mjs` und `src/planner.mjs`: Inspirationsseite und wiederverwendbarer Planer.
 - `public/assets/project-draft.js`: gemeinsame Fragen, Ergebnisregeln und geprüftes Entwurfsformat.
 - `public/assets/advisor.js` und `public/assets/planner.js`: Berater und Planer im Browser.
@@ -87,11 +88,11 @@ Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. 
 
 ## Nächster Schritt
 
-Die ausgebaute Wissensseite mit Gabriel ansehen und Rückmeldungen zu Inhalt, Suche und Gestaltung aufnehmen. Der modernisierte Projektplaner bleibt ebenfalls zur Durchsicht bereit. Das Startbild und der Hover-Effekt sind bestätigt. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
+Die neuen Inspirationsgalerien mit Gabriel ansehen und Rückmeldungen zu Bildauswahl, Texten und Bedienung aufnehmen. Die ausgebaute Wissensseite bleibt ebenfalls zur Durchsicht bereit. Der modernisierte Projektplaner bleibt ebenfalls zur Durchsicht bereit. Das Startbild und der Hover-Effekt sind bestätigt. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 
-Fragen, Ergebnisregeln und Entwurfsformat stehen in [docs/INSPIRATIONSBERATER.md](docs/INSPIRATIONSBERATER.md). Die vier mit dem eingebauten Imagegen-Werkzeug erzeugten Inspirationsmotive liegen unter `public/assets/inspiration-*.jpg`; Dateipfade und vollständige Prompts stehen in [docs/INSPIRATION-BILDPROMPTS.md](docs/INSPIRATION-BILDPROMPTS.md).
+Fragen, Ergebnisregeln und Entwurfsformat stehen in [docs/INSPIRATIONSBERATER.md](docs/INSPIRATIONSBERATER.md). Die zwölf mit dem eingebauten Imagegen-Werkzeug erzeugten Inspirationsmotive liegen unter `public/assets/inspiration-*.jpg`; Dateipfade und vollständige Prompts stehen in [docs/INSPIRATION-BILDPROMPTS.md](docs/INSPIRATION-BILDPROMPTS.md).
 
 Später sollen wiederkehrende Fragen aus dem echten Chatbot als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Bei wiederholt fehlenden Angaben kann auch der Fragenablauf gezielt erweitert werden. Dieser Ausbau und die KI-Anbindung sind noch offen.
 

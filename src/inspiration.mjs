@@ -1,4 +1,5 @@
 import { icon, eyebrow, pageIntro, escape } from "./components.mjs";
+import { inspirationGalleries, renderGallery } from "./inspiration-gallery.mjs";
 import { plannerSection } from "./planner.mjs";
 import { questions } from "../public/assets/project-draft.js";
 
@@ -9,10 +10,10 @@ export const stories = [
   { visual: "energyOverview", tag: "HEUTE VERSTEHEN. MORGEN WEITERDENKEN.", title: "Was dein Zuhause<br>mit Energie macht.", text: "Verbrauch, eigener Solarstrom und später vielleicht ein Elektroauto: Ein gemeinsamer Überblick kann helfen, deine nächsten Wünsche zu sortieren.", question: "Welche Energiefragen beschäftigen dich zu Hause?", feature: true },
 ];
 
-export function renderInspiration(visualImage) {
-  return `${pageIntro("IDEEN FÜR DEINEN ALLTAG", "Was wäre, wenn dein<br>Zuhause <span class=\"inspiration-accent\">mitdenkt?</span>", "Entdecke kleine Veränderungen für deinen Alltag. Finde anschließend heraus, welche Ideen zu deinem Zuhause passen.")}
+export function renderInspiration() {
+  return `${pageIntro("IDEEN FÜR DEINEN ALLTAG", "Was wäre, wenn dein<br>Zuhause <span class=\"inspiration-accent\">mitdenkt?</span>", "Ein Thema, viele Möglichkeiten. Wische durch die Bilder und entdecke, wie unterschiedlich Licht, Beschattung und Laden zu deinem Zuhause passen können.")}
 <div class="container inspiration-intro-link"><a class="text-link" href="#berater">Was passt zu deinem Zuhause? ${icon("arrow")}</a><span>5 Fragen · ohne Anmeldung</span></div>
-<section class="container inspiration-grid" aria-label="Ideen aus dem Wohnalltag">${stories.map((story, index) => `<article class="${story.feature ? "inspiration-feature" + (index === 3 ? " inspiration-solar" : "") : "inspiration-small inspiration-technical"}"><figure class="inspiration-image">${visualImage(story.visual, index !== 0)}<figcaption class="image-caption">ALLTAGSIDEE · KI-VISUALISIERUNG</figcaption></figure><div class="inspiration-body"><span class="tag">${story.tag}</span><h2>${story.title}</h2><p>${story.text}</p><p class="story-question">${story.question}</p></div></article>`).join("")}</section>
+<section class="container inspiration-grid" aria-label="Ideen aus dem Wohnalltag">${stories.map((story, index) => `<article class="${story.feature ? "inspiration-feature" + (index === 3 ? " inspiration-solar" : "") : "inspiration-small inspiration-technical"}">${renderGallery(inspirationGalleries[index], index)}<div class="inspiration-body"><span class="tag">${story.tag}</span><h2 id="inspiration-story-${index}">${story.title}</h2><p>${story.text}</p><p class="story-question">${story.question}</p></div></article>`).join("")}</section>
 <section class="advisor-section" id="berater" aria-labelledby="advisor-title"><div class="container advisor-layout"><div class="advisor-intro">${eyebrow("VON DER IDEE ZU DEINEM ZUHAUSE")}<h2 id="advisor-title">Was passt<br>zu dir?</h2><p>Du musst die Technik noch nicht kennen. Fünf kurze Fragen helfen dir, passende Ansätze für deinen Alltag zu finden.</p><p class="advisor-privacy">Deine Antworten bleiben nur auf dieser Seite. Beim Neuladen oder Verlassen werden sie zurückgesetzt. Es wird nichts versendet.</p><a class="text-link" href="/wissen/">Du hast erst einmal eine Frage? ${icon("arrow")}</a></div>
 <div class="advisor-card"><p data-advisor-fallback class="notice">Der kurze Berater benötigt JavaScript. Die Ideen oben und die häufigen Fragen kannst du auch ohne JavaScript lesen.</p>
 <form id="advisor-form" novalidate hidden><p class="step-label" id="advisor-progress" aria-live="polite">FRAGE 01 VON 05</p><div class="advisor-dots" aria-hidden="true">${questions.map((_, i) => `<span data-advisor-dot="${i}" class="${i === 0 ? "is-current" : ""}"></span>`).join("")}</div><p class="form-error" id="advisor-error" role="alert" hidden></p>
