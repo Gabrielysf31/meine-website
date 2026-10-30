@@ -1,7 +1,7 @@
 import { renderKnowledge } from "./knowledge.mjs";
 import { interactiveRoom, lightControls } from "./room.mjs";
 import { renderSmartHome } from "./smart-home.mjs";
-import { plannerSection } from "./planner.mjs";
+import { plannerSection, plannerIntro } from "./planner.mjs";
 import { renderInspiration } from "./inspiration.mjs";
 import { renderServicePage } from "./service-page.mjs";
 import { services, faqs, scenes, visuals } from "./content.mjs";
@@ -51,7 +51,7 @@ const knowledgePage = renderKnowledge();
 
 const contactPage = `${pageIntro("KONTAKT & NÄCHSTER SCHRITT", "Deine Idee verdient<br>einen guten Anfang.", "Ob du schon einen Plan hast oder erst Möglichkeiten sammelst: Ein paar klare Angaben helfen weiter.")}<section class="container contact-grid"><article class="contact-planner">${eyebrow("VOM WUNSCH ZUM ÜBERBLICK")}<h2>Was möchtest du<br>verändern?</h2><p>Mit dem Projektplaner stellst du dein Vorhaben in wenigen Schritten zusammen. Am Ende nimmst du deine persönliche Zusammenfassung mit.</p>${button("Projektplaner öffnen", "/anfrage/")}<small>Nur lokal im Browser. Es wird keine Anfrage versendet.</small></article><article class="contact-details"><span class="feature-icon">${icon("chat")}</span><h2>Persönlicher Kontakt</h2><p>Diese Website ist ein privater Entwurf für einen möglichen späteren Betrieb.</p><dl><div><dt>E-Mail & Telefon</dt><dd>Werden vor dem Betriebsstart ergänzt</dd></div><div><dt>Einsatzgebiet</dt><dd>Wird noch festgelegt</dd></div><div><dt>Auftragsannahme</dt><dd>Aktuell noch nicht möglich</dd></div></dl><a class="text-link" href="/ueber-mich/">Mehr über die Idee${icon("arrow")}</a></article></section>`;
 
-const plannerPage = `${pageIntro("DEIN PROJEKTPLANER", "Deine Wünsche.<br>Der Anfang von etwas Gutem.", "Was soll dein Zuhause für dich können? In drei verständlichen Schritten wird aus deiner Idee ein persönlicher Überblick. Details kannst du später klären.")}${plannerSection}`;
+const plannerPage = `${plannerIntro}${plannerSection}`;
 
 const legalPage = (kind) =>
   kind === "impressum"

@@ -23,7 +23,7 @@ Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unter
 - Inspiration mit vier seitlich bedienbaren Bildergalerien und 13 Ansichten: Nachtlicht, Beschattung, Wohnlicht sowie Energie und Laden. Je drei bis vier Ideen mit eigenem Text, Pfeilen, Bildpunkten und Endlosschleife; Wallboxen in Garage, Einfahrt und Carport.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
 - Über mich, Kontakt sowie ein Wissensbereich mit 50 Fragen, sieben Themenfiltern, Volltextsuche, verwandten Fragen und Technik-ABC. Acht Fragen bilden den Einstieg; der vollständige Katalog lässt sich aus- und wieder einklappen.
-- Moderner Projektplaner mit Wünschen am Anfang, drei erklärten Schritten, Fortschrittsbalken, Themenkarten und Hilfe zur Orientierung. Exportierbare Zusammenfassung mit den Wünschen zuerst.
+- Projektplaner mit mitwachsender Vorschau, sanftem Hintergrundschein und drei erklärten Schritten. Gefüllte Wünsche stehen oben, leere Eingabefelder unter den Themen. Zwei freiwillige Zusatzfragen zu Planungsstand und Prioritäten; alle Angaben im bearbeitbaren Überblick und Export.
 - Als Vorschau gekennzeichneter Einstieg für einen späteren KI-Assistenten.
 - Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise und Fehlerseite.
 
@@ -49,7 +49,7 @@ npm run check
 npm test
 ```
 
-`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. 20 Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Die neuen Prüfungen kontrollieren Jalousien auf Desktop und Mobil, Tastaturbedienung, Lichtspiel-Pause, reduzierte Bewegung und die Darstellung ohne JavaScript. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
+`check` erstellt alle 18 HTML-Seiten einschließlich Fehlerseite und prüft interne Verweise. 23 Playwright-Prüfungen decken Entwurfsformat, Navigation, Projektplaner, Export, Suche, Alltagssituationen und Nutzung ohne JavaScript ab. Hinzu kommen Beraterfragen, Auswahlgrenzen, Rücknavigation, Übernahme, Schutz vorhandener Eingaben und Kopierfehler. Die Leistungsseiten werden einschließlich Navigationspfad, Sprungzielen und Rückkehr zur Übersicht ohne JavaScript geprüft. Die neuen Prüfungen kontrollieren Jalousien auf Desktop und Mobil, Tastaturbedienung, Lichtspiel-Pause, reduzierte Bewegung und die Darstellung ohne JavaScript. Auf diesem Mac verwenden die Browserprüfungen das vorhandene Google Chrome; auf anderen Geräten ist gegebenenfalls einmalig `npx playwright install chromium` nötig.
 
 Der Wissensbereich wird zusätzlich auf Suche mit mehreren Wörtern, Themenfilter, den vollständigen Katalog, verwandte Fragen, Direktlinks und Nutzung ohne JavaScript geprüft. Aufbau und fachliche Quellen stehen in [docs/WISSEN.md](docs/WISSEN.md).
 
@@ -86,9 +86,11 @@ Die Website liefert fertiges HTML mit CSS und ergänzendem JavaScript aus. Es we
 
 Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. Der Planer ist weiterhin über den Button oben rechts und den Einstieg auf der Startseite erreichbar. Jeder Leistungsbereich hat ein eigenes Technikmotiv: Modernisierung zeigt einen bestehenden Wohnraum mit erneuerter Elektrik, Energie und Laden eine Wallbox mit angeschlossenem Elektroauto. Die generierten Bilder und ihre Prompts sind in [BILDPROMPTS.md](docs/BILDPROMPTS.md) dokumentiert.
 
+[Projektplaner auf Desktop](docs/vorschau/projektplaner-desktop.png) · [auf Mobil](docs/vorschau/projektplaner-mobil.png) · [Zusatzfragen](docs/vorschau/projektplaner-rahmen-desktop.png)
+
 ## Nächster Schritt
 
-Die neuen Inspirationsgalerien mit Gabriel ansehen und Rückmeldungen zu Bildauswahl, Texten und Bedienung aufnehmen. Die ausgebaute Wissensseite bleibt ebenfalls zur Durchsicht bereit. Der modernisierte Projektplaner bleibt ebenfalls zur Durchsicht bereit. Das Startbild und der Hover-Effekt sind bestätigt. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
+Den erweiterten Projektplaner mit Gabriel ansehen, besonders Wunschfeldposition, Vorschau und Zusatzfragen. Danach die kostenlose Chat-Anbindung abstimmen; Empfehlung und Quellen in [docs/ASSISTENT-KONZEPT.md](docs/ASSISTENT-KONZEPT.md). Die Inspirationsgalerien sind bestätigt. Die Wissensseite bleibt ebenfalls zur Durchsicht bereit. Der modernisierte Projektplaner bleibt ebenfalls zur Durchsicht bereit. Das Startbild und der Hover-Effekt sind bestätigt. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 

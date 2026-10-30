@@ -8,6 +8,19 @@ export const topics = {
   energy: "Energie & Laden",
 };
 
+// Optional planner context; older advisor drafts remain valid without it.
+export const planningStages = [
+  ["exploring", "Ich sammle Ideen", "Ich möchte Möglichkeiten kennenlernen"],
+  ["wishes", "Meine Wünsche sind konkreter", "Ich weiß ungefähr, was sich ändern soll"],
+  ["plans", "Es gibt schon Pläne", "Zum Beispiel einen Grundriss oder ein Raumkonzept"],
+  ["open", "Noch offen", "Das klärt sich im nächsten Schritt"],
+];
+export const planningPriorities = [
+  ["simple", "Einfach bedienen", "Im Alltag verständlich und unkompliziert"],
+  ["expandable", "Später erweitern können", "Jetzt beginnen und weitere Ideen vorbereiten"],
+  ["connected", "Funktionen gemeinsam denken", "Licht, Beschattung und Energie aufeinander abstimmen"],
+];
+
 export const questions = [
   { key: "building", title: "Wie wohnst du oder möchtest du wohnen?", options: [["Wohnung", "Wohnung"], ["Eigenheim", "Eigenheim"], ["Noch offen", "Noch offen"]] },
   { key: "project", title: "Was hast du vor?", options: [["new", "Neu bauen"], ["renovation", "Renovieren oder umfassend modernisieren"], ["extend", "Einzelne Funktionen ergänzen"], ["explore", "Erst einmal Ideen sammeln"]] },
@@ -55,6 +68,8 @@ export function validateDraft(value) {
   if (value.source === "advisor") {
     if (!value.answers || !questions.every((q) => q.multiple ? Array.isArray(value.answers[q.key]) && value.answers[q.key].length > 0 && value.answers[q.key].length <= 3 && value.answers[q.key].every((v) => q.options.some(([id]) => id === v)) : q.options.some(([id]) => id === value.answers[q.key]))) throw new Error("Die Antworten sind nicht vollständig.");
   }
+  if (value.planningStage !== undefined && value.planningStage !== "" && !planningStages.some(([id]) => id === value.planningStage)) throw new Error("Der Planungsstand ist nicht bekannt.");
+  if (value.priorities !== undefined && (!Array.isArray(value.priorities) || value.priorities.length > planningPriorities.length || new Set(value.priorities).size !== value.priorities.length || value.priorities.some(id => !planningPriorities.some(([allowed]) => id === allowed)))) throw new Error("Diese Prioritäten können nicht übernommen werden.");
   return structuredClone(value);
 }
 

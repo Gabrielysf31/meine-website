@@ -1,6 +1,17 @@
 # Projektstand
 
-Stand: 30.10.2026 · Inspirationsgalerien mit 13 Ansichten
+Stand: 30.10.2026 · Projektplaner mit Vorschau, flexiblen Wünschen und Zusatzfragen
+
+## Projektplaner und kostenloser Assistent (30.10.2026)
+
+- Gabriels Rückmeldung: Inspirationsgalerien gefallen sehr gut. Nächster Schwerpunkt ist ein freier KI-Chat mit individueller Beratung und Zusammenfassung zur Planerübergabe. Kostenpflichtige OpenAI-Anbindung abgelehnt; kostenlose Alternative recherchieren.
+- Empfehlung für einen begrenzten kostenlosen Entwicklungsstart: GroqCloud Free Plan. Noch keine Anbindung, kein Konto eingerichtet, kein Schlüssel hinterlegt, keine Chatnachricht übertragen. Quellen, Einschränkungen und späterer Ablauf stehen in [ASSISTENT-KONZEPT.md](ASSISTENT-KONZEPT.md). Keine dauerhaften Kundenprojekte beauftragt.
+- Planer geändert: leeres Wunschfeld nach den Themen, gefülltes Feld vor „Dein Zuhause“. Bestehende Berater-Übernahme und zukünftiges `applyDraft` ordnen es entsprechend ein. Beim Schreiben bleibt das Feld stehen; Umordnung beim Verlassen oder erneuten Öffnen des ersten Schritts. Leerzeichen gelten als leer.
+- Zwei neue freiwillige Fragen unter „Dein Rahmen“: „Wie weit ist deine Idee?“ (Ideen sammeln, konkretere Wünsche, Pläne, offen) und „Was ist dir besonders wichtig?“ (einfache Bedienung, spätere Erweiterung, Funktionen gemeinsam planen; Mehrfachwahl). Angaben bleiben beim Zurückgehen erhalten, erscheinen im Überblick, Kopie/Export und im Vergleich vor dem Ersetzen eines Entwurfs.
+- Neuer Einstieg auf `/anfrage/`: zweispaltiger Aufbau mit sanftem Grün-/Warmton-Hintergrund und einer Vorschau rechts, die mit den tatsächlichen Wünschen, Zuhause und Themen mitwächst. Keine erfundene Beispielplanung. Nur eine kurze Hintergrund-Einblendung, danach statisch; reduzierte Bewegung beachtet. Mobil einspaltig.
+- Gemeinsames Entwurfsformat weiterhin Version 1, ältere Beraterentwürfe bleiben gültig. Optionale `planningStage`/`priorities` nur mit erlaubten Werten. Keine Ableitung aus Vermutungen. `src/planner.mjs`, `public/assets/planner.css`, `planner.js` und `project-draft.js`; Seiteneinstieg in `src/pages.mjs`.
+- Geprüft: 18 Seiten und 545 interne Verweise, alle 23 Playwright-Prüfungen erfolgreich. Wunschfeldposition einschließlich Leerzeichen und ruhiger Eingabe, Vorschau, Zusatzfragen, Rücknavigation, Export und validierte optionale Chatangaben geprüft. Bestehende Beraterübernahme und Ersetzvergleich erweitert. Desktop und Mobil visuell geprüft, kein Seitenüberlauf bei 320–1440 Pixeln. Neue Ansichten `projektplaner-desktop.png`, `projektplaner-mobil.png`, `projektplaner-rahmen-desktop.png`.
+- Branch `feat/projektplaner-mehr-orientierung`, aufbauend auf `1843805`. Keine Veröffentlichung oder KI-Aktivierung. Nächster Schritt: Planer mit Gabriel ansehen; anschließend kostenlosen Chat-Anbieter und tatsächliche Anbindung abstimmen.
 
 ## Inspirationsgalerien (30.10.2026)
 
@@ -198,7 +209,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Aktueller nächster Schritt: neue Inspirationsgalerien unter `/inspiration/` mit Gabriel ansehen. Die bisherige Rückmeldung zur Wissensseite bleibt offen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
+Aktueller nächster Schritt: erweiterten Planer unter `/anfrage/` mit Gabriel ansehen und anschließend die kostenlose Chat-Anbindung abstimmen. Inspirationsgalerien sind bestätigt. Die bisherige Rückmeldung zur Wissensseite bleibt offen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 

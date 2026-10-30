@@ -1,4 +1,4 @@
-import { validateDraft, plannerWishes } from "./project-draft.js";
+import { validateDraft, plannerWishes, planningStages, planningPriorities } from "./project-draft.js";
 
 export function initProjectPlanner(projectForm) {
   if (!projectForm) return null;
@@ -17,6 +17,29 @@ export function initProjectPlanner(projectForm) {
   const nextButton = root.querySelector("#next-step");
   const previousButton = root.querySelector("#previous-step");
   const error = root.querySelector("#form-error");
+  const wishes = projectForm.elements.namedItem("wishes");
+  const wishesBlock = projectForm.querySelector('[data-wishes-block]');
+
+  function positionWishes() {
+    const anchor = projectForm.querySelector(wishes.value.trim() ? '[data-wishes-top]' : '[data-wishes-bottom]');
+    if (anchor.nextElementSibling !== wishesBlock) anchor.after(wishesBlock);
+  }
+  function updatePreview() {
+    const data = new FormData(projectForm);
+    const values = {
+      wishes: wishes.value.trim() || "Was möchtest du zu Hause verändern?",
+      building: data.get("building") || "Das darf noch offen sein.",
+      topics: data.getAll("topics").join(" · ") || "Du wählst, was zu deiner Idee passt.",
+    };
+    document.querySelectorAll('[data-planner-preview]').forEach(element => {
+      const text = values[element.dataset.plannerPreview];
+      element.textContent = text.length > 145 ? text.slice(0, 142) + "…" : text;
+    });
+  }
+  // Keep the textarea still while typing; reorder when leaving it or revisiting step 1.
+  wishes.addEventListener("blur", positionWishes);
+  projectForm.addEventListener("input", updatePreview);
+  projectForm.addEventListener("change", updatePreview);
 
   function buildSummary() {
     const data = new FormData(projectForm);
@@ -27,6 +50,8 @@ export function initProjectPlanner(projectForm) {
       ],
       ["Dein Zuhause", data.get("building")],
       ["Deine Themen", data.getAll("topics").join(", ")],
+      ["Stand deiner Idee", planningStages.find(([id]) => id === data.get("planningStage"))?.[1] || "Noch offen"],
+      ["Das ist dir wichtig", data.getAll("priorities").map(id => planningPriorities.find(([value]) => value === id)?.[1]).filter(Boolean).join(", ") || "Noch offen"],
       ["Zeitraum", data.get("timeline")],
       ["Ort / Postleitzahl", data.get("location").trim() || "Noch offen"],
     ];
@@ -70,6 +95,7 @@ export function initProjectPlanner(projectForm) {
     nextButton.firstChild.textContent =
       step === 1 ? "Zusammenfassung ansehen" : "Weiter";
     if (step === 2) buildSummary();
+    if (step === 0) positionWishes();
     if (focus) stepPanels[step].querySelector("h2").focus();
   }
 
@@ -122,7 +148,7 @@ export function initProjectPlanner(projectForm) {
 
   function snapshot() {
     const data = new FormData(projectForm);
-    return ["Dein Zuhause: " + (data.get("building") || "Noch offen"), "Deine Themen: " + (data.getAll("topics").join(", ") || "Noch offen"), "Zeitraum: " + data.get("timeline"), "Ort: " + (data.get("location") || "Noch offen"), "Deine Wünsche:\n" + (data.get("wishes") || "Noch offen")].join("\n\n");
+    return ["Dein Zuhause: " + (data.get("building") || "Noch offen"), "Deine Themen: " + (data.getAll("topics").join(", ") || "Noch offen"), "Stand deiner Idee: " + (planningStages.find(([id]) => id === data.get("planningStage"))?.[1] || "Noch offen"), "Das ist dir wichtig: " + (data.getAll("priorities").map(id => planningPriorities.find(([value]) => value === id)?.[1]).filter(Boolean).join(", ") || "Noch offen"), "Zeitraum: " + data.get("timeline"), "Ort: " + (data.get("location") || "Noch offen"), "Deine Wünsche:\n" + (data.get("wishes") || "Noch offen")].join("\n\n");
   }
   function reset() {
     projectForm.reset();
@@ -131,6 +157,7 @@ export function initProjectPlanner(projectForm) {
     root.querySelector("#project-summary").replaceChildren();
     root.querySelector("#copy-status").textContent = "";
     showStep(0, false);
+    updatePreview();
   }
   function applyDraft(value) {
     const draft = validateDraft(value);
@@ -141,8 +168,13 @@ export function initProjectPlanner(projectForm) {
     projectForm.elements.namedItem("timeline").value = draft.timeline || "Ich möchte mich erst orientieren";
     projectForm.elements.namedItem("location").value = draft.location;
     projectForm.elements.namedItem("wishes").value = wishes;
+    for (const input of projectForm.querySelectorAll('[name="planningStage"]')) input.checked = input.value === draft.planningStage;
+    for (const input of projectForm.querySelectorAll('[name="priorities"]')) input.checked = (draft.priorities || []).includes(input.value);
     hasDraft = true;
     showStep(0);
+    updatePreview();
   }
+  positionWishes();
+  updatePreview();
   return { applyDraft, snapshot, reset, get hasDraft() { return hasDraft; } };
 }
