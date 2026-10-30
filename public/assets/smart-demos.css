@@ -1,20 +1,19 @@
 @layer components {
   /* Die Bewegung bleibt auf den Hintergrund des Einstiegs begrenzt. */
-  .home-hero { position: relative; isolation: isolate; }
+  .home-hero { --glow-travel: clamp(160px, 24vw, 340px); position: relative; isolation: isolate; }
   .hero-glow { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
   .hero-glow::before, .hero-glow::after {
     content: "";
     position: absolute;
-    width: min(850px, 110vw);
-    height: 650px;
-    border-radius: 50%;
-    background: radial-gradient(ellipse, #ddc59333 0%, #e7d5ac1c 37%, transparent 70%);
-    top: -140px;
-    left: -180px;
+    width: min(950px, 140vw);
+    height: 620px;
+    background: radial-gradient(ellipse closest-side at 42% 46%, #d9bc7b52 0%, #e2cc9c30 43%, transparent 100%);
+    top: -110px;
+    left: -160px;
   }
-  .hero-glow::after { top: 40px; left: 22%; background: radial-gradient(ellipse, #b2cbbb26, transparent 68%); }
-  html.js .hero-glow::before { animation: hero-light-drift 28s ease-in-out infinite alternate; }
-  html.js .hero-glow::after { animation: hero-light-drift 36s ease-in-out -12s infinite alternate-reverse; }
+  .hero-glow::after { top: 65px; left: 12%; background: radial-gradient(ellipse closest-side at 48% 52%, #9bbca345 0%, #bbcfb82b 46%, transparent 100%); }
+  html.js .hero-glow::before { animation: hero-light-drift 16s ease-in-out infinite alternate; }
+  html.js .hero-glow::after { animation: hero-light-drift 22s ease-in-out -8s infinite alternate-reverse; }
   .home-hero[data-ambience-paused="true"] .hero-glow::before,
   .home-hero[data-ambience-paused="true"] .hero-glow::after,
   .home-hero[data-ambience-visible="false"] .hero-glow::before,
@@ -22,8 +21,8 @@
   .home-hero[data-page-hidden="true"] .hero-glow::before,
   .home-hero[data-page-hidden="true"] .hero-glow::after { animation-play-state: paused; }
   @keyframes hero-light-drift {
-    from { transform: translate3d(-30px, 0, 0) scale(.95); }
-    to { transform: translate3d(170px, 70px, 0) scale(1.12); }
+    from { transform: translate3d(-80px, -25px, 0) scale(.9) rotate(-6deg); }
+    to { transform: translate3d(var(--glow-travel), 90px, 0) scale(1.16) rotate(6deg); }
   }
   .ambience-toggle {
     display: inline-flex;

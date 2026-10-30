@@ -18,8 +18,8 @@ Gabriel hat die Kombination aus ruhiger Hintergrundbewegung und einer zweiten Sm
 
 ## Lichtspiel
 
-- Nur im Hintergrund des Einstiegs auf der Startseite: zwei sehr weiche Flächen in warmen und salbeigrünen Tönen.
-- Langsame CSS-Bewegung über 28 beziehungsweise 36 Sekunden. Texte und Bild bewegen sich nicht.
+- Nur im Hintergrund des Einstiegs auf der Startseite: zwei weiche Flächen in warmen und salbeigrünen Tönen. Auf Gabriels Wunsch deutlicher sichtbar, mit stärkerem Farbverlauf und größerem Bewegungsweg.
+- Ruhige CSS-Bewegung über 16 beziehungsweise 22 Sekunden je Richtung, mit leichter Drehung und Größenänderung. Der Bewegungsweg passt sich der Bildschirmbreite an. Texte und Bild bewegen sich nicht.
 - „Lichtspiel pausieren“ hält die Bewegung an derselben Stelle an; „Lichtspiel fortsetzen“ lässt sie weiterlaufen.
 - Automatische Pause außerhalb des sichtbaren Bereichs und bei verborgenem Browser-Tab.
 - Bei reduzierter Bewegung und ohne JavaScript bleibt der Hintergrund statisch. Die dafür nicht benötigte Pausentaste ist dann ausgeblendet.
