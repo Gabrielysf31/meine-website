@@ -22,7 +22,7 @@ Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unter
 - Dezentes bewegtes Lichtspiel im Hintergrund des Startseiteneinstiegs, mit Pausentaste. Bei reduzierter Bewegung oder ohne JavaScript bleibt es statisch; außerhalb des sichtbaren Bereichs und bei verborgenem Tab pausiert die Bewegung.
 - Inspiration mit vier eigenen Alltagsszenen: Orientierungslicht, Morgenroutine, Arbeits- und Wohnlicht sowie Energieüberblick.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
-- Über mich, Kontakt sowie ein Wissensbereich mit 36 Fragen, sieben Themenfiltern, Volltextsuche, verwandten Fragen und Technik-ABC. Acht Fragen bilden den Einstieg; der vollständige Katalog lässt sich aus- und wieder einklappen.
+- Über mich, Kontakt sowie ein Wissensbereich mit 50 Fragen, sieben Themenfiltern, Volltextsuche, verwandten Fragen und Technik-ABC. Acht Fragen bilden den Einstieg; der vollständige Katalog lässt sich aus- und wieder einklappen.
 - Moderner Projektplaner mit Wünschen am Anfang, drei erklärten Schritten, Fortschrittsbalken, Themenkarten und Hilfe zur Orientierung. Exportierbare Zusammenfassung mit den Wünschen zuerst.
 - Als Vorschau gekennzeichneter Einstieg für einen späteren KI-Assistenten.
 - Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise und Fehlerseite.
@@ -56,7 +56,7 @@ Der Wissensbereich wird zusätzlich auf Suche mit mehreren Wörtern, Themenfilte
 ## Aufbau
 
 - `src/content.mjs`: zentrale Inhalte, Leistungsbereiche und Fragen.
-- `src/knowledge.mjs`, `src/knowledge-data.mjs`, `public/assets/knowledge.js` und `knowledge.css`: Wissensseite, 36 Antworten, Suche und Themenfilter.
+- `src/knowledge.mjs`, `src/knowledge-data.mjs`, `public/assets/knowledge.js` und `knowledge.css`: Wissensseite, 50 Antworten, Suche und Themenfilter.
 - `src/components.mjs`: gemeinsamer Seitenrahmen und wiederverwendbare Elemente.
 - `public/assets/interactions.css`: gemeinsame Hervorhebung klickbarer Elemente, mit Rücksicht auf Touch und reduzierte Bewegung.
 - `src/pages.mjs`: Inhalte der einzelnen Seiten.

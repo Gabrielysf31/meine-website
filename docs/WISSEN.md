@@ -4,9 +4,9 @@ Stand: 30.10.2026 · lokal umgesetzt
 
 ## Aufbau
 
-36 redaktionelle Fragen in sieben Themen: Planung (8), Smart Home (8), Projektanfrage (3), Licht (6), Beschattung (4), Solar & Energie (4) und Laden (3). Keine behaupteten Kundenstatistiken oder angeblichen „häufigsten“ Suchanfragen.
+50 redaktionelle Fragen in sieben Themen: Planung (10), Smart Home (10), Projektanfrage (5), Licht (8), Beschattung (6), Solar & Energie (6) und Laden (5). Keine behaupteten Kundenstatistiken oder angeblichen „häufigsten“ Suchanfragen.
 
-Oben stehen Suche, Beispielbegriffe und eine kurze Einführung. Der Katalog zeigt zunächst acht Fragen. „Alle 36 Fragen anzeigen“ öffnet den vollständigen Katalog; „Weniger Fragen anzeigen“ reduziert ihn wieder. Ein Themenfilter zeigt alle Fragen des gewählten Themas. Jede geöffnete Antwort bietet zwei weitere Fragen desselben Themenbereichs an. Verlinkte Anschlussfragen und die Erklärungen des Technik-ABCs werden direkt eingeblendet, geöffnet und fokussiert; Filter und Suche werden dabei zurückgesetzt.
+Oben steht eine kompakte Einführung. Die Suche steht direkt über den Fragen in derselben Spalte; die bestätigte Themenanordnung bleibt links beziehungsweise auf Mobil davor. Während der Suche werden die Beispielbegriffe ausgeblendet, damit der erste Treffer direkt folgt. Der Katalog zeigt zunächst acht Fragen. „Alle 50 Fragen anzeigen“ öffnet den vollständigen Katalog; „Weniger Fragen anzeigen“ reduziert ihn wieder. Ein Themenfilter zeigt alle Fragen des gewählten Themas. Jede geöffnete Antwort bietet zwei weitere Fragen desselben Themenbereichs an. Verlinkte Anschlussfragen und die Erklärungen des Technik-ABCs werden direkt eingeblendet, geöffnet und fokussiert; Filter und Suche werden dabei zurückgesetzt.
 
 Darunter: vier Begriffskarten (Szene, Kelvin, Lastmanagement, Ersatzstrom), zwei Einstiege zu Inspiration und Planer sowie eine kurze redaktionelle Einordnung. Helle Karten, Salbeigrün und ein weicher Hintergrund-Lichtschein machen die Seite voller. Der Schein blendet sich einmal in drei Sekunden ein; keine dauerhafte Animation. Bei reduzierter Bewegung bleibt er statisch.
 
@@ -14,12 +14,12 @@ Darunter: vier Begriffskarten (Szene, Kelvin, Lastmanagement, Ersatzstrom), zwei
 
 Die Suche durchsucht alle Fragen, Antworten, Kategorien und zusätzliche verwandte Begriffe, unabhängig vom anfänglichen Ausklappen. Mehrere Wörter müssen vorkommen, die Wortreihenfolge ist egal. Groß-/Kleinschreibung, Umlaute und übliche Umschreibungen werden vereinheitlicht. Keine KI, keine unscharfe Tippfehlerkorrektur; die Begriffe werden lokal abgeglichen. Verwandte Links und Quellen zählen nicht zum Suchtext.
 
-Die Suche wird mit dem Thema kombiniert; bei keinem Treffer gibt es eine Erklärung und eine Rücksetztaste. Trefferzahl wird als Status ausgegeben, Themenfilter haben sichtbare und zugängliche Auswahlzustände. Native Details/Summary-Elemente erhalten die Tastaturbedienung. Ohne JavaScript bleiben alle 36 Fragen direkt zugänglich; interaktive Filter und Beispielbegriffe bleiben ausgeblendet. Keine Eingaben werden versendet oder gespeichert. Fragmentlinks enthalten nur feste Fragekennungen.
+Die Suche wird mit dem Thema kombiniert; bei keinem Treffer gibt es eine Erklärung und eine Rücksetztaste. Trefferzahl wird als Status ausgegeben, Themenfilter haben sichtbare und zugängliche Auswahlzustände. Native Details/Summary-Elemente erhalten die Tastaturbedienung. Ohne JavaScript bleiben alle 50 Fragen direkt zugänglich; interaktive Filter und Beispielbegriffe bleiben ausgeblendet. Keine Eingaben werden versendet oder gespeichert. Fragmentlinks enthalten nur feste Fragekennungen.
 
 ## Dateien
 
 - `src/content.mjs`: bisherige sechs Fragen, ergänzt um die neuen Fragen.
-- `src/knowledge-data.mjs`: 30 neue Fragen, Suchbegriffe und externe Vertiefungen.
+- `src/knowledge-data.mjs`: 44 ergänzende Fragen, Suchbegriffe und externe Vertiefungen.
 - `src/knowledge.mjs`: vollständiger Seitenaufbau und Anschlussfragen.
 - `public/assets/knowledge.js` und `knowledge.css`: lokale Suche, Filter, Darstellung.
 - `src/components.mjs`: CSS und Modul nur auf `/wissen/` eingebunden. Die alte Suchfunktion wurde aus `app.js` entfernt.
@@ -36,3 +36,7 @@ Geprüft am 30.10.2026. Orientierungstexte sind eigenständig formuliert. Keine 
 - [Bundesnetzagentur: Ladeeinrichtungen](https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/Netzanschluss/FAQLadeeinrichtungen/Ladeeinrichtung_table.html): Meldung beim Netzbetreiber und leistungsabhängige Zustimmung. Bewusst keine pauschale Leistungsgrenze oder allgemeine Anschlusszusage.
 
 Die passenden Vertiefungen stehen direkt an den jeweiligen Antworten und öffnen in einem weiteren Tab. Die Seite lädt selbst keine externen Inhalte.
+
+## Korrektur nach Gabriels Rückmeldung
+
+Das vorherige Suchfeld im oberen Einstieg war zu weit von den Treffern entfernt. Es steht jetzt im Fragenkatalog unmittelbar vor Status und Antworten. Der Abstand zwischen Eingabe und erstem Treffer wird auf Desktop und Mobil geprüft. Der Katalog wurde von 36 auf 50 Fragen erweitert, mit jeweils zwei zusätzlichen Fragen pro Themenbereich.

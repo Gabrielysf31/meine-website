@@ -13,6 +13,7 @@ if (root) {
   root.querySelectorAll('[data-knowledge-controls]').forEach(el=>el.hidden=false);
   function update() {
     const query = normalize(search.value.trim());
+    root.querySelector(".knowledge-suggestions").hidden = !!query;
     const tokens = query.split(/[^\p{L}\p{N}]+/u).filter(t=>t && !stopwords.has(t));
     const matches = entries.filter(entry=>(!category || entry.dataset.category===category) && tokens.every(t=>indexes.get(entry).includes(t)));
     const limit = !query && !category && !expanded ? 8 : matches.length;

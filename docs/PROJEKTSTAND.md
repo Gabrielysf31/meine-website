@@ -1,6 +1,15 @@
 # Projektstand
 
-Stand: 30.10.2026 · Wissensseite mit 36 Fragen und neuem Aufbau
+Stand: 30.10.2026 · Wissenssuche direkt über den Fragen, 50 Antworten
+
+## Wissenssuche und Erweiterung auf 50 Fragen (30.10.2026)
+
+- Gabriels Rückmeldung: Suche im Einstieg zu weit von den Fragen entfernt. Die Themenfelder gefallen ihm ausdrücklich und sollen so angeordnet bleiben. Erweiterung auf 50 Fragen gewünscht.
+- Suchkarte direkt in die Fragenspalte vor Trefferstatus und Antworten verschoben. Kompakterer Einstieg mit Titel und Kennzahlen. Auf Mobil stehen die Themen vor der Suche; zwischen Suche und Antworten gibt es keinen weiteren Inhaltsblock. Suchvorschläge werden während einer Eingabe ausgeblendet.
+- Je zwei zusätzliche Fragen pro Thema: Planung 10, Smart Home 10, Projektanfrage 5, Licht 8, Beschattung 6, Solar & Energie 6, Laden 5. Unter anderem Möbelplan, Bestandsunterlagen, verständliche Bedienung, Automatik-Wünsche, Lumen, Bildschirmlicht, Schlafzimmer, Vorbereitung für Beschattung und Wallbox sowie Speichern/Bearbeiten im Planer.
+- Acht Einstiegsfragen, Themenfilter, verwandte Fragen und Technik-ABC bleiben erhalten. Suche erfasst alle 50 Fragen, auch die zunächst eingeklappten. Keine Veröffentlichung oder externe Anbindung.
+- Arbeitsbranch `fix/wissen-suche-und-50-fragen`, aufbauend auf `6ad56f6`. Build: 18 Seiten, 534 interne Verweise. Browserprüfungen für 50 Fragen und für die räumliche Nähe von Eingabe und Treffer bei 320, 375 und 1440 Pixeln ergänzt. Desktop/Mobil-Ansichten aktualisiert. Alle 17 Prüfungen erfolgreich; die angepassten Wissen-Prüfungen nach der letzten Suchkorrektur erneut bestanden.
+- Nächster Schritt: Gabriel prüft die neue Position der Suche und die zusätzlichen Inhalte. Aufbau und Quellen bleiben in [WISSEN.md](WISSEN.md) dokumentiert.
 
 ## Wissensseite: umfangreicher Fragenkatalog (30.10.2026)
 
