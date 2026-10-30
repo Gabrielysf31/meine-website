@@ -2,6 +2,16 @@
 
 Stand: 30.10.2026 · Wissenssuche direkt über den Fragen, 50 Antworten
 
+## Sitzungsabschluss am 30.10.2026
+
+- Projektplaner modernisiert: Kundenwünsche zuerst, drei erklärte Schritte, Fortschritt und sichtbare Hilfe. Assistent bleibt ausdrücklich eine Vorschau. Umsetzung: `3b03481`.
+- Wissensseite neu aufgebaut (`6ad56f6`), nach Gabriels Feedback auf 50 Fragen erweitert und Suche direkt über die Fragen verschoben (`58e75d2`). Die Themenanordnung ist ausdrücklich bestätigt. Acht Einstiegsfragen, ausklappbarer Gesamtkatalog und verwandte Fragen bleiben erhalten.
+- Hover-Effekt von Gabriel erneut als funktionierend bestätigt; unverändert beibehalten. Drei Infopunkte bleiben statisch, das bestätigte Startbild bleibt erhalten.
+- Letzte Prüfungen: 18 Seiten und 534 interne Verweise erfolgreich; 17 Tests abgedeckt. Beim letzten Gesamtlauf bestanden 16 Tests; die neue Abstandsprüfung wurde durch Ausblenden der Suchvorschläge während der Eingabe korrigiert. Beide Wissen-Tests bestanden anschließend erneut. Danach nur eine kleine mobile Schriftkorrektur, Build und visuelle Layoutprüfung bei 320–1440 Pixeln. Kein erneuter vollständiger Testlauf nach dieser Korrektur.
+- Alle heutigen Umsetzungen sind auf dem aktuellen Branch `fix/wissen-suche-und-50-fragen` enthalten und auf GitHub gesichert. Vor diesem Doku-Abschluss war das Arbeitsverzeichnis sauber und der Branch mit `origin` synchron (Fetch geprüft).
+- Einstieg beim nächsten Mal: `/wissen/` gemeinsam ansehen, insbesondere Suche direkt über Treffern und neue Fragen; Gabriels Rückmeldung aufnehmen. Auch der Projektplaner unter `/anfrage/` kann weiter verfeinert werden. Keine zusätzliche Funktionsarbeit aus der Ideenliste beauftragt.
+- Kein Merge nach `main`, keine Veröffentlichung, keine kostenpflichtige Anbindung und kein echter Anfrageversand. Der Abschluss ändert ausschließlich diese Übergabe.
+
 ## Wissenssuche und Erweiterung auf 50 Fragen (30.10.2026)
 
 - Gabriels Rückmeldung: Suche im Einstieg zu weit von den Fragen entfernt. Die Themenfelder gefallen ihm ausdrücklich und sollen so angeordnet bleiben. Erweiterung auf 50 Fragen gewünscht.
@@ -33,7 +43,7 @@ Stand: 30.10.2026 · Wissenssuche direkt über den Fragen, 50 Antworten
 - Branch: `feat/projektplaner-kundenwuensche`. Alle 15 bestehenden Tests bestanden; die Abläufe wurden an die frühere Wünsche-Eingabe angepasst. Build: 18 Seiten, 531 interne Verweise. Desktop sowie Mobil bei 375 und 320 Pixeln ohne Überlauf geprüft; Fortschritt, Wunschübernahme und Assistenten-Dialog zusätzlich kontrolliert. Ansichten unter `docs/vorschau/projektplaner-*.png`.
 - Nächster Schritt: Den neuen Projektplaner mit Gabriel ansehen und seine Rückmeldung aufnehmen. Hover-Effekt bleibt wie bestätigt, Infopunkte statisch. Weitere allgemeine Verschönerungen nach konkretem Feedback; keine Veröffentlichung beauftragt.
 
-## Aktuelle Korrektur
+## Vorherige Korrektur: Hover-Effekt
 
 - Gabriels Vorgabe: Effekt von den drei nicht anklickbaren Infopunkten entfernen und auf die klickbaren Elemente der gesamten Website übertragen.
 - Infopunkte vollständig zurückgesetzt. Links, Buttons, Fragen, Auswahlkarten und Formularfelder werden jetzt mit passender Vergrößerung, leichtem Anheben und Schatten hervorgehoben. Breite Flächen etwas zurückhaltender, damit sie nicht überlaufen. Ausgewählte Zustände und dunkle Bereiche behalten passende Farben; Touch und reduzierte Bewegung berücksichtigt.
@@ -166,8 +176,8 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Geprüft
 
-- Build und Verweise: aktuell 18 Seiten, 527 interne Verweise.
-- Alle 15 Playwright-Prüfungen bestanden: 14 Browserabläufe einschließlich Leistungsnavigation, Jalousien und Lichtspiel sowie eine Prüfung des gemeinsamen Entwurfsformats. Die Prüfung der Smart-Home-Szenen kontrolliert auch Tageslicht, Abenddämmerung und die ausgeblendete Sonne in beiden Abendszenen.
+- Build und Verweise: aktuell 18 Seiten, 534 interne Verweise.
+- Prüfbestand: 17 Playwright-Prüfungen einschließlich zweier neuer Wissen-Prüfungen; genaue letzte Ausführungen siehe Sitzungsabschluss oben. Die bisherigen 15 Tests decken Browserabläufe einschließlich Leistungsnavigation, Jalousien und Lichtspiel sowie das gemeinsame Entwurfsformat ab. Die Prüfung der Smart-Home-Szenen kontrolliert auch Tageslicht, Abenddämmerung und die ausgeblendete Sonne in beiden Abendszenen.
 - Berater: Pflichtantworten, maximal drei Wünsche, ausschließliche Wahl „Noch offen“, Rücknavigation und passende Ergebnisanzahl.
 - Übernahme: richtige Themen, bearbeitbare Angaben, alte und neue Entwürfe vergleichen, Behalten und Ersetzen sowie Erhalt des Planers beim Neustart des Beraters.
 - Kein automatisches Vorauswählen von Photovoltaik allein aufgrund der gemeinsamen Antwort zu Verbrauch und Solarstrom. Bei offenen Wünschen bleiben Themen offen, bis der Besucher selbst auswählt.
@@ -178,7 +188,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg den gemeinsamen Hover-Effekt für klickbare Elemente auf den verschiedenen Seiten mit Gabriel ansehen. Die drei Infopunkte bleiben statisch. Das neue Startbild mit großzügigem Raumblick ist ausdrücklich freigegeben; die Lichtstärke ist bereits leicht erhöht. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
+Beim Wiedereinstieg an der Wissensseite unter `/wissen/` anknüpfen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -188,7 +198,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der weitere Bildausschnitt ist mit `46427bb` auf `style/startbild-weiterer-ausschnitt` gesichert. Das neue großzügige Raummotiv ist mit `979b305` auf `feat/startbild-wohnraum-weit` gesichert. Der zwischenzeitliche Effekt für Infopunkte ist mit `b2b1048` auf `style/startseite-punkte-hover` gesichert. Der aktuelle, vollständige Arbeitsstand mit zurückgesetzten Infopunkten und gemeinsamer Hervorhebung klickbarer Elemente liegt auf `style/klickbare-elemente-hover`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der weitere Bildausschnitt ist mit `46427bb` auf `style/startbild-weiterer-ausschnitt` gesichert. Das neue großzügige Raummotiv ist mit `979b305` auf `feat/startbild-wohnraum-weit` gesichert. Der zwischenzeitliche Effekt für Infopunkte ist mit `b2b1048` auf `style/startseite-punkte-hover` gesichert. Der Hover-Stand liegt auf `style/klickbare-elemente-hover`. Darauf bauen der modernisierte Projektplaner (`3b03481` auf `feat/projektplaner-kundenwuensche`), die Wissensseite (`6ad56f6` auf `feat/wissen-fragenkatalog`) und die aktuelle Suchposition mit 50 Fragen (`58e75d2` auf `fix/wissen-suche-und-50-fragen`) auf. Der aktuelle Branch enthält alle diese Änderungen. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 
