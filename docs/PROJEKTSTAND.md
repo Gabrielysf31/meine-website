@@ -1,6 +1,13 @@
 # Projektstand
 
-Stand: 29.10.2026 · Sitzungsabschluss
+Stand: 30.10.2026 · Abenddämmerung korrigiert
+
+## Aktuelle Korrektur
+
+- Gabriels Rückmeldung: Nur „Ankommen“ soll draußen hell sein; „Feierabend“ und „Unterwegs“ sollen Abenddämmerung zeigen.
+- Beide Abendszenen zeigen jetzt einen blaugrauen Himmel mit rosigem Horizont, dunkler Landschaft und ausgeblendeter Sonne. „Ankommen“ behält Tageslicht und Sonne. Die manuelle Lichtwahl erhält die gewählte Tageszeit.
+- Build und alle 465 internen Verweise sowie die erweiterte Smart-Home-Browserprüfung erfolgreich. Drei Szenen auf Desktop und die Abendansicht auf Mobil visuell geprüft; bei 375 Pixeln kein horizontales Überlaufen.
+- Korrektur auf `fix/smart-home-abenddaemmerung`; bisheriger Abschlussstand bleibt auf `feat/smart-home-ruhige-lichtstimmungen` erhalten.
 
 ## Letzte Sitzung und abschließende Entscheidungen
 
@@ -8,7 +15,7 @@ Stand: 29.10.2026 · Sitzungsabschluss
 - Smart-Home-Seite um zwei eigene Bilder, Funktionsübersicht, Bedienung, Nachrüstung/Neubau, KNX-Einordnung und fünf aufklappbare Antworten erweitert. Am Ende führt ein Button zur ausdrücklich als Vorschau gekennzeichneten Assistentenfunktion.
 - Gabriels interaktive Lichtidee umgesetzt: illustrierter Wohnraum mit Pendel- und Stehleuchte. Lampen, Lichtkegel, Raumtönung und Lichtbeschreibung wechseln gemeinsam.
 - Endgültige Auswahl nach Gabriels Feedback: **Warm, Gedimmt und Aus**. Gelb, Grün und Rot wurden zwischenzeitlich ausprobiert und wieder entfernt, weil die bunten Farben ihm zu unseriös wirken. Diese gestalterische Entscheidung beim Wiedereinstieg beibehalten.
-- Ankommen: heller Raum mit Tageslicht, blauem Himmel und Sonne, passend zu „Tageslicht nutzen“; Licht warm. Feierabend: Abendansicht, warm und gedimmt. Unterwegs: Abendansicht mit ausgeschalteten Lampen.
+- Ankommen: heller Raum mit Tageslicht, blauem Himmel und Sonne, passend zu „Tageslicht nutzen“; Licht warm. Feierabend: Abenddämmerung ohne Sonne, warm und gedimmt. Unterwegs: dieselbe Abenddämmerung mit ausgeschalteten Lampen.
 - Manuelle Lichtwahl verändert nur die Beleuchtung und erhält die gewählte Tageszeit. Ein Szenenwechsel stellt die Vorgabe der jeweiligen Situation wieder her. Auf Mobilgeräten stehen Raumansicht und Lichtauswahl direkt zusammen.
 - Raum als skalierbare SVG-/CSS-Illustration in `src/room.mjs`, ohne Geräteanbindung. Bedienelemente mit Tastatur und sichtbarem Auswahlzustand; bei reduzierter Bewegung ohne Übergangsanimation. Ohne JavaScript bleibt die warme Tagesansicht sichtbar.
 - Sämtliche Umsetzungsänderungen bis Commit `e4ad57b` sind auf `feat/smart-home-ruhige-lichtstimmungen` gesichert. Der Abschluss aktualisiert ausschließlich die Übergabedokumentation.
@@ -83,7 +90,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der aktuelle, vollständige Arbeitsstand liegt auf `feat/smart-home-ruhige-lichtstimmungen`; dort wird auch die Abschlussdokumentation gesichert. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Der aktuelle, vollständige Arbeitsstand einschließlich Abenddämmerung liegt auf `fix/smart-home-abenddaemmerung`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 

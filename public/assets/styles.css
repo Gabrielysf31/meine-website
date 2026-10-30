@@ -1083,11 +1083,13 @@
   .light-room { --lamp-color:#ffd694; --lamp-surface:#ffe3a9; --room-wall:#72786b; --room-floor:#696554; margin-top:25px; position:relative; border-radius:10px; overflow:hidden; }
   .light-room[data-light="dim"] { --lamp-color:#f8b968; --lamp-surface:#dcb17c; --room-wall:#39463e; --room-floor:#3d4237; }
   .light-room[data-light="off"] { --lamp-color:#000; --lamp-surface:#858a79; --room-wall:#273b3e; --room-floor:#303e3a; }
-  .light-room[data-time="day"] { --window-sky:#b9d9df; --sky-light:#fff4b6; --window-landscape:#72947a; }
+  .light-room[data-time="day"] { --window-sky-top:#a9cfdc; --window-sky-bottom:#d6e8e4; --window-landscape:#72947a; }
+  .light-room[data-time="dusk"] { --window-sky-top:#46536d; --window-sky-bottom:#b78e86; --window-landscape:#35464b; }
+  .light-room[data-time="dusk"] .room-sun { opacity:0; }
   .light-room[data-time="day"][data-light="warm"] { --room-wall:#b8b6a0; --room-floor:#a69a7b; }
   .light-room[data-time="day"][data-light="off"] { --room-wall:#929b8c; --room-floor:#8a8570; }
   .light-room svg { width:100%; height:auto; }
-  .light-room svg * { transition:fill .45s, opacity .45s; }
+  .light-room svg * { transition:fill .45s, stop-color .45s, opacity .45s; }
   .room-light-pools { opacity:1; transition:opacity .45s; }
   [data-light="dim"] .room-light-pools { opacity:.4; }
   [data-light="off"] .room-light-pools { opacity:0; }
