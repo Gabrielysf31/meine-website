@@ -2,7 +2,7 @@
 
 Stand: 30.10.2026
 
-Gabriel möchte den warmen, leicht beleuchteten Auftritt auf allen Seiten wiederfinden. Alle Unterseiten verwenden deshalb einen gemeinsamen salbeigrünen und warmen Hintergrundschein im oberen Seitenbereich. Der Schein läuft nach unten weich aus; Bilder und Karten behalten ihre eigenen Farben.
+Gabriel möchte den warmen, leicht beleuchteten Auftritt auf allen Seiten wiederfinden. Alle Unterseiten verwenden deshalb einen gemeinsamen salbeigrünen und warmen Hintergrundschein im oberen Seitenbereich. Der Schein läuft nach unten weich aus; Bilder und Karten behalten ihre eigenen Farben. Nach Gabriels Rückmeldung wurden Farbstärke und Deckkraft angehoben: erkennbareres Salbeigrün und warmes Champagnerlicht bei unverändert weichen Übergängen.
 
 `src/components.mjs` lädt auf Unterseiten `public/assets/ambience.css` und setzt `has-page-ambience` am Hauptinhalt. Dessen Pseudoelement liegt hinter den Inhalten, ist auf die Seitenbreite begrenzt und nimmt keine Zeigerereignisse an. Es gibt keine zusätzlichen Netzwerkdienste, Bilder oder Skripte für den Effekt.
 

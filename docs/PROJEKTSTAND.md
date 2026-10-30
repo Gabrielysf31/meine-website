@@ -4,6 +4,8 @@ Stand: 30.10.2026 · einheitlicher Hintergrundschein auf allen Unterseiten
 
 ## Einheitlicher Hintergrundschein (30.10.2026)
 
+- Nach Gabriels Rückmeldung die zunächst zu schwache Wirkung verstärkt: sichtbareres Salbeigrün und warmes Champagnerlicht durch kräftigere Farbtöne und höhere Deckkraft auf Desktop und Mobil. Ausdehnung, Einblendung und ruhiges Verhalten bleiben erhalten. Farbkorrektur mit Build, Verweisen, Layout und aktualisierten Ansichten geprüft; kein erneuter vollständiger Browser-Testlauf nur für die Farbwerte.
+
 - Gabriels Wunsch: die sanfte Hintergrundbeleuchtung auch auf Inspiration, Über mich, Wissen und den übrigen Seiten einsetzen, damit der Auftritt zusammenpasst.
 - Zentraler warmer und salbeigrüner Lichtschein auf allen 17 Unterseiten einschließlich Leistungsdetails, Kontakt und Hinweisseiten. Die Startseite behält ihr bestehendes pausierbares Lichtspiel. Eigene Lichtebenen auf Wissen und im Planer durch den gemeinsamen Effekt ersetzt.
 - Reine CSS-Darstellung, hinter den Inhalten und ohne Einfluss auf Klicks oder Layout. Eine Einblendung von 2,8 Sekunden, danach statisch; bei reduzierter Bewegung direkt statisch. Auch ohne JavaScript sichtbar. Auf Mobil angepasste Ausdehnung, kein seitlicher Überlauf.

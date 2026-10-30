@@ -11,16 +11,16 @@
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 680px 480px at 88% 120px, #cbdcbb94, #e6e8cc38 56%, transparent 80%),
-    radial-gradient(ellipse 620px 360px at 16% 500px, #ecdbb773, transparent 76%),
-    radial-gradient(ellipse 600px 380px at 85% 740px, #dbe6d23b, transparent 76%);
+    radial-gradient(ellipse 680px 480px at 88% 120px, #b8cfa3c2, #d6dfb56b 56%, transparent 80%),
+    radial-gradient(ellipse 620px 360px at 16% 500px, #e7c58b9e, transparent 76%),
+    radial-gradient(ellipse 600px 380px at 85% 740px, #bfd1aa6b, transparent 76%);
 }
 @media (max-width: 700px) {
   .has-page-ambience::before {
     background:
-      radial-gradient(ellipse 390px 400px at 92% 120px, #cbdcbb8c, transparent 80%),
-      radial-gradient(ellipse 360px 310px at 3% 580px, #ecdbb773, transparent 80%),
-      radial-gradient(ellipse 350px 320px at 90% 850px, #dbe6d238, transparent 80%);
+      radial-gradient(ellipse 390px 400px at 92% 120px, #b8cfa3bd, transparent 80%),
+      radial-gradient(ellipse 360px 310px at 3% 580px, #e7c58b9e, transparent 80%),
+      radial-gradient(ellipse 350px 320px at 90% 850px, #bfd1aa67, transparent 80%);
   }
 }
 @media (prefers-reduced-motion: no-preference) {
