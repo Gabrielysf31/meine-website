@@ -12,7 +12,7 @@ Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imageg
 
 ## Startbild: Elektrotechnik im Zuhause
 
-Am 30.10.2026 mit dem eingebauten Imagegen-Werkzeug erstellt. `public/assets/zuhause-elektrotechnik.jpg` zeigt einen modernen Wohnraum mit gut sichtbaren Schuko-Steckdosen, Wandtaster, Bedienpanel und eingeschalteter Beleuchtung. Das Bild ersetzt den bisherigen Wohnraum auf der Startseite. Es ist als KI-Visualisierung gekennzeichnet und zeigt kein Kundenprojekt oder konkretes Produktsystem. Originalpfad und vollständiger Prompt stehen in [STARTBILD.md](STARTBILD.md).
+Am 30.10.2026 mit dem eingebauten Imagegen-Werkzeug neu erstellt. `public/assets/wohnraum-elektrotechnik-weit.jpg` zeigt einen großzügigen Wohn- und Essbereich mit seitlich angebrachten Schuko-Steckdosen und Wandtaster, Jalousien, eingeschalteten Leuchten und offener Küche. Das vollständige Motiv im Querformat ersetzt die vorherige Nahansicht auf der Startseite. Es ist als KI-Visualisierung gekennzeichnet und zeigt kein Kundenprojekt oder konkretes Produktsystem. Originalpfad und vollständiger Prompt stehen in [STARTBILD-WOHNRAUM.md](STARTBILD-WOHNRAUM.md). Das vorherige Bild `zuhause-elektrotechnik.jpg` und seine [Promptdokumentation](STARTBILD.md) bleiben als ungenutzter Zwischenstand erhalten.
 
 ## Wohnraumfotos
 

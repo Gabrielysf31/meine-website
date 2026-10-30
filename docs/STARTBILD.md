@@ -1,5 +1,7 @@
 # Startbild: Elektrotechnik im Zuhause
 
+Dieses Motiv ist ein früherer Zwischenstand und wird nicht mehr auf der Startseite verwendet. Das aktuelle Motiv und sein vollständiger Prompt stehen in [STARTBILD-WOHNRAUM.md](STARTBILD-WOHNRAUM.md).
+
 Erstellt am 30.10.2026 mit dem eingebauten Imagegen-Werkzeug, ohne CLI/API-Fallback.
 
 Gabriels Wunsch: Die moderne Wohnatmosphäre beibehalten und im Startbild klar sichtbare Elektrotechnik zeigen. Der bisherige Wohnraum wirkte zu allgemein. Zusätzlich wurde die Hintergrund-Lichtstärke geringfügig angehoben.
