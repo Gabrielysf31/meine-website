@@ -2,6 +2,7 @@ import { interactiveRoom, lightControls } from "./room.mjs";
 import { renderSmartHome } from "./smart-home.mjs";
 import { plannerSection } from "./planner.mjs";
 import { renderInspiration } from "./inspiration.mjs";
+import { renderServicePage } from "./service-page.mjs";
 import { services, faqs, scenes, visuals } from "./content.mjs";
 import { icon, button, eyebrow, pageIntro, escape } from "./components.mjs";
 
@@ -128,7 +129,7 @@ export const pages = [
     path: `/leistungen/${s.slug}/`,
     title: s.label,
     description: s.description,
-    content: `${pageIntro("LEISTUNGEN / " + s.number, s.intro, s.description)}<div class="container">${visualFigure(s.visual, "service-figure")}</div><section class="container content-section"><a class="text-link back-link" href="/leistungen/">${icon("arrow", "back-arrow")}Alle Leistungen</a><div class="three-columns detail-columns">${s.details.map(([title, text]) => `<article>${icon(s.icon)}<h2>${title}</h2><p>${text}</p></article>`).join("")}</div><div class="preparation-note"><span class="feature-icon">${icon("chat")}</span><div><h2>Was du schon mitbringen kannst</h2><p>${s.prepare}</p></div></div><p class="section-footnote">Geplanter Themenbereich im privaten Zukunftsentwurf. Noch kein buchbares Leistungsangebot.</p>${s.slug === "smart-home" ? button("Alltagssituationen entdecken", "/smart-home/", true) : s.slug === "energie" ? `<a class="text-link" href="/leistungen/photovoltaik/">Mehr zur Photovoltaik${icon("arrow")}</a>` : ""}</section>`,
+    content: renderServicePage(s, visualFigure, services),
   })),
   {
     path: "/404.html",

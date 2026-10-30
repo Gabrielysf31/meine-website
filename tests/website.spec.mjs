@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { pages } from "../src/pages.mjs";
+import { services } from "../src/content.mjs";
 import { readFile } from "node:fs/promises";
 
 test("Alle Seiten sind erreichbar, haben eine Überschrift und laden ohne Browserfehler", async ({
@@ -73,6 +74,30 @@ test("Projektplaner validiert, behält Eingaben und exportiert ohne Versand", as
   await expect(
     page.getByRole("radio", { name: "Eigenheim" }),
   ).not.toBeChecked();
+});
+
+test("Leistungsseiten bieten Orientierung und Abschnittsnavigation auch ohne JavaScript", async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const page = await context.newPage();
+  try {
+    for (const service of services) {
+      await page.goto(`http://127.0.0.1:4173/leistungen/${service.slug}/`);
+      const breadcrumb = page.getByRole("navigation", { name: "Brotkrumennavigation" });
+      await expect(breadcrumb.locator('[aria-current="page"]')).toHaveText(service.label);
+      const contents = page.getByRole("navigation", { name: "Auf dieser Leistungsseite" });
+      for (const [heading] of service.details) {
+        const link = contents.getByRole("link", { name: new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) });
+        const target = await link.getAttribute("href");
+        await link.click();
+        expect(new URL(page.url()).hash).toBe(target);
+        const section = page.locator(target);
+        await expect(section.getByRole("heading", { name: heading, exact: true })).toBeInViewport();
+        await expect(section.getByRole("img")).toBeVisible();
+      }
+      await breadcrumb.getByRole("link", { name: "Leistungen", exact: true }).click();
+      await expect(page).toHaveURL(/\/leistungen\/$/);
+    }
+  } finally { await context.close(); }
 });
 
 test("Mobile Navigation, Dialog und Layout funktionieren auf kleinen Bildschirmen", async ({

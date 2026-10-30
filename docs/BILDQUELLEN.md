@@ -20,3 +20,7 @@ Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imageg
 Bezug am 29.10.2026 über Unsplash mit verkleinerten Bildabmessungen. Die Quellen sind zusätzlich auf der Website unter `/bildnachweise/` verlinkt. Unsplash-Lizenz: https://unsplash.com/license
 
 Logozeichen, Favicon und Funktionssymbole sind im Projekt als SVG umgesetzt. Die Schriftgestaltung verwendet lokal vorhandene Systemschriften.
+
+## Planungsskizzen auf den Leistungsseiten
+
+Die 18 eingebetteten Vektordarstellungen sind eigene Skizzen aus `src/service-illustrations.mjs`. Sie erläutern unter anderem Elektroplanung im Grundriss, Verteilung, Lichtbereiche, Beschattung und Energieflüsse. Der Beispielgrundriss wird für Neubau und Modernisierung verwendet. Alle Skizzen sind illustrative Planungsbeispiele; sie zeigen keine Kundenprojekte, konkreten Verdrahtungen oder realen Messwerte. Aufbau und Zuordnung stehen in [LEISTUNGEN.md](LEISTUNGEN.md).

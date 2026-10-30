@@ -1,8 +1,16 @@
 # Projektstand
 
-Stand: 30.10.2026 · Abenddämmerung korrigiert
+Stand: 30.10.2026 · Leistungsseiten ausgearbeitet
 
-## Aktuelle Korrektur
+## Aktuelle Überarbeitung
+
+- Gabriels Auftrag: Auf allen sechs Leistungsseiten den vollständigen Namen hinter „Leistungen /“ anzeigen und die bisherigen drei Unterpunkte zu ausführlichen Abschnitten mit Beispielen und passenden Darstellungen ausbauen.
+- Umgesetzt: verlinkter Navigationspfad, drei Sprunglinks je Seite, insgesamt 18 Themenabschnitte mit Erklärungen, konkreten Planungspunkten und Alltagsbeispielen sowie 18 eingebettete Vektorskizzen. Dazu gehören ein markierter Grundriss und eine beschriftete Verteilung. Die vorhandenen Technikbilder bleiben erhalten.
+- Aufbau und Inhalte: [LEISTUNGEN.md](LEISTUNGEN.md). Einstieg in `src/service-page.mjs`, Texte in `src/service-details.mjs`, Skizzen in `src/service-illustrations.mjs`, Gestaltung in `public/assets/services.css`.
+- Build: 18 Seiten, 507 interne Verweise. Alle elf Playwright-Prüfungen erfolgreich, einschließlich Orientierung und Sprungnavigation durch alle sechs Leistungsseiten ohne JavaScript. Alle Seiten bei 375 Pixeln ohne horizontales Überlaufen; Leistungsseiten und sämtliche Skizzen visuell geprüft. Neue Desktop- und Mobilansichten der Neubauseite liegen unter `docs/vorschau/leistungen-neubau-*.png`.
+- Aktueller Arbeitsbranch: `feat/leistungen-ausfuehrlich`, aufbauend auf der Dämmerungskorrektur `9108999`. Nächster Schritt: die sechs erweiterten Seiten gemeinsam ansehen und Gabriels Feedback aufnehmen.
+
+## Vorherige Korrektur
 
 - Gabriels Rückmeldung: Nur „Ankommen“ soll draußen hell sein; „Feierabend“ und „Unterwegs“ sollen Abenddämmerung zeigen.
 - Beide Abendszenen zeigen jetzt einen blaugrauen Himmel mit rosigem Horizont, dunkler Landschaft und ausgeblendeter Sonne. „Ankommen“ behält Tageslicht und Sonne. Die manuelle Lichtwahl erhält die gewählte Tageszeit.
@@ -63,13 +71,14 @@ Statisches HTML aus JavaScript-Vorlagen, CSS und ergänzende Browsermodule. Node
 - `public/assets/planner.js`: Planer, Bearbeitung, Zusammenfassung und Export.
 - `public/assets/app.js`: übrige Websitefunktionen und Zurücksetzen beim Verlassen beziehungsweise Wiederherstellen einer Seite.
 - `src/content.mjs`: Leistungsinhalte und Bilddefinitionen.
+- `src/service-page.mjs`, `src/service-details.mjs`, `src/service-illustrations.mjs`: ausführliche Leistungsseiten und Vektorskizzen; Gestaltung in `public/assets/services.css`.
 
 Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md). Die vier neuen Bilder mit Dateipfaden und vollständigen Prompts sind in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md) dokumentiert. Die Originale bleiben im Imagegen-Ausgabeordner; die Website verwendet lokale JPEG-Dateien.
 
 ## Geprüft
 
-- Build und Verweise: 18 Seiten, 465 interne Verweise.
-- Alle zehn Playwright-Prüfungen bestanden: neun Browserabläufe und eine Prüfung des gemeinsamen Entwurfsformats. Nach den abschließenden kleinen Änderungen an Tageslicht und Lichtfarben wurden Build/Verweise und gezielt die Smart-Home-Browserprüfung erneut erfolgreich ausgeführt. Für diesen reinen Dokumentationsabschluss ist kein erneuter App-Build erforderlich.
+- Build und Verweise: aktuell 18 Seiten, 507 interne Verweise.
+- Alle elf Playwright-Prüfungen bestanden: zehn Browserabläufe einschließlich Leistungsnavigation und eine Prüfung des gemeinsamen Entwurfsformats. Die Prüfung der Smart-Home-Szenen kontrolliert auch Tageslicht, Abenddämmerung und die ausgeblendete Sonne in beiden Abendszenen.
 - Berater: Pflichtantworten, maximal drei Wünsche, ausschließliche Wahl „Noch offen“, Rücknavigation und passende Ergebnisanzahl.
 - Übernahme: richtige Themen, bearbeitbare Angaben, alte und neue Entwürfe vergleichen, Behalten und Ersetzen sowie Erhalt des Planers beim Neustart des Beraters.
 - Kein automatisches Vorauswählen von Photovoltaik allein aufgrund der gemeinsamen Antwort zu Verbrauch und Solarstrom. Bei offenen Wünschen bleiben Themen offen, bis der Besucher selbst auswählt.
@@ -80,7 +89,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg diesen Abschlussstand lesen und mit Gabriel die nächste gewünschte Überarbeitung festlegen. Die zuletzt gewünschte reduzierte Lichtauswahl ist umgesetzt; daraus ergibt sich keine weitere offene Funktionsaufgabe. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs` und `src/room.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
+Beim Wiedereinstieg die sechs erweiterten Leistungsseiten mit Gabriel ansehen und sein Feedback aufnehmen. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt; daraus ergibt sich keine weitere offene Funktionsaufgabe. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs` und `src/room.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -90,7 +99,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Der aktuelle, vollständige Arbeitsstand einschließlich Abenddämmerung liegt auf `fix/smart-home-abenddaemmerung`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Der aktuelle, vollständige Arbeitsstand mit ausgearbeiteten Leistungsseiten liegt auf `feat/leistungen-ausfuehrlich`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 
