@@ -1,8 +1,5 @@
 /* Gemeinsamer Planer auf der Anfrageseite und unter dem Inspirationsberater. */
 .planner-hero { position: relative; isolation: isolate; overflow: hidden; padding: 75px 0 65px; }
-.planner-hero::before, .planner-hero::after { content: ""; position: absolute; z-index: -1; pointer-events: none; border-radius: 50%; filter: blur(35px); }
-.planner-hero::before { width: 760px; height: 640px; right: -120px; top: -180px; background: radial-gradient(ellipse, #cbdcbb9c, #e6e8cc45 55%, transparent 72%); }
-.planner-hero::after { width: 620px; height: 350px; left: 15%; bottom: -160px; background: radial-gradient(ellipse, #ecdbb78c, transparent 70%); }
 .planner-hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 65px; align-items: center; }
 .planner-hero h1 { font-size: clamp(40px, 4.8vw, 68px); line-height: 1.07; letter-spacing: -.045em; margin: 25px 0; }
 .planner-hero h1 > span { color: #638066; }
@@ -22,10 +19,6 @@
 .planner-idea-preview dd { font-size: 13px; margin-top: 7px; line-height: 1.6; overflow-wrap: anywhere; }
 .planner-preview-footer { display: flex; align-items: center; gap: 8px; color: #5d765b; font-size: 10px; margin-top: 23px; }
 .planner-preview-footer .icon { width: 16px; height: 16px; }
-@media (prefers-reduced-motion: no-preference) {
-  .planner-hero::before { animation: planner-glow-in 2.8s ease-out both; }
-  @keyframes planner-glow-in { from { opacity: .15; transform: translate(25px, -15px); } to { opacity: 1; transform: translate(0); } }
-}
 .planner-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.55fr); gap: 48px; }
 .planner-kicker { font-size: 10px; letter-spacing: .12em; color: var(--petrol); margin: 0 0 16px; }
 .planner-aside-title { font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; }

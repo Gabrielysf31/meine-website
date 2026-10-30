@@ -57,7 +57,7 @@
   .service-chapter:nth-child(even) .service-chapter-copy { order: 2; }
   .service-chapter:nth-child(even) .service-chapter-visual { order: 1; }
   .service-chapter .number-label { margin-bottom: 20px; }
-  .service-chapter h2 { font-size: clamp(30px, 3vw, 42px); margin-bottom: 25px; }
+  .service-chapter h2 { font-size: clamp(30px, 3vw, 42px); margin-bottom: 25px; overflow-wrap: anywhere; }
   .service-chapter-copy > p:not(.number-label) { font-size: 15px; color: var(--muted); margin-top: 19px; }
   .service-chapter-copy > p.service-chapter-lead { color: var(--ink); font-size: 18px; line-height: 1.65; }
   .service-chapter-copy h3 { font-size: 16px; letter-spacing: -0.015em; margin-top: 30px; }

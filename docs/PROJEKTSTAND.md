@@ -1,6 +1,15 @@
 # Projektstand
 
-Stand: 30.10.2026 · Projektplaner mit Vorschau, flexiblen Wünschen und Zusatzfragen
+Stand: 30.10.2026 · einheitlicher Hintergrundschein auf allen Unterseiten
+
+## Einheitlicher Hintergrundschein (30.10.2026)
+
+- Gabriels Wunsch: die sanfte Hintergrundbeleuchtung auch auf Inspiration, Über mich, Wissen und den übrigen Seiten einsetzen, damit der Auftritt zusammenpasst.
+- Zentraler warmer und salbeigrüner Lichtschein auf allen 17 Unterseiten einschließlich Leistungsdetails, Kontakt und Hinweisseiten. Die Startseite behält ihr bestehendes pausierbares Lichtspiel. Eigene Lichtebenen auf Wissen und im Planer durch den gemeinsamen Effekt ersetzt.
+- Reine CSS-Darstellung, hinter den Inhalten und ohne Einfluss auf Klicks oder Layout. Eine Einblendung von 2,8 Sekunden, danach statisch; bei reduzierter Bewegung direkt statisch. Auch ohne JavaScript sichtbar. Auf Mobil angepasste Ausdehnung, kein seitlicher Überlauf.
+- Umsetzung: `public/assets/ambience.css`, zentrale Einbindung und Klasse am Hauptinhalt in `src/components.mjs`; alte Effekte aus `knowledge.css` und `planner.css` entfernt. Details in [HINTERGRUNDLICHT.md](HINTERGRUNDLICHT.md).
+- Geprüft: 18 Seiten und 562 interne Verweise, alle 23 Browserprüfungen erfolgreich. Zusätzlich alle Seiten bei 320 und 1440 Pixeln, Hintergrund ohne JavaScript, reduzierte Bewegung und Ende der Einblendung geprüft. Sechs Ansichten von Inspiration, Über mich und Wissen visuell kontrolliert. Ein bereits vorhandener 320-Pixel-Überlauf bei „Abnahmevorbereitung“ durch erlaubten Wortumbruch in Leistungsüberschriften behoben; Leistungsnavigation und mobile Navigation danach erneut erfolgreich geprüft.
+- Branch `style/einheitlicher-hintergrundschein`, aufbauend auf `6a0e0ca`. Keine Veröffentlichung. Nächster Schritt bleibt der kostenlose freie Assistent; Groq ist als Empfehlung dokumentiert und noch nicht angebunden.
 
 ## Projektplaner und kostenloser Assistent (30.10.2026)
 

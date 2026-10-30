@@ -8,7 +8,7 @@ Stand: 30.10.2026 · lokal umgesetzt
 
 Oben steht eine kompakte Einführung. Die Suche steht direkt über den Fragen in derselben Spalte; die bestätigte Themenanordnung bleibt links beziehungsweise auf Mobil davor. Während der Suche werden die Beispielbegriffe ausgeblendet, damit der erste Treffer direkt folgt. Der Katalog zeigt zunächst acht Fragen. „Alle 50 Fragen anzeigen“ öffnet den vollständigen Katalog; „Weniger Fragen anzeigen“ reduziert ihn wieder. Ein Themenfilter zeigt alle Fragen des gewählten Themas. Jede geöffnete Antwort bietet zwei weitere Fragen desselben Themenbereichs an. Verlinkte Anschlussfragen und die Erklärungen des Technik-ABCs werden direkt eingeblendet, geöffnet und fokussiert; Filter und Suche werden dabei zurückgesetzt.
 
-Darunter: vier Begriffskarten (Szene, Kelvin, Lastmanagement, Ersatzstrom), zwei Einstiege zu Inspiration und Planer sowie eine kurze redaktionelle Einordnung. Helle Karten, Salbeigrün und ein weicher Hintergrund-Lichtschein machen die Seite voller. Der Schein blendet sich einmal in drei Sekunden ein; keine dauerhafte Animation. Bei reduzierter Bewegung bleibt er statisch.
+Darunter: vier Begriffskarten (Szene, Kelvin, Lastmanagement, Ersatzstrom), zwei Einstiege zu Inspiration und Planer sowie eine kurze redaktionelle Einordnung. Helle Karten, Salbeigrün und ein weicher Hintergrund-Lichtschein machen die Seite voller. Der Schein wird jetzt wie auf allen Unterseiten gemeinsam über `ambience.css` ausgeliefert. Er blendet sich einmal in 2,8 Sekunden ein; bei reduzierter Bewegung erscheint er direkt statisch. Keine dauerhafte Animation oder zusätzliche eigene Wissen-Lichtebene.
 
 ## Suche und Zugänglichkeit
 
