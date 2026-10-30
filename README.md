@@ -14,6 +14,7 @@ Website für Gabriels mögliche spätere Selbstständigkeit im Bereich Elektrote
 Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unterseiten, mobile Navigation und kurze Inhalte für Privatkunden.
 
 - Startseite, Leistungsübersicht und sechs Leistungsunterseiten: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
+- Einheitlicher Hover-Effekt für klickbare Links, Buttons, Fragen und Formularauswahl auf der gesamten Website. Die drei Infopunkte bleiben statisch. Einzelheiten stehen in [docs/INTERAKTIONEN.md](docs/INTERAKTIONEN.md).
 - Neues Startbild mit großzügigem Blick auf Wohn- und Essbereich: seitlich angebrachte Steckdosen und Wandtaster, Jalousien, eingeschaltete Leuchten und eine offene Küche. Vollständig im Querformat und als KI-Visualisierung gekennzeichnet; Bild und vollständiger Prompt stehen in [docs/STARTBILD-WOHNRAUM.md](docs/STARTBILD-WOHNRAUM.md).
 - Alle sechs Leistungsseiten mit ausgeschriebenem Navigationspfad „Leistungen / Leistungsname“, drei ausführlichen Themenabschnitten, Sprunglinks und insgesamt 18 erklärenden Vektorskizzen. Dazu gehören ein markierter Beispielgrundriss, eine schematische Verteilung, Lichtbereiche und Energieübersichten.
 - Erweiterte Smart-Home-Seite mit eigenen Bildern, Funktionsübersicht, Bedienung, Einstieg im Bestand oder Neubau, fünf Antworten und Assistentenhinweis. Drei interaktive Alltagssituationen steuern eine illustrierte Raumansicht mit zwei Lampen. Warm, gedimmt und Aus lassen sich zusätzlich direkt ausprobieren.
@@ -54,6 +55,7 @@ npm test
 
 - `src/content.mjs`: zentrale Inhalte, Leistungsbereiche und häufige Fragen.
 - `src/components.mjs`: gemeinsamer Seitenrahmen und wiederverwendbare Elemente.
+- `public/assets/interactions.css`: gemeinsame Hervorhebung klickbarer Elemente, mit Rücksicht auf Touch und reduzierte Bewegung.
 - `src/pages.mjs`: Inhalte der einzelnen Seiten.
 - `src/service-page.mjs`, `src/service-details.mjs` und `src/service-illustrations.mjs`: ausführliche Leistungsseiten, Themeninhalte und eigene Vektorskizzen; Gestaltung in `public/assets/services.css`.
 - `src/shading.mjs` sowie `public/assets/smart-demos.js` und `smart-demos.css`: Jalousien-Demo und Startseiten-Lichtspiel.

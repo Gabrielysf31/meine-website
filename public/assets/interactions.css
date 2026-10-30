@@ -1,0 +1,66 @@
+/* Nur Grundwerte: vorhandene Flex-, Grid- und Festpositionierungen haben Vorrang. */
+@layer reset {
+  :where(a[href]) { display: inline-block; }
+  :where(a[href], button, summary, label[for], .choice, input, select, textarea) { position: relative; }
+}
+
+@layer interactions {
+  @media (hover: hover) and (pointer: fine) {
+    :where(
+      a[href]:not([aria-disabled="true"]),
+      button:enabled:not([aria-disabled="true"]),
+      summary, label[for], .choice:has(input:enabled),
+      input:enabled:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+      select:enabled, textarea:enabled
+    ) {
+      --interaction-scale: 1.08;
+      --interaction-lift: -6px;
+      --interaction-background: var(--white);
+      transition: scale .22s ease-out, translate .22s ease-out, box-shadow .22s ease-out, background-color .22s ease-out;
+    }
+
+    :where(.service-row, summary, .choice, label[for], .assistant-link, .main-nav.is-open a) {
+      --interaction-scale: 1.025;
+      --interaction-lift: -4px;
+    }
+    :where(input, select, textarea) { --interaction-scale: 1.01; --interaction-lift: -2px; }
+    :where(.button, .assistant-trigger) { --interaction-background: #28534c; }
+    :where(.button-secondary) { --interaction-background: var(--white); }
+    .smart-teaser :where(a[href], button),
+    .inspiration-dark :where(a[href], button),
+    :where(.skip-link) { --interaction-background: #28534c; }
+    :where(.assistant-trigger) { --interaction-z: 25; }
+    :where(.skip-link) { --interaction-z: 100; }
+    :where(.scene-tab, .light-options button, .shade-control-buttons button)[aria-pressed="true"] { --interaction-background: var(--petrol); }
+    .shade-group-controls [aria-pressed="true"] { --interaction-inset: inset 0 0 0 2px #91a98c; }
+    .choice:has(input:checked) { --interaction-background: #edf2e7; }
+
+    :where(
+      a[href]:not([aria-disabled="true"]),
+      button:enabled:not([aria-disabled="true"]),
+      summary, label[for], .choice:has(input:enabled),
+      input:enabled:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+      select:enabled, textarea:enabled
+    ):is(:hover, :focus-visible),
+    .choice:has(input:enabled:focus-visible) {
+      background-color: var(--interaction-background);
+      box-shadow: var(--interaction-inset, inset 0 0 0 0 transparent), 0 12px 28px #203a361c;
+      z-index: var(--interaction-z, 2);
+    }
+  }
+
+  /* Die sichtbare Hervorhebung bleibt bei reduzierter Bewegung ohne Vergrößern. */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    :where(
+      a[href]:not([aria-disabled="true"]),
+      button:enabled:not([aria-disabled="true"]),
+      summary, label[for], .choice:has(input:enabled),
+      input:enabled:not([type="radio"]):not([type="checkbox"]):not([type="hidden"]),
+      select:enabled, textarea:enabled
+    ):is(:hover, :focus-visible),
+    .choice:has(input:enabled:focus-visible) {
+      translate: 0 var(--interaction-lift);
+      scale: var(--interaction-scale);
+    }
+  }
+}

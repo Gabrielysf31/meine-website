@@ -28,7 +28,7 @@ Gabriel hat die Kombination aus ruhiger Hintergrundbewegung und einer zweiten Sm
 
 ## Einstieg im Code
 
-Die drei Punkte unter dem Startseiteneinstieg haben zusätzlich einen Hover-Effekt: Der jeweils überfahrene Punkt wird leicht angehoben, um acht Prozent vergrößert und mit hellem Hintergrund und Schatten hervorgehoben. Die eigentliche Fläche unter der Maus bleibt stabil; beim Wechsel geht der vorherige Punkt zurück. Der Effekt gilt für Geräte mit Maus ab 681 Pixeln Breite. Bei reduzierter Bewegung bleibt nur die statische Hervorhebung, auf Touch-Geräten die normale Darstellung. Umsetzung in `src/pages.mjs` und `public/assets/smart-demos.css`.
+Die drei Infopunkte unter dem Startseiteneinstieg sind nach Gabriels Korrektur wieder statisch. Der gemeinsame Hover-Effekt gilt für klickbare Elemente auf der gesamten Website, einschließlich Licht- und Jalousien-Tasten. Umsetzung und Prüfung stehen in [INTERAKTIONEN.md](INTERAKTIONEN.md).
 
 - `src/shading.mjs`: Räume, Illustration und Beispiel-App.
 - `src/smart-home.mjs`: Einbau unter der Lichtsimulation und Sprunglink.
@@ -40,7 +40,7 @@ Die drei Punkte unter dem Startseiteneinstieg haben zusätzlich einen Hover-Effe
 
 ## Prüfung
 
-- 18 Seiten erstellt, 509 interne Verweise geprüft; alle 15 Playwright-Prüfungen erfolgreich.
+- 18 Seiten erstellt, aktuell 527 interne Verweise geprüft; alle 15 Playwright-Prüfungen erfolgreich.
 - Einzelbedienung, Halbposition, Gruppentasten, Rückmeldungen, Tastaturbedienung, Neuladen und ausbleibende Datenanfragen auf Desktop und Mobil geprüft.
 - Beim Bedienen auf Mobil bleibt das zugehörige Fenster im sichtbaren Bereich.
 - Lichtspiel pausieren/fortsetzen, Pause außerhalb des sichtbaren Bereichs sowie reduzierte Bewegung geprüft.
