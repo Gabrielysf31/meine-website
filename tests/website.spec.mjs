@@ -41,9 +41,11 @@ test("Projektplaner validiert, behält Eingaben und exportiert ohne Versand", as
     .check();
   await page.getByRole("button", { name: "Weiter", exact: true }).click();
   await page.getByLabel("Ort oder Postleitzahl").fill("Teststadt");
+  await page.getByRole("button", { name: "Zurück", exact: true }).click();
   await page
     .getByLabel("Beschreibe kurz deine Wünsche")
     .fill("Licht & Rollläden <script>alert(1)</script>");
+  await page.getByRole("button", { name: "Weiter", exact: true }).click();
   await page.getByRole("button", { name: "Zusammenfassung ansehen" }).click();
   await expect(page.locator("#project-summary")).toContainText("Teststadt");
   await expect(page.locator("#project-summary")).toContainText(

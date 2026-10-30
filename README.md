@@ -23,7 +23,7 @@ Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unter
 - Inspiration mit vier eigenen Alltagsszenen: Orientierungslicht, Morgenroutine, Arbeits- und Wohnlicht sowie Energieüberblick.
 - Kurzer Berater mit fünf Fragen, begründeten Ansätzen und bearbeitbarer Übergabe in den Projektplaner.
 - Über mich, Kontakt sowie durchsuchbare häufige Fragen.
-- Projektplaner mit Auswahl, Detailangaben und exportierbarer Zusammenfassung.
+- Moderner Projektplaner mit Wünschen am Anfang, drei erklärten Schritten, Fortschrittsbalken, Themenkarten und Hilfe zur Orientierung. Exportierbare Zusammenfassung mit den Wünschen zuerst.
 - Als Vorschau gekennzeichneter Einstieg für einen späteren KI-Assistenten.
 - Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise und Fehlerseite.
 
@@ -84,7 +84,7 @@ Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. 
 
 ## Nächster Schritt
 
-Das neue Startbild mit erkennbarer Elektrotechnik und die leicht erhöhte Lichtstärke gemeinsam ansehen und Gabriels Feedback aufnehmen. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
+Den modernisierten Projektplaner gemeinsam ansehen und Gabriels Feedback zu Aufbau, Schritten und Hilfestellung aufnehmen. Das Startbild und der Hover-Effekt sind bestätigt. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 

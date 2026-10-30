@@ -1,6 +1,17 @@
 # Projektstand
 
-Stand: 30.10.2026 · Einheitlicher Effekt für klickbare Elemente
+Stand: 30.10.2026 · Moderner Projektplaner mit Wünschen im Vordergrund
+
+## Projektplaner: Wünsche zuerst (30.10.2026)
+
+- Neuer Auftrag: Projektplaner moderner gestalten, Schritte besser erklären und Kundenwünsche in den Vordergrund stellen. Hilfe bei Details sichtbar machen und den Auftritt aufwerten.
+- Drei Schritte: „Deine Wünsche“, „Dein Rahmen“, „Dein Überblick“. Freitext für Wünsche steht jetzt am Anfang; die Zusammenfassung beginnt ebenfalls mit den Wünschen. Danach Zuhause und Themen mit kurzen Alltagserklärungen. Im zweiten Schritt nur Zeitraum und optionaler Ort.
+- Neue Karten, Rundungen, mehr Abstand und Petrol-Hilfekarte; auf Mobil ein kompakter Fortschritt über dem Formular. Aktueller Schritt und Fortschrittsbalken werden einschließlich zugänglicher Statusangaben aktualisiert.
+- Häufige Fragen öffnen in einem zusätzlichen Tab, damit der Entwurf erhalten bleibt. „Assistent entdecken“ öffnet die bestehende, ausdrücklich als Vorschau erklärte Funktion. Keine aktive KI behauptet oder angebunden.
+- Gemeinsamer Planer auf `/anfrage/` und unter dem Inspirationsberater. Übernahme, Bearbeitung, Rücknavigation, Kopie und Export bleiben erhalten. Keine Speicherung oder Übermittlung.
+- Umsetzung in `src/planner.mjs`, `public/assets/planner.css` und `planner.js`; Einstiegstext in `src/pages.mjs`, bedingte CSS-Einbindung in `src/components.mjs`.
+- Branch: `feat/projektplaner-kundenwuensche`. Alle 15 bestehenden Tests bestanden; die Abläufe wurden an die frühere Wünsche-Eingabe angepasst. Build: 18 Seiten, 531 interne Verweise. Desktop sowie Mobil bei 375 und 320 Pixeln ohne Überlauf geprüft; Fortschritt, Wunschübernahme und Assistenten-Dialog zusätzlich kontrolliert. Ansichten unter `docs/vorschau/projektplaner-*.png`.
+- Nächster Schritt: Den neuen Projektplaner mit Gabriel ansehen und seine Rückmeldung aufnehmen. Hover-Effekt bleibt wie bestätigt, Infopunkte statisch. Weitere allgemeine Verschönerungen nach konkretem Feedback; keine Veröffentlichung beauftragt.
 
 ## Aktuelle Korrektur
 

@@ -84,7 +84,6 @@ test("Übernahme bleibt bearbeitbar und ersetzt vorhandene Angaben erst nach Pr�
   await expect(planner.getByRole("radio", { name: /^Eigenheim/ })).toBeChecked();
   await expect(planner.getByRole("checkbox", { name: topics.light, exact: true })).toBeChecked();
   await expect(planner.getByRole("checkbox", { name: topics.smart, exact: true })).toBeChecked();
-  await planner.getByRole("button", { name: "Weiter", exact: true }).click();
   await expect(planner.getByLabel("Beschreibe kurz deine Wünsche")).toHaveValue(/Deine Auswahl[\s\S]*Mögliche Ansätze[\s\S]*Noch zu klären/);
   await expect(planner.getByLabel("Ort oder Postleitzahl")).toHaveValue("");
   const edited = "Meine eigene Ergänzung <script>alert(1)</script>";

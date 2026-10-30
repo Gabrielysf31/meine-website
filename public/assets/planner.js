@@ -21,14 +21,14 @@ export function initProjectPlanner(projectForm) {
   function buildSummary() {
     const data = new FormData(projectForm);
     const rows = [
-      ["Dein Zuhause", data.get("building")],
-      ["Deine Themen", data.getAll("topics").join(", ")],
-      ["Zeitraum", data.get("timeline")],
-      ["Ort / Postleitzahl", data.get("location").trim() || "Noch offen"],
       [
         "Deine Wünsche",
         data.get("wishes").trim() || "Noch keine weiteren Angaben",
       ],
+      ["Dein Zuhause", data.get("building")],
+      ["Deine Themen", data.getAll("topics").join(", ")],
+      ["Zeitraum", data.get("timeline")],
+      ["Ort / Postleitzahl", data.get("location").trim() || "Noch offen"],
     ];
     const summary = root.querySelector("#project-summary");
     summary.replaceChildren();
@@ -57,9 +57,14 @@ export function initProjectPlanner(projectForm) {
     root.querySelectorAll("[data-progress]").forEach((item, index) => {
       if (index === step) item.setAttribute("aria-current", "step");
       else item.removeAttribute("aria-current");
+      item.dataset.complete = String(index < step);
     });
     root.querySelector("[data-step-label]").textContent =
       `SCHRITT 0${step + 1} VON 03`;
+    const meter = root.querySelector('[role="progressbar"]');
+    meter.setAttribute("aria-valuenow", String(step + 1));
+    meter.setAttribute("aria-valuetext", `Schritt ${step + 1} von 3`);
+    root.querySelector("[data-planner-meter]").style.width = `${(step + 1) / 3 * 100}%`;
     previousButton.hidden = step === 0;
     nextButton.hidden = step === 2;
     nextButton.firstChild.textContent =
