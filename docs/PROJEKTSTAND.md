@@ -1,6 +1,17 @@
 # Projektstand
 
-Stand: 30.10.2026 · Smart-Home-Bedienung mit Taster, App und Automatik
+Stand: 31.10.2026 · Sitzungsabschluss und Wiedereinstieg
+
+## Sitzungsabschluss am 31.10.2026
+
+- Aktives Projekt: „Meine Website“. Alle Umsetzungen dieser Sitzung sind auf `feat/smart-home-bedienungsdemo` enthalten; letzter Funktionscommit `e4b4c3f`. Arbeitsverzeichnis vor dem Doku-Abschluss sauber, nach `git fetch origin` mit dem Remote-Branch synchron. Kein Merge nach `main`, keine Veröffentlichung.
+- Inspiration: vier umlaufende Bildergalerien mit 13 Ansichten und individuellen Texten (`1843805`). Von Gabriel ausdrücklich positiv bestätigt.
+- Projektplaner: leere Wünsche unten, gefüllte oder übernommene Wünsche oben; während der Eingabe kein Springen. Zwei freiwillige Zusatzfragen zu Planungsstand und Prioritäten, mitwachsende Vorschau im Einstieg und vollständige Übernahme in Überblick/Export (`6a0e0ca`).
+- Hintergrundlicht: gemeinsamer warmer und salbeigrüner Schein auf allen Unterseiten (`8eeedfb`), nach Gabriels Feedback sichtbar verstärkt (`559a849`). Die stärkere Wirkung ist ausdrücklich bestätigt. Startbild, Hover-Effekt und statische Infopunkte bleiben wie vereinbart.
+- Neueste Umsetzung: „Ein Raum. Drei Wege.“ unter `/smart-home/#bedienung` mit Taster, App und vorgespulter Automatik. Kurz schalten, durch Halten dimmen, Helligkeitsregler, zwei änderbare Beispielzeiten und manuelle Übersteuerung. Noch keine ausdrückliche inhaltliche Abnahme dieser neuesten Demo.
+- Letzter vollständiger Testlauf: alle 27 Playwright-Prüfungen bestanden; Build mit 18 Seiten und 564 internen Verweisen erfolgreich. Nach Ergänzung einer weiteren Halteprüfung innerhalb der bestehenden Tests alle vier Bedienungsdemo-Prüfungen erneut bestanden. Keine anschließende Funktionsänderung. Desktop/Mobil und 320–1440 Pixel geprüft, sechs Demoansichten dokumentiert. Für diesen reinen Doku-Abschluss kein erneuter App-Build nötig.
+- Freier Assistent: gewünscht sind echte individuelle Gespräche und eine geprüfte Zusammenfassung zur bearbeitbaren Planerübernahme. Kostenpflichtige OpenAI-Anbindung abgelehnt. Groq Free Plan ist die recherchierte Empfehlung, noch keine Anbieterfreigabe oder Anbindung. Kein API-Schlüssel eingerichtet, kein Chatversand, keine dauerhaften Kundenprojekte beauftragt. Konzept und Quellen: [ASSISTENT-KONZEPT.md](ASSISTENT-KONZEPT.md).
+- Konkreter Wiedereinstieg: zuerst die neue Bedienungsdemo gemeinsam ansehen und Gabriels Rückmeldung aufnehmen. Danach den kostenlosen Chat-Anbieter und die tatsächliche Anbindung abstimmen. Planer und Wissensseite bleiben zur Durchsicht bereit. Keine weiteren Funktionen aus einer Ideenliste ohne Auftrag beginnen.
 
 ## Smart Home: drei Bedienungsarten (30.10.2026)
 
@@ -230,17 +241,19 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Aktueller nächster Schritt: erweiterten Planer unter `/anfrage/` mit Gabriel ansehen und anschließend die kostenlose Chat-Anbindung abstimmen. Inspirationsgalerien sind bestätigt. Die bisherige Rückmeldung zur Wissensseite bleibt offen: Gabriel sieht sich die Suche direkt über den Fragen, die Themenfilter und den auf 50 Antworten erweiterten Katalog an. Danach sein Feedback umsetzen. Der modernisierte Projektplaner unter `/anfrage/` bleibt ebenfalls zur Durchsicht bereit. Der Hover-Effekt ist bestätigt und bleibt so; die drei Infopunkte sind statisch. Das Startbild ist ausdrücklich bestätigt. Keine allgemeine Ideenliste ohne konkreten neuen Auftrag abarbeiten.
+Aktueller nächster Schritt: die neue Demo unter `/smart-home/#bedienung` gemeinsam ansehen, insbesondere Taster-Halten, App-Regler und die vorgespulte Automatik. Danach Gabriels Rückmeldung umsetzen und die kostenlose Chat-Anbindung abstimmen. Der erweiterte Planer unter `/anfrage/` und die Wissensseite bleiben zur Durchsicht bereit. Inspirationsgalerien und stärkerer Hintergrundschein sind bestätigt. Startbild, Hover-Effekt und statische Infopunkte beibehalten. Keine allgemeine Ideenliste ohne konkreten Auftrag abarbeiten.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
-Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte Profilinformationen und Kontaktangaben offen. Vor einer KI-Anbindung braucht es eine geprüfte Wissensgrundlage und eine gesonderte serverseitige Umsetzung. Der gemeinsame Projektentwurf ist dafür vorbereitet; ein konkreter KI-Anbieter ist noch nicht gewählt.
+Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte Profilinformationen und Kontaktangaben offen. Vor einer KI-Anbindung braucht es eine geprüfte Wissensgrundlage und eine gesonderte serverseitige Umsetzung. Der gemeinsame Projektentwurf ist dafür vorbereitet. Groq Free Plan ist als kostenloser Einstieg empfohlen, aber noch nicht ausgewählt oder angebunden.
 
 ## Git und Vorschau
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
 Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der weitere Bildausschnitt ist mit `46427bb` auf `style/startbild-weiterer-ausschnitt` gesichert. Das neue großzügige Raummotiv ist mit `979b305` auf `feat/startbild-wohnraum-weit` gesichert. Der zwischenzeitliche Effekt für Infopunkte ist mit `b2b1048` auf `style/startseite-punkte-hover` gesichert. Der Hover-Stand liegt auf `style/klickbare-elemente-hover`. Darauf bauen der modernisierte Projektplaner (`3b03481` auf `feat/projektplaner-kundenwuensche`), die Wissensseite (`6ad56f6` auf `feat/wissen-fragenkatalog`) und die aktuelle Suchposition mit 50 Fragen (`58e75d2` auf `fix/wissen-suche-und-50-fragen`) auf. Der aktuelle Branch enthält alle diese Änderungen. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+
+Die anschließenden Umsetzungen sind ebenfalls im aktuellen Branch enthalten: Inspirationsgalerien (`1843805`), erweiterter Projektplaner (`6a0e0ca`), gemeinsamer Hintergrundschein (`8eeedfb`), dessen bestätigte Verstärkung (`559a849`) und die neue Bedienungsdemo (`e4b4c3f`). Aktueller Branch zum Wiedereinstieg: `feat/smart-home-bedienungsdemo`. Der Doku-Abschluss bleibt auf diesem Branch.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 
