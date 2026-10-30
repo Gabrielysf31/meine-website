@@ -1,3 +1,5 @@
+import { knowledgeQuestions } from "./knowledge-data.mjs";
+
 export const site = {
   name: "Gabriel",
   descriptor: "Elektrotechnik & Smart Home",
@@ -289,6 +291,7 @@ export const faqs = [
     answer:
       "Nein. Deine Angaben bleiben während der Nutzung im geöffneten Browserfenster. Du kannst die Zusammenfassung selbst kopieren oder als Textdatei herunterladen. Beim Neuladen werden die Eingaben zurückgesetzt.",
   },
+  ...knowledgeQuestions,
 ];
 
 export const scenes = {

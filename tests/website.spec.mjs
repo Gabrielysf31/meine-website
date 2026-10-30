@@ -150,7 +150,7 @@ test("Wissenssuche zeigt Treffer und eine hilfreiche leere Ansicht", async ({
   await page.getByRole("searchbox").fill("xyzunbekannt");
   await expect(page.locator(".empty-search")).toBeVisible();
   await page.getByRole("searchbox").fill("");
-  await expect(page.locator("[data-faq]:visible")).toHaveCount(6);
+  await expect(page.locator("[data-faq]:visible")).toHaveCount(8);
 });
 
 test("Smart-Home-Beispiele wechseln die Situation verständlich", async ({
@@ -215,7 +215,7 @@ test("Inhalte und Antworten bleiben auch ohne JavaScript erreichbar", async ({
   const page = await context.newPage();
   await page.goto("http://127.0.0.1:4173/wissen/");
   await page
-    .getByText("Brauche ich für alles eine App?", { exact: true })
+    .locator("#frage-einstieg-3 summary")
     .click();
   await expect(
     page.getByText("Eine App ist eine mögliche Ergänzung.", { exact: false }),

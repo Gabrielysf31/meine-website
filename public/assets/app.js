@@ -66,30 +66,6 @@ assistant?.addEventListener("click", (event) => {
   }
 });
 
-const faqSearch = document.querySelector("#faq-search");
-faqSearch?.addEventListener("input", () => {
-  const normalize = (text) =>
-    text
-      .toLocaleLowerCase("de")
-      .normalize("NFD")
-      .replace(/\p{Diacritic}/gu, "")
-      .replace(/ß/g, "ss");
-  const query = normalize(faqSearch.value.trim());
-  const entries = [...document.querySelectorAll("[data-faq]")];
-  let count = 0;
-  for (const entry of entries) {
-    const matches = normalize(
-      entry.textContent + " " + entry.dataset.keywords,
-    ).includes(query);
-    entry.hidden = !matches;
-    if (matches) count++;
-  }
-  document.querySelector("#faq-status").textContent = query
-    ? `${count} ${count === 1 ? "Antwort" : "Antworten"} gefunden`
-    : "";
-  document.querySelector(".empty-search").hidden = count > 0;
-});
-
 const sceneData = document.querySelector("#scene-data");
 if (sceneData) {
   const scenes = JSON.parse(sceneData.textContent);

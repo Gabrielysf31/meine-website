@@ -1,6 +1,17 @@
 # Projektstand
 
-Stand: 30.10.2026 · Moderner Projektplaner mit Wünschen im Vordergrund
+Stand: 30.10.2026 · Wissensseite mit 36 Fragen und neuem Aufbau
+
+## Wissensseite: umfangreicher Fragenkatalog (30.10.2026)
+
+- Gabriels Auftrag: 30–40 Fragen, bessere Chance auf Suchtreffer, zunächst 5–8 Fragen und weitere über Ausklappen beziehungsweise ähnliche Fragen; die Seite größer, voller und gestalterisch lebendiger aufbauen.
+- Umgesetzt: 36 Fragen in sieben Themen, große Suche mit Beispielbegriffen, acht Einstiegsfragen, alle Fragen aus-/einklappbar, Themenfilter und jeweils zwei verwandte Fragen unter jeder Antwort. Die Suche erfasst Fragen, Antworten und zusätzliche verwandte Begriffe; mehrere Wörter funktionieren unabhängig von der Reihenfolge. Sie arbeitet lokal und ohne KI.
+- Anschlussfragen und Technik-ABC verlinken auf direkt geöffnete, fokussierte Antworten; Direktlinks funktionieren auch nach Neuladen. Ohne JavaScript sind alle 36 Antworten zugänglich.
+- Neuer heller Kartenaufbau, salbeigrüne Bereiche, weicher Hintergrund-Lichtschein mit einmaliger dreisekündiger Einblendung, vier Begriffskarten sowie Einstiege zu Inspiration und Planer. Reduzierte Bewegung berücksichtigt.
+- Fachliche Orientierung mit geprüften Verweisen auf KNX, licht.de, SMA und Bundesnetzagentur direkt an passenden Antworten. Keine verbindlichen Anlagenbewertungen, Produktkompatibilitäten oder Kostenangaben erfunden. Keine Veröffentlichung oder KI-Anbindung.
+- Umsetzung und Quellen: [WISSEN.md](WISSEN.md). Neue Dateien `src/knowledge.mjs`, `src/knowledge-data.mjs`, `public/assets/knowledge.js`, `knowledge.css` und `tests/knowledge.spec.mjs`. Die bisherige Suche aus `app.js` entfernt. Die Startseite behält ihre bisherigen drei Fragen.
+- Geprüft: 18 Seiten, 534 interne Verweise und alle 17 Playwright-Prüfungen erfolgreich. Suche, Filter, Ausklappen, verwandte Fragen, Direktlinks und Nutzung ohne JavaScript geprüft. Layout von 320 bis 1440 Pixeln ohne Überlauf; Desktop, Mobil und geöffnete Suchantwort visuell kontrolliert. Ansichten in `docs/vorschau/wissen-*.png`.
+- Arbeitsbranch: `feat/wissen-fragenkatalog`, aufbauend auf dem modernisierten Projektplaner (`3b03481`). Nächster Schritt: Gabriel schaut sich die Wissensseite an und meldet gewünschte Anpassungen. Hover-Effekt und statische Infopunkte beibehalten.
 
 ## Projektplaner: Wünsche zuerst (30.10.2026)
 
