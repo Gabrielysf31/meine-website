@@ -7,11 +7,11 @@
     position: absolute;
     width: min(950px, 140vw);
     height: 620px;
-    background: radial-gradient(ellipse closest-side at 42% 46%, #d9bc7b52 0%, #e2cc9c30 43%, transparent 100%);
+    background: radial-gradient(ellipse closest-side at 42% 46%, #d9bc7b5c 0%, #e2cc9c36 43%, transparent 100%);
     top: -110px;
     left: -160px;
   }
-  .hero-glow::after { top: 65px; left: 12%; background: radial-gradient(ellipse closest-side at 48% 52%, #9bbca345 0%, #bbcfb82b 46%, transparent 100%); }
+  .hero-glow::after { top: 65px; left: 12%; background: radial-gradient(ellipse closest-side at 48% 52%, #9bbca34d 0%, #bbcfb830 46%, transparent 100%); }
   html.js .hero-glow::before { animation: hero-light-drift 16s ease-in-out infinite alternate; }
   html.js .hero-glow::after { animation: hero-light-drift 22s ease-in-out -8s infinite alternate-reverse; }
   .home-hero[data-ambience-paused="true"] .hero-glow::before,

@@ -8,7 +8,11 @@ Sechs Technikmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: einge
 
 ## Eigene Inspirationsmotive
 
-Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: nächtliches Orientierungslicht, Schlafzimmer im Morgenlicht, Arbeits- und Leseecke sowie ein Energieüberblick im Hauswirtschaftsraum. Sie liegen als `public/assets/inspiration-*.jpg` vor. Alle Dateipfade und Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Zwei weitere eigene Motive für die Smart-Home-Seite zeigen einen vernetzten Küchen-/Essbereich und die Bedienung am Wandtaster. Dateien und Prompts stehen in [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Insgesamt verwendet der Entwurf zwölf gekennzeichnete KI-Visualisierungen.
+Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imagegen-Werkzeug erstellt: nächtliches Orientierungslicht, Schlafzimmer im Morgenlicht, Arbeits- und Leseecke sowie ein Energieüberblick im Hauswirtschaftsraum. Sie liegen als `public/assets/inspiration-*.jpg` vor. Alle Dateipfade und Prompts stehen in [INSPIRATION-BILDPROMPTS.md](INSPIRATION-BILDPROMPTS.md). Zwei weitere eigene Motive für die Smart-Home-Seite zeigen einen vernetzten Küchen-/Essbereich und die Bedienung am Wandtaster. Dateien und Prompts stehen in [SMART-HOME-BILDER.md](SMART-HOME-BILDER.md). Mit dem neuen Startbild verwendet der Entwurf 13 gekennzeichnete KI-Visualisierungen.
+
+## Startbild: Elektrotechnik im Zuhause
+
+Am 30.10.2026 mit dem eingebauten Imagegen-Werkzeug erstellt. `public/assets/zuhause-elektrotechnik.jpg` zeigt einen modernen Wohnraum mit gut sichtbaren Schuko-Steckdosen, Wandtaster, Bedienpanel und eingeschalteter Beleuchtung. Das Bild ersetzt den bisherigen Wohnraum auf der Startseite. Es ist als KI-Visualisierung gekennzeichnet und zeigt kein Kundenprojekt oder konkretes Produktsystem. Originalpfad und vollständiger Prompt stehen in [STARTBILD.md](STARTBILD.md).
 
 ## Wohnraumfotos
 
@@ -17,7 +21,7 @@ Vier weitere eigenständige Inspirationsmotive wurden mit dem eingebauten Imageg
 | `public/assets/wohnraum.jpg`      | https://images.unsplash.com/photo-1600210492486-724fe5c67fb0 |
 | `public/assets/wohnen-detail.jpg` | https://images.unsplash.com/photo-1600607687920-4e2a09cf159d |
 
-Bezug am 29.10.2026 über Unsplash mit verkleinerten Bildabmessungen. Die Quellen sind zusätzlich auf der Website unter `/bildnachweise/` verlinkt. Unsplash-Lizenz: https://unsplash.com/license
+Bezug am 29.10.2026 über Unsplash mit verkleinerten Bildabmessungen. `wohnraum.jpg` ist das frühere Startbild und bleibt als ungenutzte Datei erhalten; auf der Startseite wird jetzt das neue Technikmotiv verwendet. Die Bildnachweise der Website wurden entsprechend angepasst. Unsplash-Lizenz: https://unsplash.com/license
 
 Logozeichen, Favicon und Funktionssymbole sind im Projekt als SVG umgesetzt. Die Schriftgestaltung verwendet lokal vorhandene Systemschriften.
 

@@ -1,13 +1,22 @@
 # Projektstand
 
-Stand: 30.10.2026 · Lichtspiel sichtbar verstärkt
+Stand: 30.10.2026 · Neues Startbild mit sichtbarer Elektrotechnik
+
+## Aktuelle Überarbeitung
+
+- Gabriels Wunsch: Lichtstärke nur noch minimal anheben und das allgemeine Wohnraumfoto durch ein modernes Motiv mit erkennbarer Elektrotechnik ersetzen.
+- Neues Startbild mit dem eingebauten Imagegen-Werkzeug erstellt: Schuko-Doppelsteckdose, vierteiliger Wandtaster und Bedienpanel stehen gut sichtbar im Mittelpunkt. Eingeschaltete Leuchten sowie Küche mit Backofen ergänzen die Wohnatmosphäre. Datei: `public/assets/zuhause-elektrotechnik.jpg`; Originalpfad und vollständiger Prompt in [STARTBILD.md](STARTBILD.md).
+- Bild, Alternativtext, Preload und Bildnachweise angepasst; als KI-Visualisierung gekennzeichnet. Der bisherige Textkasten über dem Bild wurde entfernt, damit er keine Steckdosen verdeckt. Das alte Foto bleibt als ungenutzte Datei erhalten.
+- Nur die Intensität der beiden Hintergrund-Lichtflächen noch leicht angehoben. Tempo, Bewegungsweg und Pausenfunktionen bleiben erhalten.
+- Build und 509 interne Verweise erfolgreich. Vier passende Browserprüfungen bestanden: alle Seiten erreichbar, mobiles Layout und Navigation, Lichtspiel/Pause/reduzierte Bewegung sowie Darstellung ohne JavaScript. Desktop und Mobil visuell geprüft; alle drei elektrischen Bedienelemente bleiben im Bildausschnitt sichtbar.
+- Aktueller Arbeitsbranch: `feat/startbild-elektrotechnik`, aufbauend auf `2b06c13`. Nächster Schritt: das neue Bild und die leicht erhöhte Lichtstärke mit Gabriel ansehen.
 
 ## Aktuelle Feinabstimmung
 
 - Gabriels Wunsch: etwas mehr sichtbare Bewegung im Hintergrund. Das Startseiten-Lichtspiel hat jetzt deutlichere warme und salbeigrüne Lichtflächen, einen größeren Bewegungsweg sowie eine leichte Drehung und Größenänderung. Die Dauer je Richtung beträgt 16 und 22 Sekunden. Die Bewegung bleibt auf den Einstieg begrenzt.
 - Pausentaste, automatische Pause außerhalb des sichtbaren Bereichs und bei verborgenem Tab sowie reduzierte Bewegung bleiben erhalten.
 - Build und 509 interne Verweise sowie die beiden Lichtspiel-Browserprüfungen erfolgreich. Laufende Bewegung auf Desktop geprüft, Desktop und Mobil visuell kontrolliert; bei 320, 375 und 768 Pixeln kein horizontales Überlaufen. Startseiten-Vorschau aktualisiert.
-- Aktueller Arbeitsbranch: `style/lichtspiel-sichtbarer`, aufbauend auf `3cba83c`. Nächster Schritt: die Stärke und Bewegung des Lichtspiels mit Gabriel ansehen.
+- Mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert, aufbauend auf `3cba83c`.
 
 ## Jalousien-Demo und erstes Lichtspiel
 
@@ -72,7 +81,7 @@ Die Website bleibt ein lokaler privater Entwurf. Veröffentlichung, kostenpflich
 - Über mich, Kontakt, Entwurfsseiten für Impressum und Datenschutz sowie Bildnachweise.
 - Assistenteneinstieg als ausdrücklich gekennzeichnete Vorschau, auf Mobilgeräten als kleines Symbol.
 - Keine großen wiederkehrenden Abschlussblöcke mit Projektaufruf. Planerzugänge oben rechts, auf der Startseite und auf der Kontaktseite bleiben erhalten. Auf der Inspirationsseite ist die Übernahme Bestandteil des Beraterergebnisses.
-- Alle zwölf KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
+- Alle 13 KI-Motive sind Visualisierungen; sie weisen weder Kundenprojekte noch konkrete Produktkompatibilität nach.
 
 ## Technischer Einstieg
 
@@ -106,7 +115,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg die Stärke und Bewegung des verstärkten Startseiten-Lichtspiels mit Gabriel ansehen und sein Feedback aufnehmen. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
+Beim Wiedereinstieg das neue Startbild mit sichtbarer Elektrotechnik und die leicht erhöhte Lichtstärke mit Gabriel ansehen und sein Feedback aufnehmen. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -116,7 +125,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Der aktuelle, vollständige Arbeitsstand mit verstärktem Lichtspiel liegt auf `style/lichtspiel-sichtbarer`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Der aktuelle, vollständige Arbeitsstand mit neuem Startbild und nochmals leicht angehobener Lichtstärke liegt auf `feat/startbild-elektrotechnik`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 

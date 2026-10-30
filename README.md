@@ -14,6 +14,7 @@ Website für Gabriels mögliche spätere Selbstständigkeit im Bereich Elektrote
 Der erste lokale Entwurf ist umgesetzt: helle Gestaltung mit Petrol, echte Unterseiten, mobile Navigation und kurze Inhalte für Privatkunden.
 
 - Startseite, Leistungsübersicht und sechs Leistungsunterseiten: Neubau, Modernisierung, Licht, Smart Home, Photovoltaik sowie Energie und Laden.
+- Neues Startbild mit deutlich sichtbaren Steckdosen, Wandtaster und Smart-Home-Bedienpanel, ergänzt durch eingeschaltete Leuchten und eine angrenzende Küche. Als KI-Visualisierung gekennzeichnet; Bild und vollständiger Prompt stehen in [docs/STARTBILD.md](docs/STARTBILD.md).
 - Alle sechs Leistungsseiten mit ausgeschriebenem Navigationspfad „Leistungen / Leistungsname“, drei ausführlichen Themenabschnitten, Sprunglinks und insgesamt 18 erklärenden Vektorskizzen. Dazu gehören ein markierter Beispielgrundriss, eine schematische Verteilung, Lichtbereiche und Energieübersichten.
 - Erweiterte Smart-Home-Seite mit eigenen Bildern, Funktionsübersicht, Bedienung, Einstieg im Bestand oder Neubau, fünf Antworten und Assistentenhinweis. Drei interaktive Alltagssituationen steuern eine illustrierte Raumansicht mit zwei Lampen. Warm, gedimmt und Aus lassen sich zusätzlich direkt ausprobieren.
 - Darunter eine Jalousien-Demo mit drei Räumen und Beispiel-App: einzeln öffnen, halb schließen oder schließen sowie alle gemeinsam öffnen und schließen. Fenster, Raumhelligkeit und angezeigte Zustände ändern sich zusammen. Auf Mobil bleibt die Fensteransicht beim Bedienen sichtbar.
@@ -81,7 +82,7 @@ Die großen wiederkehrenden Projektaufrufe wurden auf Gabriels Wunsch entfernt. 
 
 ## Nächster Schritt
 
-Die Jalousien-Demo und das dezente Startseiten-Lichtspiel gemeinsam ansehen und Gabriels Feedback aufnehmen. Verhalten und Dateien stehen in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md). Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
+Das neue Startbild mit erkennbarer Elektrotechnik und die leicht erhöhte Lichtstärke gemeinsam ansehen und Gabriels Feedback aufnehmen. Jalousien-Demo und Lichtspiel sind in [docs/SMART-HOME-DEMO.md](docs/SMART-HOME-DEMO.md) dokumentiert. Auch die sechs erweiterten Leistungsseiten können weiter verfeinert werden; Aufbau und Inhalte stehen in [docs/LEISTUNGEN.md](docs/LEISTUNGEN.md). Inspiration, Berater und bearbeitbare Planerübergabe sind lokal umgesetzt; der Planer öffnet direkt unter dem Ergebnis. Beim Neuladen oder Verlassen werden die Angaben zurückgesetzt; es gibt keine Browser-Speicherung und keinen Versand.
 
 Der konkrete Wiedereinstieg und die Abgrenzung zwischen bestehender Umsetzung und besprochenem Konzept stehen in [docs/PROJEKTSTAND.md](docs/PROJEKTSTAND.md).
 
