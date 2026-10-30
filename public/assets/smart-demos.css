@@ -43,6 +43,16 @@
   .ambience-toggle[aria-pressed="true"] .ambience-toggle-mark::after { display: none; }
   html:not(.js) .ambience-toggle { display: none; }
 
+  .value-card { display: flex; align-items: center; justify-content: inherit; gap: inherit; }
+  @media (hover: hover) and (pointer: fine) and (min-width: 681px) {
+    .values-strip { padding-block: 10px; }
+    .values-strip > div { position: relative; min-width: 0; padding-inline: 10px; }
+    .value-card { width: 100%; min-height: 56px; padding: 14px 10px; border-radius: 8px; transition: transform .22s ease-out, background-color .22s ease-out, box-shadow .22s ease-out; }
+    .values-strip > div:hover { z-index: 1; }
+    .values-strip > div:hover .value-card { transform: translateY(-6px) scale(1.08); background: var(--white); box-shadow: 0 12px 28px #203a361c; }
+    .values-strip > div:hover .icon { color: var(--petrol); }
+  }
+
   .shading-demo { border-top: 1px solid #cdd6c6; margin-top: 75px; padding-top: 75px; }
   .shading-demo .section-heading { align-items: end; }
   .shading-demo-grid { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 70px; align-items: center; }
@@ -143,6 +153,7 @@
     .ambience-toggle { margin-top: 4px; }
   }
   @media (prefers-reduced-motion: reduce) {
+    .values-strip > div:hover .value-card { transform: none; }
     .hero-glow::before, .hero-glow::after { animation: none !important; }
     .ambience-toggle { display: none; }
     .shade-room-interior, .shade-slats, .shade-daylight { transition: none; }

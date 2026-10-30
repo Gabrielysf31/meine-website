@@ -1,6 +1,14 @@
 # Projektstand
 
-Stand: 30.10.2026 · Neues Startbild mit großzügigem Raumblick
+Stand: 30.10.2026 · Startseitenpunkte mit Hover-Effekt
+
+## Aktuelle Startseitenanpassung
+
+- Gabriel hat das neue Startbild mit „JAAAAA 100%“ ausdrücklich bestätigt. Dieses Motiv beibehalten.
+- Die drei Punkte direkt unter dem Einstieg („Für dein Zuhause gedacht“, „Verständlich von Anfang an“, „Mit Blick nach vorn“) treten beim Darüberfahren mit der Maus hervor: leicht angehoben, um acht Prozent vergrößert, heller Hintergrund und weicher Schatten. Beim Wechsel geht der vorherige Punkt zurück.
+- Reiner CSS-Effekt mit ruhigem Übergang. Der Hover-Bereich bleibt an seiner Position, damit das Vergrößern keine flackernden Wechsel auslöst. Auf Touch-Geräten bleibt die normale Darstellung; bei reduzierter Bewegung entfällt das Anheben und Vergrößern.
+- Build und 509 interne Verweise sowie mobile Navigation und Layout erfolgreich geprüft. Alle drei Hover-Zustände, Rücksetzen beim Verlassen, reduzierte Bewegung und Touch-Darstellung im Browser kontrolliert.
+- Aktueller Arbeitsbranch: `style/startseite-punkte-hover`, aufbauend auf `979b305`. Nächster Schritt: den Effekt mit Gabriel ansehen.
 
 ## Aktuelles Startbild
 
@@ -8,7 +16,7 @@ Stand: 30.10.2026 · Neues Startbild mit großzügigem Raumblick
 - Neues Motiv mit eingebautem Imagegen: großzügiger Blick auf einen offenen Wohn- und Essbereich. Steckdosen und Wandtaster sitzen an der Seitenwand; Jalousien, eingeschaltete Leuchten und offene Küche mit Backofen sind in den Raum eingebunden.
 - Datei: `public/assets/wohnraum-elektrotechnik-weit.jpg`, 1448 × 1086 Pixel. Vollständiges Foto im Seitenverhältnis 4:3 auf Desktop und Mobil. Preload, Alternativtext und Bildnachweise angepasst; Kennzeichnung als KI-Visualisierung bleibt erhalten. Originalpfad und vollständiger Prompt in [STARTBILD-WOHNRAUM.md](STARTBILD-WOHNRAUM.md).
 - Build und 509 interne Verweise erfolgreich. Alle Seiten erreichbar sowie mobiles Layout und Navigation erfolgreich geprüft. Neues Bild und passender Preload auf Desktop und Mobil kontrolliert; Vorschauansichten aktualisiert.
-- Aktueller Arbeitsbranch: `feat/startbild-wohnraum-weit`, aufbauend auf `46427bb`. Nächster Schritt: das neue Raummotiv mit Gabriel ansehen und sein Feedback aufnehmen.
+- Mit `979b305` auf `feat/startbild-wohnraum-weit` gesichert, aufbauend auf `46427bb`. Von Gabriel anschließend ausdrücklich bestätigt.
 
 ## Vorherige Bildanpassung
 
@@ -130,7 +138,7 @@ Fragen und Verhalten stehen in [INSPIRATIONSBERATER.md](INSPIRATIONSBERATER.md).
 
 ## Nächster gemeinsamer Schritt
 
-Beim Wiedereinstieg das neue Startbild mit großzügigem Raumblick mit Gabriel ansehen und sein Feedback aufnehmen. Die Lichtstärke ist bereits leicht erhöht. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
+Beim Wiedereinstieg den Hover-Effekt der drei Startseitenpunkte mit Gabriel ansehen. Das neue Startbild mit großzügigem Raumblick ist ausdrücklich freigegeben; die Lichtstärke ist bereits leicht erhöht. Auch Jalousien-Demo und die sechs erweiterten Leistungsseiten können weiter verfeinert werden. Die reduzierte Lichtauswahl und die Abenddämmerung sind umgesetzt. Bei weiterer Smart-Home-Arbeit an `src/smart-home.mjs`, `src/room.mjs` und `src/shading.mjs` anknüpfen. Inspiration und Berater können bei Bedarf weiter verfeinert werden.
 
 Gabriels ergänzende Idee ist festgehalten: Wiederkehrende Fragen aus dem späteren echten Chatbot sollen als „Top-Fragen“ mit kurzen Antworten beim Berater ergänzt werden. Fehlt für die Beratung regelmäßig eine Angabe, kann auch der Fragenablauf gezielt erweitert werden. Es werden dafür jetzt keine häufigen Kundenfragen behauptet. Die spätere Auswertung und Übernahme sind noch nicht implementiert.
 
@@ -140,7 +148,7 @@ Danach bleiben Firmenname, Einsatzgebiet, tatsächlicher Leistungsumfang, echte 
 
 Privates Repository: https://github.com/Gabrielysf31/meine-website
 
-Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der weitere Bildausschnitt ist mit `46427bb` auf `style/startbild-weiterer-ausschnitt` gesichert. Der aktuelle, vollständige Arbeitsstand mit neuem großzügigem Raummotiv liegt auf `feat/startbild-wohnraum-weit`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
+Die erste Website-Umsetzung liegt auf `feat/erster-website-entwurf` bis Commit `b73bed2`. Die konkrete Konzeptausarbeitung wurde auf `docs/inspirationsberater-konzept` mit Commit `82b6863` gesichert. Inspiration und Berater wurden mit Commit `a33994a` auf `feat/inspiration-berater` gesichert. Darauf bauen Smart Home (`8ddc091`), Lichtsimulation (`a7aeeec`), Tageslicht (`e6a6a90`), die zwischenzeitliche rote Lichtfarbe (`630896b`) und die endgültige reduzierte Auswahl (`e4ad57b`) auf. Der Abschluss vom 29.10. liegt mit Commit `066b7fb` auf `feat/smart-home-ruhige-lichtstimmungen`. Die Abenddämmerung wurde mit `9108999` auf `fix/smart-home-abenddaemmerung` gesichert. Die ausgearbeiteten Leistungsseiten liegen mit `75dc264` auf `feat/leistungen-ausfuehrlich`. Jalousien-Demo und erstes Lichtspiel sind mit `3cba83c` auf `feat/jalousien-demo-lichtspiel` gesichert. Das verstärkte Lichtspiel ist mit `2b06c13` auf `style/lichtspiel-sichtbarer` gesichert. Das neue Startbild und die nochmals leicht angehobene Lichtstärke sind mit `92cd957` auf `feat/startbild-elektrotechnik` gesichert. Der weitere Bildausschnitt ist mit `46427bb` auf `style/startbild-weiterer-ausschnitt` gesichert. Das neue großzügige Raummotiv ist mit `979b305` auf `feat/startbild-wohnraum-weit` gesichert. Der aktuelle, vollständige Arbeitsstand mit Hover-Effekt für die drei Startseitenpunkte liegt auf `style/startseite-punkte-hover`. `main` enthält weiterhin die ursprüngliche Repository-Initialisierung; es wurde nichts in `main` integriert oder als Website veröffentlicht.
 
 Die von Gabriel geöffnete lokale Vorschau unter `http://localhost:4173` wurde wiederverwendet und während der Umsetzung aktualisiert. Falls sie nicht läuft: `npm run dev`. Nach weiteren Änderungen `npm run build` ausführen und den Browser neu laden.
 
